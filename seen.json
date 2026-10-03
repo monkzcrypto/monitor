@@ -1,0 +1,268 @@
+{
+  "heartbeat": "2026-10-03",
+  "initialized": true,
+  "mode": "bonded-v1",
+  "seen": {
+    "dex:base:0x02393c763fb32e41591Aa9F53092C55f0A1ed373": {
+      "address": "0x02393c763fb32e41591Aa9F53092C55f0A1ed373",
+      "chain": "base",
+      "liquidity_usd": 82.31,
+      "name": "Institutional Oil Fund",
+      "source": "Onchain - bonded, trading on uniswap",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/base/0x9647c000f3368d656b79a309c77a722ce813391b0469773ba39cd7386eb4a740"
+    },
+    "dex:base:0x0be4Eb3c1B7d958325C09e699F39E5F72654e307": {
+      "address": "0x0be4Eb3c1B7d958325C09e699F39E5F72654e307",
+      "chain": "base",
+      "liquidity_usd": 81.21,
+      "name": "Institutional Oil Fund",
+      "source": "Onchain - bonded, trading on uniswap",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/base/0xf5d17023ba8160c11bc251b9f2731cf16e8dcd59681643d1ad2bbd4f24302dcd"
+    },
+    "dex:base:0x0ceCd87CeC29eB7FEd6c679FdAe6037bE7ABD522": {
+      "address": "0x0ceCd87CeC29eB7FEd6c679FdAe6037bE7ABD522",
+      "chain": "base",
+      "liquidity_usd": 84.09,
+      "name": "Institutional Oil Fund",
+      "source": "Onchain - bonded, trading on uniswap",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/base/0x1b651eeb195a18146c47c7588a58ca1ec11d26de39b4995decdb421d7c1cddf2"
+    },
+    "dex:base:0x12cd3d59DD86947e87c8a8B11897052ce1FcfFa9": {
+      "address": "0x12cd3d59DD86947e87c8a8B11897052ce1FcfFa9",
+      "chain": "base",
+      "liquidity_usd": 84.2,
+      "name": "Institutional Oil Fund",
+      "source": "Onchain - bonded, trading on uniswap",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/base/0x9513180d99572a3069efdb6e094f27b5455e7bb126030ab622b1c2ed6f6a2e95"
+    },
+    "dex:base:0x1BE0e7B9962EbFed016FCB4F6D0F5caF734a9988": {
+      "address": "0x1BE0e7B9962EbFed016FCB4F6D0F5caF734a9988",
+      "chain": "base",
+      "liquidity_usd": 67037.93,
+      "name": "Institutional Oil Fund",
+      "source": "Onchain - bonded, trading on uniswap",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/base/0xdfa59a4d6ceedbd1aa69e6e8112c4225b475d0f31e099fc8d0e95c01312f7b25"
+    },
+    "dex:base:0x1ab23552Be7f90b11a65Ea5Ce8F36246A0Aaa177": {
+      "address": "0x1ab23552Be7f90b11a65Ea5Ce8F36246A0Aaa177",
+      "chain": "base",
+      "liquidity_usd": 79.12,
+      "name": "Institutional Oil Fund",
+      "source": "Onchain - bonded, trading on uniswap",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/base/0x8a18570d1b7fd3601d6f1d81e31b77c3d9874322ab94ca475a6a35ece2e8647f"
+    },
+    "dex:base:0x2e5Ec440934758B3f2286213531A45454e07bDe8": {
+      "address": "0x2e5Ec440934758B3f2286213531A45454e07bDe8",
+      "chain": "base",
+      "liquidity_usd": 84.52,
+      "name": "Institutional Oil Fund",
+      "source": "Onchain - bonded, trading on uniswap",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/base/0xe83e50cb5999fe1d980cb68ae270acd4373445bfdf02712e852c59b60fe8413b"
+    },
+    "dex:base:0x33279dC69c7a6f9060b154548686D7e37823D7DD": {
+      "address": "0x33279dC69c7a6f9060b154548686D7e37823D7DD",
+      "chain": "base",
+      "liquidity_usd": 179377.8,
+      "name": "(IOF) Institutional Oil Fund ",
+      "source": "Onchain - bonded, trading on uniswap",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/base/0x6dc4730159aa9abc5385bd87ca052436173d8203f2af034732688174d4628b80"
+    },
+    "dex:base:0x38DF4B222B9c64D3b152a470B40fFa253B1Af5a2": {
+      "address": "0x38DF4B222B9c64D3b152a470B40fFa253B1Af5a2",
+      "chain": "base",
+      "liquidity_usd": 81.05,
+      "name": "Institutional Oil Fund",
+      "source": "Onchain - bonded, trading on uniswap",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/base/0x724ad1fdc2bff61cbc0a521d3abc823413b67d04aecf0481570d73598872b99d"
+    },
+    "dex:base:0x38F3ED35D53c50Ad22BE8238a3afEec31DFc6545": {
+      "address": "0x38F3ED35D53c50Ad22BE8238a3afEec31DFc6545",
+      "chain": "base",
+      "liquidity_usd": 85.14,
+      "name": "Institutional Oil Fund",
+      "source": "Onchain - bonded, trading on uniswap",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/base/0x15a127471ee7360d4cc811b01d7d008b0abcba9cff7ea40d599dac8d5117c40b"
+    },
+    "dex:base:0x4446163a079e8d84137acd94fF2781fF2a865BcF": {
+      "address": "0x4446163a079e8d84137acd94fF2781fF2a865BcF",
+      "chain": "base",
+      "liquidity_usd": 296089.12,
+      "name": "Institutional Oil Fund (IOF)",
+      "source": "Onchain - bonded, trading on uniswap",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/base/0x605c92cc50aa62226ce5281d47866f71d247ae02b7b1e80f3514339a1e1c9508"
+    },
+    "dex:base:0x4ce5DC8A5C4E16B1F21Baa5c6850a26C50c4A9D7": {
+      "address": "0x4ce5DC8A5C4E16B1F21Baa5c6850a26C50c4A9D7",
+      "chain": "base",
+      "liquidity_usd": 100208.69,
+      "name": "Institusional Oil Fund - IOF",
+      "source": "Onchain - bonded, trading on uniswap",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/base/0x937694e37a406298b8554834dc45a971872cd85244aec96a94b21b80435fd5d8"
+    },
+    "dex:base:0x50dF795E8ee8cdbA0E4449707dD3ca24b43D0DaF": {
+      "address": "0x50dF795E8ee8cdbA0E4449707dD3ca24b43D0DaF",
+      "chain": "base",
+      "liquidity_usd": 127628.83,
+      "name": "Institution Oil Fund (IOF)",
+      "source": "Onchain - bonded, trading on uniswap",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/base/0x2c575f525b29d60517accc34557778894aac54b117b058b55d69b3eb71327e68"
+    },
+    "dex:base:0xC0BdAa657411C6dd953E388E290c7E368B3FCad2": {
+      "address": "0xC0BdAa657411C6dd953E388E290c7E368B3FCad2",
+      "chain": "base",
+      "liquidity_usd": 87730.98,
+      "name": "Institusional Oil Fund - IOF",
+      "source": "Onchain - bonded, trading on uniswap",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/base/0xfdc2b4bddd6cf92a8b3b70ef7d56339a1e92eaf1d572aec2bfe4669f75c71059"
+    },
+    "dex:base:0xD846B8D8a16f373E718bFB00006d5Ca9C9d321de": {
+      "address": "0xD846B8D8a16f373E718bFB00006d5Ca9C9d321de",
+      "chain": "base",
+      "liquidity_usd": 111169.99,
+      "name": "Institution Oil Fund",
+      "source": "Onchain - bonded, trading on uniswap",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/base/0x44a507c2ffb3c23d9d6799daddb2c88ee74fec01281cacf3276239368d302039"
+    },
+    "dex:base:0xDCEeb0c9A7894d8E859e968F872188a5ddE4A384": {
+      "address": "0xDCEeb0c9A7894d8E859e968F872188a5ddE4A384",
+      "chain": "base",
+      "liquidity_usd": 135634.21,
+      "name": "Institutional Oil Fund",
+      "source": "Onchain - bonded, trading on uniswap",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/base/0x00ebf7ef0f6733664feefd8fcfa47380659901ea378233b999b7d4a2a40e57fa"
+    },
+    "dex:robinhood:0xf2ABB036f9D8F667C328a1C86AC122DccFc47777": {
+      "address": "0xf2ABB036f9D8F667C328a1C86AC122DccFc47777",
+      "chain": "robinhood",
+      "liquidity_usd": 10281.43,
+      "name": "Institutional Oil Fund",
+      "source": "Onchain - bonded, trading on flapsh",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/robinhood/0x4533eef994e1bcf2e0336c7e8a8b028d93a66b0d"
+    },
+    "dex:solana:12FiD7RUw1y3dgW7wrHrPuQy5hw6HFiQn4Nw5TV3pump": {
+      "address": "12FiD7RUw1y3dgW7wrHrPuQy5hw6HFiQn4Nw5TV3pump",
+      "chain": "solana",
+      "liquidity_usd": 2348.75,
+      "name": "Institutional Oil Fund",
+      "source": "Onchain - bonded, trading on pumpswap",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/solana/4hgnkcrjjm1qjaaajuyamfrdjy8jvmurjdjlw7rnnmzr"
+    },
+    "dex:solana:2sY7rkMCQyFNcSpHm3fciJf2ptYRg3cYpn4srN6Bpump": {
+      "address": "2sY7rkMCQyFNcSpHm3fciJf2ptYRg3cYpn4srN6Bpump",
+      "chain": "solana",
+      "liquidity_usd": 193163.04,
+      "name": "Institutional Oil Fund",
+      "source": "Onchain - bonded, trading on pumpswap",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/solana/7wcareycymxe2olsuaptqg4ybx5hfh1msinrhq4pvhjm"
+    },
+    "dex:solana:3Fo7AwpnrX8wFfST7pRUoxdMkjkjHUU3uRezGem4pump": {
+      "address": "3Fo7AwpnrX8wFfST7pRUoxdMkjkjHUU3uRezGem4pump",
+      "chain": "solana",
+      "liquidity_usd": 2100.36,
+      "name": "Institutional Oil Fund",
+      "source": "Onchain - bonded, trading on pumpswap",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/solana/exe3rfypghapp2h5xnsdj8vnywxg6cdv4v2aukvzwtth"
+    },
+    "dex:solana:4AjGL2PtcEk362aUgZnbwgFbakMTCFacb25Kdg8Vpump": {
+      "address": "4AjGL2PtcEk362aUgZnbwgFbakMTCFacb25Kdg8Vpump",
+      "chain": "solana",
+      "liquidity_usd": 2139.69,
+      "name": "IOF",
+      "source": "Onchain - bonded, trading on pumpswap",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/solana/a6qb5xhb4t3gzy1dthgpufgdmpemixaznkqpa9jnk56r"
+    },
+    "dex:solana:5cAK8tQ43imaV9AzT6JUasAdmZdxP71EyB1mt4PMpump": {
+      "address": "5cAK8tQ43imaV9AzT6JUasAdmZdxP71EyB1mt4PMpump",
+      "chain": "solana",
+      "liquidity_usd": 2121.11,
+      "name": "Institutional Oil Fund",
+      "source": "Onchain - bonded, trading on pumpswap",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/solana/8meps2zpgt96ru9ndhrsrgg8apskzq3bzzhjsvxywnuh"
+    },
+    "dex:solana:8BeeSSBNfY84XCBs1LPEixWn5qtTXzfKc3XNamdmpump": {
+      "address": "8BeeSSBNfY84XCBs1LPEixWn5qtTXzfKc3XNamdmpump",
+      "chain": "solana",
+      "liquidity_usd": 532753.63,
+      "name": "Institutional Oil Fund",
+      "source": "Onchain - bonded, trading on pumpswap",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/solana/c9eitawceag5bbyfdpvzccelvqfqcbzjuevu1mtd5qhd"
+    },
+    "dex:solana:C8QFtWqrVq2oqBjEEc5ytcfewUwT5Zr3NVHLT8Ugpump": {
+      "address": "C8QFtWqrVq2oqBjEEc5ytcfewUwT5Zr3NVHLT8Ugpump",
+      "chain": "solana",
+      "liquidity_usd": 2107.74,
+      "name": "Institutional Oil Fund",
+      "source": "Onchain - bonded, trading on pumpswap",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/solana/7pexk7nkdr5bkkha98tcxt4diutgwjuwx2bedsrdf88t"
+    },
+    "dex:solana:HfT7CfrT4jMnMDK3Hfw1epuz1vJTqv7W1qXiaDjHpump": {
+      "address": "HfT7CfrT4jMnMDK3Hfw1epuz1vJTqv7W1qXiaDjHpump",
+      "chain": "solana",
+      "liquidity_usd": 283406.5,
+      "name": "Institutional Oil Fund",
+      "source": "Onchain - bonded, trading on pumpswap",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/solana/8yybndbra7vcxvrrtfqk7rpgwtghq17qrgobihkre76s"
+    },
+    "dex:solana:UTGq3k7c85agh2JynL4vi6rEQAfmUuM4N1K78iopump": {
+      "address": "UTGq3k7c85agh2JynL4vi6rEQAfmUuM4N1K78iopump",
+      "chain": "solana",
+      "liquidity_usd": 3128.65,
+      "name": "Institutional Oil Fund",
+      "source": "Onchain - bonded, trading on pumpswap",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/solana/82ha2qxhbwn6yehgrsdsidfwfewobbv4m7uguzmxgy3h"
+    },
+    "dex:solana:egccGYSoJ6qo1nmrmxfffBNN8YB2RYQk3AN8B8cpump": {
+      "address": "egccGYSoJ6qo1nmrmxfffBNN8YB2RYQk3AN8B8cpump",
+      "chain": "solana",
+      "liquidity_usd": 325230.86,
+      "name": "Institutional Oil Fund",
+      "source": "Onchain - bonded, trading on pumpswap",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/solana/hbt7f4ifcvvfwtt832yhycvw5qzqw9sd1qyvdfsjghd2"
+    },
+    "dex:solana:gAmaZzYCVQM2apTDBnqRXN6eZyg2KcFu9NhUwP3pump": {
+      "address": "gAmaZzYCVQM2apTDBnqRXN6eZyg2KcFu9NhUwP3pump",
+      "chain": "solana",
+      "liquidity_usd": 2429.35,
+      "name": "IOF",
+      "source": "Onchain - bonded, trading on pumpswap",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/solana/d3awdzpfkwrgfqdwv6mctz5w9xkskafs9yhcb9cfpamg"
+    },
+    "dex:solana:ik9NXZtjppLiS8nhnFFmFM6Yvp17ewjegX4CtXEpump": {
+      "address": "ik9NXZtjppLiS8nhnFFmFM6Yvp17ewjegX4CtXEpump",
+      "chain": "solana",
+      "liquidity_usd": 2643.7,
+      "name": "Institutional Oil Fund",
+      "source": "Onchain - bonded, trading on pumpswap",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/solana/3ekiojcruaqvad1igymnybkq1zz6apgwukuppvm48yqr"
+    }
+  }
+}
