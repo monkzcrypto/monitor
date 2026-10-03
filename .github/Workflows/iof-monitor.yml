@@ -1,0 +1,31 @@
+name: IOF monitor
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"   # every 10 minutes
+  workflow_dispatch:          # adds a "Run workflow" button for testing
+
+permissions:
+  contents: write
+
+concurrency:
+  group: iof-monitor
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check for new IOF tokens
+        env:
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+        run: python3 monitor.py
+
+      - name: Remember what we've already seen
+        run: |
+          git config user.name "iof-monitor"
+          git config user.email "iof-monitor@users.noreply.github.com"
+          git add seen.json
+          git diff --cached --quiet || (git commit -m "Update seen tokens" && git push)
