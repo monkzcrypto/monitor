@@ -12,6 +12,15 @@
       "symbol": "IOF",
       "url": "https://dexscreener.com/base/0x9647c000f3368d656b79a309c77a722ce813391b0469773ba39cd7386eb4a740"
     },
+    "dex:base:0x0E2A6ff589bEd640702F135Cd8663ad84BcF6a82": {
+      "address": "0x0E2A6ff589bEd640702F135Cd8663ad84BcF6a82",
+      "chain": "base",
+      "liquidity_usd": 67029.14,
+      "name": "Institutional Oil Fund",
+      "source": "Onchain - bonded, trading on uniswap",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/base/0x89869e4de3878ec7792d22a636974c9d6998ee35386f292dffa85a41acf5686c"
+    },
     "dex:base:0x0a6c5Ab87Ae9Fee0CC03246fDBB7004A52Ac7117": {
       "address": "0x0a6c5Ab87Ae9Fee0CC03246fDBB7004A52Ac7117",
       "chain": "base",
@@ -183,6 +192,15 @@
       "symbol": "IOF",
       "url": "https://dexscreener.com/solana/4hgnkcrjjm1qjaaajuyamfrdjy8jvmurjdjlw7rnnmzr"
     },
+    "dex:solana:2d7pbufwNHnD4xYEaNpiyk11arZZcZjGh7xybGnnpump": {
+      "address": "2d7pbufwNHnD4xYEaNpiyk11arZZcZjGh7xybGnnpump",
+      "chain": "solana",
+      "liquidity_usd": 2127.39,
+      "name": "IOF",
+      "source": "Onchain - bonded, trading on pumpswap",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/solana/5qezs3bzsz5kxn1pbcr5mhmncrzg8qwetefltxerzc2e"
+    },
     "dex:solana:2sY7rkMCQyFNcSpHm3fciJf2ptYRg3cYpn4srN6Bpump": {
       "address": "2sY7rkMCQyFNcSpHm3fciJf2ptYRg3cYpn4srN6Bpump",
       "chain": "solana",
@@ -245,6 +263,15 @@
       "source": "Onchain - bonded, trading on pumpswap",
       "symbol": "IOF",
       "url": "https://dexscreener.com/solana/7pexk7nkdr5bkkha98tcxt4diutgwjuwx2bedsrdf88t"
+    },
+    "dex:solana:HRmm3gh9GdGXUjiqSedpi4bYHX66p6p2FTTmoNc4pump": {
+      "address": "HRmm3gh9GdGXUjiqSedpi4bYHX66p6p2FTTmoNc4pump",
+      "chain": "solana",
+      "liquidity_usd": 735037.23,
+      "name": "IOF",
+      "source": "Onchain - bonded, trading on pumpswap",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/solana/cm34icqfabhv2jyafzbrrxjmgssjoeukngs3e528bqvz"
     },
     "dex:solana:HfT7CfrT4jMnMDK3Hfw1epuz1vJTqv7W1qXiaDjHpump": {
       "address": "HfT7CfrT4jMnMDK3Hfw1epuz1vJTqv7W1qXiaDjHpump",
