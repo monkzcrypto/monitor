@@ -10,6 +10,10 @@ Sends a phone notification (via the free ntfy app) whenever a token
 matching the name or ticker below has BONDED (graduated off its launchpad's
 bonding curve onto a real exchange) and hasn't been alerted on before.
 A token still on its bonding curve is ignored until it bonds.
+
+For each new fake, it also sends a ready-to-paste scam report plus a button
+that opens the Blockaid report form. The real token below is never alerted
+on or reported.
 """
 
 import datetime
@@ -27,6 +31,11 @@ SEARCH_TERMS = ["IOF", "Institutional Oil Fund"]
 # bonded once it trades somewhere NOT on this list, with real liquidity.
 BONDING_CURVE_DEXES = {"pumpfun", "moonshot", "launchlab", "boop", "believe",
                        "bonk", "letsbonk", "heaven", "jupstudio", "dbc"}
+
+# The REAL token. It is never alerted on and never gets a report drafted.
+LEGIT_CAS = {"2sY7rkMCQyFNcSpHm3fciJf2ptYRg3cYpn4srN6Bpump"}
+
+REPORT_URL = "https://report.blockaid.io/scam"
 # ----------------------------------------------------------------------------
 
 STATE_FILE = "seen.json"
@@ -63,6 +72,8 @@ def check_dexscreener():
             bt = p.get("baseToken") or {}
             if not matches(bt.get("name"), bt.get("symbol")):
                 continue
+            if bt.get("address") in LEGIT_CAS:
+                continue  # never touch the real token
             key = f"dex:{p.get('chainId', '?')}:{bt.get('address', '?')}"
             tokens.setdefault(key, {"info": bt, "pairs": {}})
             tokens[key]["pairs"][p.get("pairAddress") or p.get("url")] = p
@@ -73,6 +84,7 @@ def check_dexscreener():
         if not bonded:
             continue  # still on its bonding curve; check again next run
         best = max(bonded, key=lambda p: (p.get("liquidity") or {}).get("usd") or 0)
+        created = [p.get("pairCreatedAt") for p in t["pairs"].values() if p.get("pairCreatedAt")]
         found[key] = {
             "source": f"Onchain - bonded, trading on {best.get('dexId')}",
             "name": t["info"].get("name"),
@@ -81,6 +93,8 @@ def check_dexscreener():
             "address": t["info"].get("address", "?"),
             "url": best.get("url"),
             "liquidity_usd": (best.get("liquidity") or {}).get("usd"),
+            "created_ms": min(created) if created else None,
+            "reportable": True,
         }
     return found
 
@@ -101,7 +115,7 @@ def check_coinbase_official():
     return found
 
 
-def notify(title, message, click=None, priority=3):
+def notify(title, message, click=None, priority=3, actions=None):
     if not TOPIC:
         print("NTFY_TOPIC secret is missing, so no notification was sent.")
         print(title, "-", message)
@@ -110,6 +124,8 @@ def notify(title, message, click=None, priority=3):
                "priority": priority, "tags": ["oil_drum"]}
     if click:
         payload["click"] = click
+    if actions:
+        payload["actions"] = actions
     req = urllib.request.Request(
         "https://ntfy.sh/", data=json.dumps(payload).encode("utf-8"),
         headers={"Content-Type": "application/json"}, method="POST",
@@ -124,6 +140,60 @@ def describe(t):
             f"Where: {t['source']} - {t['chain']}\n"
             f"Contract: {t['address']}\n"
             f"Liquidity: {liq_text}")
+
+
+def age_text(created_ms):
+    if not created_ms:
+        return "recently"
+    now = datetime.datetime.now(datetime.timezone.utc).timestamp() * 1000
+    minutes = max(0, int((now - created_ms) / 60000))
+    days, rem = divmod(minutes, 1440)
+    hours, mins = divmod(rem, 60)
+    if days:
+        return f"approximately {days} day{'s' if days != 1 else ''} and {hours} hour{'s' if hours != 1 else ''} ago"
+    if hours:
+        return f"approximately {hours} hour{'s' if hours != 1 else ''} and {mins} minute{'s' if mins != 1 else ''} ago"
+    return f"approximately {mins} minute{'s' if mins != 1 else ''} ago"
+
+
+def report_text(t):
+    ca = t["address"]
+    real = next(iter(LEGIT_CAS))
+    return (
+        "I am writing to report a scam token that is impersonating an existing project.\n\n"
+        f"Impersonator (scam) token CA:\n{ca}\n\n"
+        f"Original (legitimate) token CA:\n{real}\n\n"
+        f"The impersonator token was deployed {age_text(t.get('created_ms'))}. "
+        "It is a direct clone of the original Institutional Oil Fund ($IOF) token, using the "
+        "same name, ticker, and profile image. The original token was deployed almost two weeks ago.\n\n"
+        "The deployer of the impersonator token bundled over 95% of the supply and appears to be "
+        "using bots to create fake holders and inflate trading volume. The apparent goal is to rank "
+        "higher in search results on platforms such as Coinbase, deceive buyers into purchasing the "
+        "counterfeit token, and then execute a rug pull.\n\n"
+        "I respectfully request that you investigate and flag this token as soon as possible to "
+        "protect users from losing their funds.\n\n"
+        f"Scam token CA (for reference):\n{ca}\n\n"
+        "Thank you for your time and attention to this matter."
+    )
+
+
+def send_report_alerts(t):
+    chain = str(t.get("chain", "")).capitalize()
+    notify(
+        "Fake $IOF bonded - report it",
+        f"{t['name']} (${t['symbol']}) on {chain}\n"
+        f"CA: {t['address']}\n\n"
+        "Form: Scam > Domain coinbase.com, Address = the scam CA above, "
+        f"Chain {chain}, Wallet Coinbase, Txn hash empty, your email.\n"
+        "Check the holders first: only send if the 95% bundle line is true for this one. "
+        "The next alert is the report text to copy.",
+        click=REPORT_URL, priority=4,
+        actions=[
+            {"action": "view", "label": "Open report form", "url": REPORT_URL},
+            {"action": "view", "label": "View token", "url": t.get("url") or REPORT_URL},
+        ],
+    )
+    notify("Report text (copy this)", report_text(t), priority=3)
 
 
 def main():
@@ -154,7 +224,10 @@ def main():
     else:
         for k in new_keys[:5]:
             t = current[k]
-            notify(f"{SYMBOL_MATCH} token just bonded", describe(t), click=t.get("url"), priority=4)
+            if t.get("reportable"):
+                send_report_alerts(t)
+            else:
+                notify(f"{SYMBOL_MATCH} token just bonded", describe(t), click=t.get("url"), priority=4)
         if len(new_keys) > 5:
             notify(f"{len(new_keys) - 5} more bonded {SYMBOL_MATCH} tokens",
                    "Check DexScreener for the rest.")
