@@ -23,9 +23,9 @@ import urllib.parse
 import urllib.request
 
 # ---- What to look for (you can edit these) ---------------------------------
-NAME_MATCH = "institutional oil fund"  # matched anywhere in the name, any case
-SYMBOL_MATCH = "IOF"                    # exact ticker match
-SEARCH_TERMS = ["IOF", "Institutional Oil Fund"]
+SYMBOL_MATCH = "IOF"                    # REQUIRED: exact ticker match
+NAME_MATCH = "institutional oil fund"   # optional: same name too = double ping
+SEARCH_TERMS = ["IOF", "$IOF", "Institutional Oil Fund", "IOF pump", "IOF solana"]
 
 # DexScreener labels for launchpad bonding curves. A token only counts as
 # bonded once it trades somewhere NOT on this list, with real liquidity.
@@ -39,7 +39,7 @@ REPORT_URL = "https://report.blockaid.io/scam"
 # ----------------------------------------------------------------------------
 
 STATE_FILE = "seen.json"
-MODE = "bonded-v1"
+MODE = "bonded-v2"
 TOPIC = os.environ.get("NTFY_TOPIC", "").strip()
 
 
@@ -52,9 +52,13 @@ def get_json(url):
 
 
 def matches(name, symbol):
-    name = (name or "").lower()
+    """A token counts only if its ticker is IOF. The name is checked separately."""
     symbol = (symbol or "").upper().lstrip("$").strip()
-    return symbol == SYMBOL_MATCH or NAME_MATCH in name
+    return symbol == SYMBOL_MATCH
+
+
+def name_matches(name):
+    return NAME_MATCH in (name or "").lower()
 
 
 def is_bonded_pair(p):
@@ -94,6 +98,7 @@ def check_dexscreener():
             "url": best.get("url"),
             "liquidity_usd": (best.get("liquidity") or {}).get("usd"),
             "created_ms": min(created) if created else None,
+            "name_match": name_matches(t["info"].get("name")),
             "reportable": True,
         }
     return found
@@ -164,8 +169,14 @@ def report_text(t):
         f"Impersonator (scam) token CA:\n{ca}\n\n"
         f"Original (legitimate) token CA:\n{real}\n\n"
         f"The impersonator token was deployed {age_text(t.get('created_ms'))}. "
-        "It is a direct clone of the original Institutional Oil Fund ($IOF) token, using the "
-        "same name, ticker, and profile image. The original token was deployed almost two weeks ago.\n\n"
+        + (
+            "It is a direct clone of the original Institutional Oil Fund ($IOF) token, using the "
+            "same name, ticker, and profile image. "
+            if t.get("name_match") else
+            f"It uses the same $IOF ticker as the original Institutional Oil Fund token "
+            f"(listed under the name \"{t.get('name')}\") to confuse buyers searching for $IOF. "
+        )
+        + "The original token was deployed almost two weeks ago.\n\n"
         "The deployer of the impersonator token bundled over 95% of the supply and appears to be "
         "using bots to create fake holders and inflate trading volume. The apparent goal is to rank "
         "higher in search results on platforms such as Coinbase, deceive buyers into purchasing the "
@@ -179,6 +190,8 @@ def report_text(t):
 
 def send_report_alerts(t):
     chain = str(t.get("chain", "")).capitalize()
+    if t.get("name_match"):
+        notify("SAME NAME + TICKER - full clone", f"{t['name']} (${t['symbol']}) copies the name AND ticker.\nCA: {t['address']}", priority=5)
     notify(
         "Fake $IOF bonded - report it",
         f"{t['name']} (${t['symbol']}) on {chain}\n"
