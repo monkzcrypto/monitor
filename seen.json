@@ -423,6 +423,18 @@
       "symbol": "IOF",
       "url": "https://dexscreener.com/base/0x0cf5ee00189b3f83fa12eefa8dc9682a529953cd60fc2a6e5fd8d427c1e33ef5"
     },
+    "dex:base:0x4324B547F569366a63aEa39Ea0d1C7CC3B427777": {
+      "address": "0x4324B547F569366a63aEa39Ea0d1C7CC3B427777",
+      "chain": "base",
+      "created_ms": 1791150531000,
+      "liquidity_usd": 10383.63,
+      "name": "Institutional Oil Fund",
+      "name_match": true,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on flapsh",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/base/0x7a544229089f9450befe5b83bb502b15d99c8514"
+    },
     "dex:base:0x4446163a079e8d84137acd94fF2781fF2a865BcF": {
       "address": "0x4446163a079e8d84137acd94fF2781fF2a865BcF",
       "chain": "base",
@@ -567,6 +579,18 @@
       "symbol": "IOF",
       "url": "https://dexscreener.com/robinhood/0xd842da1cfee8e2763b51ba8a489dbdb19b1838cc"
     },
+    "dex:robinhood:0xDa5Bd77b8fB52e238C324b6fcb127Eb5Af6D7777": {
+      "address": "0xDa5Bd77b8fB52e238C324b6fcb127Eb5Af6D7777",
+      "chain": "robinhood",
+      "created_ms": 1791150528000,
+      "liquidity_usd": 10383.63,
+      "name": "Institutional Oil Fund",
+      "name_match": true,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on flapsh",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/robinhood/0x89548bbff7ef2ffba0ca29fc9d6e7309713afde6"
+    },
     "dex:solana:12FiD7RUw1y3dgW7wrHrPuQy5hw6HFiQn4Nw5TV3pump": {
       "address": "12FiD7RUw1y3dgW7wrHrPuQy5hw6HFiQn4Nw5TV3pump",
       "chain": "solana",
@@ -626,6 +650,18 @@
       "source": "Onchain - bonded, trading on pumpswap",
       "symbol": "IOF",
       "url": "https://dexscreener.com/solana/ctdh71uf3tydgvue7yebtnbf5tqpvazyc1khiv6um1bi"
+    },
+    "dex:solana:4m52JogFyrXKnRYKn5pFDovjoedF2hJegAEnoWMnpump": {
+      "address": "4m52JogFyrXKnRYKn5pFDovjoedF2hJegAEnoWMnpump",
+      "chain": "solana",
+      "created_ms": 1791150520000,
+      "liquidity_usd": 314205.19,
+      "name": "Institutional Oil Fund",
+      "name_match": true,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on pumpswap",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/solana/9petamqryagyqsjticmfdrczf9tzbt35y4hhnf3k34ic"
     },
     "dex:solana:8BeeSSBNfY84XCBs1LPEixWn5qtTXzfKc3XNamdmpump": {
       "address": "8BeeSSBNfY84XCBs1LPEixWn5qtTXzfKc3XNamdmpump",
