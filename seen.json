@@ -1,5 +1,5 @@
 {
-  "heartbeat": "2026-10-04",
+  "heartbeat": "2026-10-05",
   "initialized": true,
   "mode": "bonded-v2",
   "seen": {
@@ -806,6 +806,18 @@
       "source": "Onchain - bonded, trading on pumpswap",
       "symbol": "IOF",
       "url": "https://dexscreener.com/solana/8yybndbra7vcxvrrtfqk7rpgwtghq17qrgobihkre76s"
+    },
+    "dex:solana:Hiv6TbPHmBfrN5ThyGc48TUjiUnZFJTVev4pxztdpump": {
+      "address": "Hiv6TbPHmBfrN5ThyGc48TUjiUnZFJTVev4pxztdpump",
+      "chain": "solana",
+      "created_ms": 1791158900000,
+      "liquidity_usd": 1226813.66,
+      "name": "IOF",
+      "name_match": false,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on pumpswap",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/solana/2o5jygqyhsryjubzvqn3mf8sdfrc6cwjwtu1frgff8pz"
     },
     "dex:solana:J3DhuoPknFomEQFPNHAawttJ6FJ5pwygu9ib2Bfcpump": {
       "address": "J3DhuoPknFomEQFPNHAawttJ6FJ5pwygu9ib2Bfcpump",
