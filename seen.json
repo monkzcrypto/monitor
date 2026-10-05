@@ -747,6 +747,18 @@
       "symbol": "IOF",
       "url": "https://dexscreener.com/solana/bg2tkpjyvzlgebo5aaecehxmxwyjauyqfbht9nvkhz4o"
     },
+    "dex:solana:BPpn98KJBwW27d2BM7y5sA3xmBafjjhiqQj2BCqkpump": {
+      "address": "BPpn98KJBwW27d2BM7y5sA3xmBafjjhiqQj2BCqkpump",
+      "chain": "solana",
+      "created_ms": 1791161038000,
+      "liquidity_usd": 502723.67,
+      "name": "IOF",
+      "name_match": false,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on pumpswap",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/solana/gwkbdanbbrjvfvetclvrnj5jzuh32799ryhitdm9fkmb"
+    },
     "dex:solana:C8QFtWqrVq2oqBjEEc5ytcfewUwT5Zr3NVHLT8Ugpump": {
       "address": "C8QFtWqrVq2oqBjEEc5ytcfewUwT5Zr3NVHLT8Ugpump",
       "chain": "solana",
