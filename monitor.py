@@ -17,14 +17,16 @@ on or reported.
 """
 
 import datetime
+import re
 import json
 import os
 import urllib.parse
 import urllib.request
 
 # ---- What to look for (you can edit these) ---------------------------------
-SYMBOL_MATCH = "IOF"                    # REQUIRED: exact ticker match
-NAME_MATCH = "institutional oil fund"   # optional: same name too = double ping
+SYMBOL_MATCH = "IOF"                    # any ticker or name CONTAINING this counts
+NAME_MATCH = "institutional oil fund"   # any name containing this (or close spellings) counts
+# Double ping = ticker is exactly IOF AND the name is Institutional Oil Fund.
 SEARCH_TERMS = ["IOF", "$IOF", "Institutional Oil Fund", "IOF pump", "IOF solana"]
 
 # DexScreener labels for launchpad bonding curves. A token only counts as
@@ -39,7 +41,7 @@ REPORT_URL = "https://report.blockaid.io/scam"
 # ----------------------------------------------------------------------------
 
 STATE_FILE = "seen.json"
-MODE = "bonded-v2"
+MODE = "bonded-v4"
 TOPIC = os.environ.get("NTFY_TOPIC", "").strip()
 
 
@@ -51,14 +53,32 @@ def get_json(url):
         return json.load(r)
 
 
-def matches(name, symbol):
-    """A token counts only if its ticker is IOF. The name is checked separately."""
-    symbol = (symbol or "").upper().lstrip("$").strip()
-    return symbol == SYMBOL_MATCH
+def clean_symbol(symbol):
+    return (symbol or "").upper().lstrip("$").strip()
 
 
 def name_matches(name):
-    return NAME_MATCH in (name or "").lower()
+    """Institutional Oil Fund, including spacing tricks and close misspellings."""
+    letters = re.sub(r"[^a-z]", "", (name or "").lower())
+    target = re.sub(r"[^a-z]", "", NAME_MATCH)
+    return target in letters or ("instit" in letters and "oilfund" in letters)
+
+
+def exact_ticker(symbol):
+    return letters_only(symbol) == SYMBOL_MATCH.lower()
+
+
+def letters_only(text):
+    return re.sub(r"[^a-z]", "", (text or "").lower())
+
+
+def matches(name, symbol):
+    """Counts if IOF appears anywhere in the ticker or name (also "I O F", "I.O.F"),
+    or the name is Institutional Oil Fund."""
+    key = SYMBOL_MATCH.lower()
+    return (key in letters_only(symbol)
+            or key in letters_only(name)
+            or name_matches(name))
 
 
 def is_bonded_pair(p):
@@ -98,7 +118,9 @@ def check_dexscreener():
             "url": best.get("url"),
             "liquidity_usd": (best.get("liquidity") or {}).get("usd"),
             "created_ms": min(created) if created else None,
+            "mcap": best.get("marketCap") or best.get("fdv"),
             "name_match": name_matches(t["info"].get("name")),
+            "exact_ticker": exact_ticker(t["info"].get("symbol")),
             "reportable": True,
         }
     return found
@@ -161,44 +183,104 @@ def age_text(created_ms):
     return f"approximately {mins} minute{'s' if mins != 1 else ''} ago"
 
 
+def age_short(created_ms):
+    """e.g. '5 minutes ago (3:42 PM ET, Oct 6)'"""
+    if not created_ms:
+        return "recently"
+    now = datetime.datetime.now(datetime.timezone.utc)
+    minutes = max(0, int((now.timestamp() * 1000 - created_ms) / 60000))
+    days, rem = divmod(minutes, 1440)
+    hours, mins = divmod(rem, 60)
+    parts = []
+    if days:
+        parts.append(f"{days} day{'s' if days != 1 else ''}")
+    if hours:
+        parts.append(f"{hours} hour{'s' if hours != 1 else ''}")
+    if mins or not parts:
+        parts.append(f"{mins} minute{'s' if mins != 1 else ''}")
+    try:
+        from zoneinfo import ZoneInfo
+        local = datetime.datetime.fromtimestamp(created_ms / 1000, ZoneInfo("America/New_York"))
+        clock = local.strftime("%-I:%M %p ET, %b %-d")
+    except Exception:
+        clock = datetime.datetime.fromtimestamp(created_ms / 1000, datetime.timezone.utc).strftime("%H:%M UTC, %b %d")
+    return f"{' and '.join(parts)} ago, at {clock}"
+
+
+def mcap_text(mcap):
+    if not isinstance(mcap, (int, float)) or mcap <= 0:
+        return "an inflated"
+    for size, label in ((1e9, "B"), (1e6, "M"), (1e3, "K")):
+        if mcap >= size:
+            return f"a ${mcap / size:,.1f}{label}".replace(".0" + label, label)
+    return f"a ${mcap:,.0f}"
+
+
+def copied_what(t):
+    if t.get("exact_ticker") and t.get("name_match"):
+        return "ticker, name, and pfp"
+    if t.get("exact_ticker"):
+        return "ticker and pfp"
+    return f"branding (they launched as \"{t.get('name')}\" with the ticker ${t.get('symbol')})"
+
+
 def report_text(t):
     ca = t["address"]
     real = next(iter(LEGIT_CAS))
-    return (
-        "I am writing to report a scam token that is impersonating an existing project.\n\n"
-        f"Impersonator (scam) token CA:\n{ca}\n\n"
-        f"Original (legitimate) token CA:\n{real}\n\n"
-        f"The impersonator token was deployed {age_text(t.get('created_ms'))}. "
-        + (
-            "It is a direct clone of the original Institutional Oil Fund ($IOF) token, using the "
-            "same name, ticker, and profile image. "
-            if t.get("name_match") else
-            f"It uses the same $IOF ticker as the original Institutional Oil Fund token "
-            f"(listed under the name \"{t.get('name')}\") to confuse buyers searching for $IOF. "
+    age = age_short(t.get("created_ms"))
+    mcap = mcap_text(t.get("mcap"))
+    chain = str(t.get("chain", "")).lower()
+
+    if chain == "solana":
+        same = ("same exact ticker and PFP" if t.get("exact_ticker")
+                else "same branding (" + copied_what(t).split("(", 1)[-1])
+        return (
+            "I am writing to report the token with the following CA as a MALICIOUS TOKEN. "
+            f"They bundled to {mcap} market cap, and are wash trading and spoofing their holder "
+            "count in order to rank higher on Coinbase search results than the real token so that "
+            "they can deceive buyers into buying an impersonator token and rugpull them. "
+            f"They are using the {same} as the original token that was deployed over 2 weeks ago "
+            "and it is extremely obvious what they are doing. I urge you to look into this and flag "
+            "them as a MALICIOUS token so that it is reflected in the search of platforms like "
+            "Coinbase and FOMO and people stop getting scammed.\n\n"
+            f"Malicious CA (launched {age}) : {ca}\n\n"
+            f"Original CA (launched over 2 weeks ago) : {real}\n\n"
+            f"And please double check and make sure that the MALICIOUS CA ( {ca} ) is classified "
+            "as MALICIOUS as that is the only way that it actually shows a warning on Coinbase, "
+            "which is where most people are currently getting scammed. Thank you for your help."
         )
-        + "The original token was deployed almost two weeks ago.\n\n"
-        "The deployer of the impersonator token bundled over 95% of the supply and appears to be "
-        "using bots to create fake holders and inflate trading volume. The apparent goal is to rank "
-        "higher in search results on platforms such as Coinbase, deceive buyers into purchasing the "
-        "counterfeit token, and then execute a rug pull.\n\n"
-        "I respectfully request that you investigate and flag this token as soon as possible to "
-        "protect users from losing their funds.\n\n"
-        f"Scam token CA (for reference):\n{ca}\n\n"
-        "Thank you for your time and attention to this matter."
+
+    chain_name = "BASE" if chain == "base" else chain.upper()
+    return (
+        f"I am writing to report the following CA on {chain_name} chain as a MALICIOUS token -\n\n"
+        f"{ca}\n\n"
+        f"They deployed {age}, and are already at {mcap} market cap, directly copying the "
+        f"{copied_what(t)} of the original token that was deployed over 2 weeks ago. They do this in "
+        "order to rank higher on platforms' search, for example Coinbase. They wait for people to "
+        "buy their token thinking it is the original and then they rugpull. Please flag this CA as "
+        "MALICIOUS as that is the only flag that will remove it from Coinbase search and keep "
+        "users safe.\n\n"
+        "For reference, here is the ORIGINAL CA deployed over 2 weeks ago -\n\n"
+        f"{real}\n\n"
+        "Once again, the MALICIOUS CA is -\n\n"
+        f"{ca}\n\n"
+        "Please flag it as MALICIOUS so that people don't get scammed. Thank you"
     )
 
 
 def send_report_alerts(t):
     chain = str(t.get("chain", "")).capitalize()
-    if t.get("name_match"):
+    exact = t.get("exact_ticker")
+    if t.get("name_match") and exact:
         notify("SAME NAME + TICKER - full clone", f"{t['name']} (${t['symbol']}) copies the name AND ticker.\nCA: {t['address']}", priority=5)
     notify(
-        "Fake $IOF bonded - report it",
+        "Fake $IOF bonded - report it" if exact else "IOF-related token bonded - check it",
         f"{t['name']} (${t['symbol']}) on {chain}\n"
         f"CA: {t['address']}\n\n"
         "Form: Scam > Domain coinbase.com, Address = the scam CA above, "
         f"Chain {chain}, Wallet Coinbase, Txn hash empty, your email.\n"
-        "Check the holders first: only send if the 95% bundle line is true for this one. "
+        + ("" if exact else "This one only CONTAINS IOF, so make sure it's really posing as $IOF before reporting. ")
+        + "Quick check before sending: make sure the bundling/copying claims fit this one. "
         "The next alert is the report text to copy.",
         click=REPORT_URL, priority=4,
         actions=[
@@ -256,3 +338,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
