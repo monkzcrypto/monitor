@@ -723,6 +723,18 @@
       "symbol": "IOF",
       "url": "https://dexscreener.com/robinhood/0xe6e394aac39db3edfd8c9581d9e75de5ce3d0dd2"
     },
+    "dex:robinhood:0x5225BEC7237d45B9853dF13bB1f6AD19FD997777": {
+      "address": "0x5225BEC7237d45B9853dF13bB1f6AD19FD997777",
+      "chain": "robinhood",
+      "created_ms": 1791250496000,
+      "liquidity_usd": 10423.36,
+      "name": "IOF",
+      "name_match": false,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on flapsh",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/robinhood/0x41e07feec0d10b42e614af6995c66e8fa9c457fc"
+    },
     "dex:robinhood:0xBbCb50df879b9dfbeB4DdDD4900f6c39e97F7777": {
       "address": "0xBbCb50df879b9dfbeB4DdDD4900f6c39e97F7777",
       "chain": "robinhood",
@@ -1190,6 +1202,18 @@
       "source": "Onchain - bonded, trading on pumpswap",
       "symbol": "IOF",
       "url": "https://dexscreener.com/solana/ei5nv1qtsqbgiiymeaiwsbzh3ojdafhsrijyb79s65s1"
+    },
+    "dex:solana:yoY7UEbsdU8eCs2chvphQR1bCjDjZrZaKqeQWJypump": {
+      "address": "yoY7UEbsdU8eCs2chvphQR1bCjDjZrZaKqeQWJypump",
+      "chain": "solana",
+      "created_ms": 1791250488000,
+      "liquidity_usd": 1225087.57,
+      "name": "IOF",
+      "name_match": false,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on pumpswap",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/solana/6jthwnk2kde5vt7tu9utg4tagwj54g2vjufup1ryv6gw"
     }
   }
 }
