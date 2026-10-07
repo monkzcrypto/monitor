@@ -85,9 +85,11 @@ def matches(name, symbol):
     """Counts if IOF appears anywhere in the ticker or name (also "I O F", "I.O.F"),
     or the name is Institutional Oil Fund."""
     key = SYMBOL_MATCH.lower()
-    return (key in letters_only(symbol)
-            or key in letters_only(name)
-            or name_matches(name))
+    n = name or ""
+    return (key in letters_only(symbol)              # ticker: IOF anywhere, I O F, I.O.F
+            or SYMBOL_MATCH in n                     # name: capital IOF anywhere
+            or re.search(r"(?i)(?<![a-z])i[\s.\-_/]*o[\s.\-_/]*f(?![a-z])", n)  # name: iof / I O F as its own word
+            or name_matches(n))
 
 
 def is_bonded_pair(p):
@@ -464,6 +466,12 @@ def main():
                     current[k]["created_ms"] = v["created_ms"]  # keep the earliest launch time
         except Exception as e:  # one source failing shouldn't stop the others
             print(f"{checker.__name__} failed: {e}")
+
+    # Keep alerts readable: shorten absurdly long token names.
+    for v in current.values():
+        nm = str(v.get("name") or "")
+        if len(nm) > 60:
+            v["name"] = nm[:57] + "..."
 
     new_keys = [k for k in current if k not in state["seen"]]
 
