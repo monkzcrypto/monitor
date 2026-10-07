@@ -18,6 +18,7 @@ on or reported.
 
 import datetime
 import re
+import time
 import json
 import os
 import urllib.parse
@@ -32,7 +33,15 @@ SEARCH_TERMS = ["IOF", "$IOF", "Institutional Oil Fund", "IOF pump", "IOF solana
 # DexScreener labels for launchpad bonding curves. A token only counts as
 # bonded once it trades somewhere NOT on this list, with real liquidity.
 BONDING_CURVE_DEXES = {"pumpfun", "moonshot", "launchlab", "boop", "believe",
-                       "bonk", "letsbonk", "heaven", "jupstudio", "dbc"}
+                       "bonk", "letsbonk", "heaven", "jupstudio", "dbc",
+                       # GeckoTerminal's names for the same launchpads
+                       "pump-fun", "pump_fun", "raydium-launchlab", "meteora-dbc",
+                       "boop-fun", "moonshot-solana", "believe-app", "letsbonk-fun"}
+
+# Extra places to look, so new tokens can't get crowded out of one search.
+GECKO_NETWORKS = ["solana", "base"]
+GECKO_TERMS = ["IOF", "Institutional Oil Fund"]
+QUOTE_SYMBOLS = {"SOL", "WSOL", "WETH", "ETH", "USDC", "USDT", "VIRTUAL", "ZORA", "CLANKER"}
 
 # The REAL token. It is never alerted on and never gets a report drafted.
 LEGIT_CAS = {"2sY7rkMCQyFNcSpHm3fciJf2ptYRg3cYpn4srN6Bpump"}
@@ -123,6 +132,116 @@ def check_dexscreener():
             "exact_ticker": exact_ticker(t["info"].get("symbol")),
             "reportable": True,
         }
+    return found
+
+
+def token_entry(source, name, symbol, chain, address, url, liq, created_ms, mcap):
+    return {
+        "source": source, "name": name, "symbol": symbol, "chain": chain,
+        "address": address, "url": url, "liquidity_usd": liq,
+        "created_ms": created_ms, "mcap": mcap,
+        "name_match": name_matches(name), "exact_ticker": exact_ticker(symbol),
+        "reportable": True,
+    }
+
+
+def iso_to_ms(text):
+    try:
+        return datetime.datetime.fromisoformat(text.replace("Z", "+00:00")).timestamp() * 1000
+    except Exception:
+        return None
+
+
+def as_number(x):
+    try:
+        return float(x)
+    except (TypeError, ValueError):
+        return None
+
+
+def check_geckoterminal():
+    """GeckoTerminal's free official API: searches Solana and Base pools."""
+    found = {}
+    for network in GECKO_NETWORKS:
+        for term in GECKO_TERMS:
+            for page in (1, 2):
+                url = ("https://api.geckoterminal.com/api/v2/search/pools?query="
+                       + urllib.parse.quote(term) + f"&network={network}&page={page}"
+                       + "&include=base_token,quote_token,dex")
+                req = urllib.request.Request(url, headers={
+                    "User-Agent": "iof-monitor/1.0",
+                    "Accept": "application/json;version=20230302"})
+                with urllib.request.urlopen(req, timeout=30) as r:
+                    data = json.load(r)
+                time.sleep(2.5)  # stay under the free rate limit
+                tokens = {i["id"]: i.get("attributes", {})
+                          for i in data.get("included", []) if i.get("type") == "token"}
+                pools = data.get("data") or []
+                for pool in pools:
+                    attr = pool.get("attributes", {})
+                    rel = pool.get("relationships", {})
+                    dex = ((rel.get("dex") or {}).get("data") or {}).get("id", "")
+                    liq = as_number(attr.get("reserve_in_usd")) or 0
+                    if dex.lower() in BONDING_CURVE_DEXES or liq <= 0:
+                        continue  # not bonded yet
+                    for side in ("base_token", "quote_token"):
+                        tid = ((rel.get(side) or {}).get("data") or {}).get("id")
+                        tok = tokens.get(tid) or {}
+                        sym, name, addr = tok.get("symbol"), tok.get("name"), tok.get("address")
+                        if not addr or (sym or "").upper() in QUOTE_SYMBOLS:
+                            continue
+                        if addr in LEGIT_CAS or not matches(name, sym):
+                            continue
+                        key = f"dex:{network}:{addr}"
+                        created = iso_to_ms(attr.get("pool_created_at") or "")
+                        mcap = as_number(attr.get("market_cap_usd")) or as_number(attr.get("fdv_usd"))
+                        old = found.get(key)
+                        if old and (old.get("liquidity_usd") or 0) >= liq:
+                            continue
+                        found[key] = token_entry(
+                            f"Onchain - bonded, trading on {dex} (GeckoTerminal)", name, sym,
+                            network, addr,
+                            f"https://www.geckoterminal.com/{network}/pools/{attr.get('address')}",
+                            liq, created, mcap)
+                if len(pools) < 20:
+                    break  # no more pages
+    return found
+
+
+def check_pumpfun():
+    """Bonus source: pump.fun's unofficial website data. If pump.fun blocks it
+    or changes it, this is skipped and the other sources keep working."""
+    urls = []
+    for term in GECKO_TERMS:
+        q = urllib.parse.quote(term)
+        urls += [
+            f"https://frontend-api-v3.pump.fun/coins?searchTerm={q}&offset=0&limit=50"
+            "&sort=created_timestamp&order=DESC&includeNsfw=true",
+            f"https://frontend-api-v3.pump.fun/coins/search?searchTerm={q}&offset=0&limit=50"
+            "&sort=created_timestamp&order=DESC&includeNsfw=true",
+        ]
+    found, worked = {}, False
+    for url in urls:
+        try:
+            data = get_json(url)
+        except Exception:
+            continue
+        worked = True
+        coins = data if isinstance(data, list) else (data.get("coins") or data.get("data") or [])
+        for c in coins:
+            if not isinstance(c, dict) or not c.get("complete"):
+                continue  # only bonded coins
+            mint, name, sym = c.get("mint"), c.get("name"), c.get("symbol")
+            if not mint or mint in LEGIT_CAS or not matches(name, sym):
+                continue
+            created = c.get("created_timestamp")
+            found[f"dex:solana:{mint}"] = token_entry(
+                "Onchain - bonded (pump.fun)", name, sym, "solana", mint,
+                f"https://pump.fun/coin/{mint}", None,
+                created if isinstance(created, (int, float)) else None,
+                as_number(c.get("usd_market_cap")))
+    if not worked:
+        print("pump.fun was unreachable this run (skipped)")
     return found
 
 
@@ -301,13 +420,31 @@ def main():
         state = {"mode": MODE, "initialized": False, "seen": {}}
 
     current = {}
-    for checker in (check_dexscreener, check_coinbase_official):
+    for checker in (check_dexscreener, check_geckoterminal, check_pumpfun, check_coinbase_official):
         try:
-            current.update(checker())
-        except Exception as e:  # one source failing shouldn't stop the other
+            results = checker()
+            print(f"{checker.__name__}: {len(results)} matches")
+            for k, v in results.items():
+                if k not in current:
+                    current[k] = v
+                elif v.get("created_ms") and (not current[k].get("created_ms")
+                                              or v["created_ms"] < current[k]["created_ms"]):
+                    current[k]["created_ms"] = v["created_ms"]  # keep the earliest launch time
+        except Exception as e:  # one source failing shouldn't stop the others
             print(f"{checker.__name__} failed: {e}")
 
     new_keys = [k for k in current if k not in state["seen"]]
+
+    # One-time catch-up when the extra sources are first added: tokens they find
+    # that launched more than 6 hours ago are filed quietly instead of pinging.
+    if state.get("initialized") and not state.get("sources_v2"):
+        cutoff = (time.time() - 6 * 3600) * 1000
+        quiet = [k for k in new_keys if (current[k].get("created_ms") or 0) < cutoff]
+        for k in quiet:
+            state["seen"][k] = current[k]
+        new_keys = [k for k in new_keys if k not in quiet]
+        print(f"Catch-up: filed {len(quiet)} older tokens quietly")
+    state["sources_v2"] = True
     print(f"Matches found now: {len(current)}, new: {len(new_keys)}")
 
     if not state.get("initialized"):
@@ -338,4 +475,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
