@@ -1078,6 +1078,21 @@
       "symbol": "DARIO",
       "url": "https://dexscreener.com/solana/2babvjoscs34lz8yabthyrtapghynd2ytpftbdthluf6"
     },
+    "dex:solana:HRmm3gh9GdGXUjiqSedpi4bYHX66p6p2FTTmoNc4pump": {
+      "address": "HRmm3gh9GdGXUjiqSedpi4bYHX66p6p2FTTmoNc4pump",
+      "bonded_ms": 1791007102000,
+      "chain": "solana",
+      "created_ms": 1791007102000,
+      "exact_ticker": true,
+      "liquidity_usd": 2599.6,
+      "mcap": 2600,
+      "name": "IOF",
+      "name_match": false,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on pumpswap",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/solana/cm34icqfabhv2jyafzbrrxjmgssjoeukngs3e528bqvz"
+    },
     "dex:solana:Hiv6TbPHmBfrN5ThyGc48TUjiUnZFJTVev4pxztdpump": {
       "address": "Hiv6TbPHmBfrN5ThyGc48TUjiUnZFJTVev4pxztdpump",
       "bonded_ms": 1791158900000,
