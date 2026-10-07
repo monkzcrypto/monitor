@@ -47,6 +47,11 @@ QUOTE_SYMBOLS = {"SOL", "WSOL", "WETH", "ETH", "USDC", "USDT", "VIRTUAL", "ZORA"
 LEGIT_CAS = {"2sY7rkMCQyFNcSpHm3fciJf2ptYRg3cYpn4srN6Bpump"}
 
 REPORT_URL = "https://report.blockaid.io/scam"
+
+# Only ping for tokens that bonded within this many minutes (i.e. "right when it bonds").
+# Anything older that shows up for the first time is filed quietly, no ping.
+BOND_WINDOW_MINUTES = 60
+ALERT_CHAINS = {"solana", "base"}
 # ----------------------------------------------------------------------------
 
 STATE_FILE = "seen.json"
@@ -120,6 +125,7 @@ def check_dexscreener():
             continue  # still on its bonding curve; check again next run
         best = max(bonded, key=lambda p: (p.get("liquidity") or {}).get("usd") or 0)
         created = [p.get("pairCreatedAt") for p in t["pairs"].values() if p.get("pairCreatedAt")]
+        bonded_at = [p.get("pairCreatedAt") for p in bonded if p.get("pairCreatedAt")]
         found[key] = {
             "source": f"Onchain - bonded, trading on {best.get('dexId')}",
             "name": t["info"].get("name"),
@@ -129,6 +135,7 @@ def check_dexscreener():
             "url": best.get("url"),
             "liquidity_usd": (best.get("liquidity") or {}).get("usd"),
             "created_ms": min(created) if created else None,
+            "bonded_ms": min(bonded_at) if bonded_at else None,
             "mcap": best.get("marketCap") or best.get("fdv"),
             "name_match": name_matches(t["info"].get("name")),
             "exact_ticker": exact_ticker(t["info"].get("symbol")),
@@ -137,8 +144,9 @@ def check_dexscreener():
     return found
 
 
-def token_entry(source, name, symbol, chain, address, url, liq, created_ms, mcap):
+def token_entry(source, name, symbol, chain, address, url, liq, created_ms, mcap, bonded_ms=None):
     return {
+        "bonded_ms": bonded_ms,
         "source": source, "name": name, "symbol": symbol, "chain": chain,
         "address": address, "url": url, "liquidity_usd": liq,
         "created_ms": created_ms, "mcap": mcap,
@@ -209,7 +217,7 @@ def check_geckoterminal():
                             f"Onchain - bonded, trading on {dex} (GeckoTerminal)", name, sym,
                             network, addr,
                             f"https://www.geckoterminal.com/{network}/pools/{attr.get('address')}",
-                            liq, created, mcap)
+                            liq, created, mcap, bonded_ms=created)
                 if len(pools) < 20:
                     break  # no more pages
     return found
@@ -422,26 +430,17 @@ def report_text(t):
 
 
 def send_report_alerts(t):
-    chain = str(t.get("chain", "")).capitalize()
-    exact = t.get("exact_ticker")
-    if t.get("name_match") and exact:
-        notify("SAME NAME + TICKER - full clone", f"{t['name']} (${t['symbol']}) copies the name AND ticker.\nCA: {t['address']}", priority=5)
+    """One ping per bonded token: just your Solana or Base report script."""
+    chain = "Solana" if str(t.get("chain")).lower() == "solana" else "Base"
     notify(
-        "Fake $IOF bonded - report it" if exact else "IOF-related token bonded - check it",
-        f"{t['name']} (${t['symbol']}) on {chain}\n"
-        f"CA: {t['address']}\n\n"
-        "Form: Scam > Domain coinbase.com, Address = the scam CA above, "
-        f"Chain {chain}, Wallet Coinbase, Txn hash empty, your email.\n"
-        + ("" if exact else "This one only CONTAINS IOF, so make sure it's really posing as $IOF before reporting. ")
-        + "Quick check before sending: make sure the bundling/copying claims fit this one. "
-        "The next alert is the report text to copy.",
+        f"{chain} $IOF bonded - report it",
+        report_text(t),
         click=REPORT_URL, priority=4,
         actions=[
             {"action": "view", "label": "Open report form", "url": REPORT_URL},
             {"action": "view", "label": "View token", "url": t.get("url") or REPORT_URL},
         ],
     )
-    notify("Report text (copy this)", report_text(t), priority=3)
 
 
 def main():
@@ -461,9 +460,10 @@ def main():
             for k, v in results.items():
                 if k not in current:
                     current[k] = v
-                elif v.get("created_ms") and (not current[k].get("created_ms")
-                                              or v["created_ms"] < current[k]["created_ms"]):
-                    current[k]["created_ms"] = v["created_ms"]  # keep the earliest launch time
+                else:
+                    for field in ("created_ms", "bonded_ms"):  # keep the earliest times
+                        if v.get(field) and (not current[k].get(field) or v[field] < current[k][field]):
+                            current[k][field] = v[field]
         except Exception as e:  # one source failing shouldn't stop the others
             print(f"{checker.__name__} failed: {e}")
 
@@ -474,44 +474,37 @@ def main():
             v["name"] = nm[:57] + "..."
 
     new_keys = [k for k in current if k not in state["seen"]]
+    now_ms = time.time() * 1000
+    window_ms = BOND_WINDOW_MINUTES * 60 * 1000
 
-    # Flood guard: if lots of "new" tokens appear at once (a source came back
-    # after being down, or a fresh start), only ping for ones launched in the
-    # last 6 hours and file older ones quietly.
-    if state.get("initialized") and (not state.get("sources_v2") or len(new_keys) > 8):
-        cutoff = (time.time() - 6 * 3600) * 1000
-        quiet = [k for k in new_keys if (current[k].get("created_ms") or 0) < cutoff]
-        for k in quiet:
-            state["seen"][k] = current[k]
-        new_keys = [k for k in new_keys if k not in quiet]
-        print(f"Catch-up: filed {len(quiet)} older tokens quietly")
-    state["sources_v2"] = True
-    print(f"Matches found now: {len(current)}, new: {len(new_keys)}")
-
-    if not state.get("initialized"):
-        names = ", ".join(sorted({f"{t['name']} on {t['chain']}" for t in current.values()})[:5])
-        notify("IOF monitor is on (bonded only)",
-               f"Watching for newly bonded tokens. Already bonded matches: {len(current)}."
-               + (f"\nExamples: {names}" if names else ""))
-        state["initialized"] = True
-    else:
-        # Save first, so a failed alert can never make the same tokens repeat forever.
-        for k in new_keys:
-            state["seen"][k] = current[k]
-        with open(STATE_FILE, "w") as f:
-            json.dump(state, f, indent=2, sort_keys=True)
-        for k in new_keys[:5]:
-            t = current[k]
-            if t.get("reportable"):
-                send_report_alerts(t)
-            else:
-                notify(f"{SYMBOL_MATCH} token just bonded", describe(t), click=t.get("url"), priority=4)
-        if len(new_keys) > 5:
-            notify(f"{len(new_keys) - 5} more bonded {SYMBOL_MATCH} tokens",
-                   "Check DexScreener for the rest.")
-
+    to_alert, quiet, waiting = [], [], []
     for k in new_keys:
+        t = current[k]
+        bonded = t.get("bonded_ms")
+        if not bonded:
+            waiting.append(k)  # bond time unknown yet (pump.fun only): check again next run
+            continue
+        fresh = now_ms - bonded <= window_ms
+        if (state.get("initialized") and fresh and t.get("reportable")
+                and str(t.get("chain")).lower() in ALERT_CHAINS):
+            to_alert.append(k)
+        else:
+            quiet.append(k)
+    print(f"Matches found now: {len(current)}, new: {len(new_keys)}, "
+          f"just bonded (pinging): {len(to_alert)}, older (filed quietly): {len(quiet)}, "
+          f"waiting: {len(waiting)}")
+    state["initialized"] = True
+    state["sources_v2"] = True
+
+    # Save first, so a failed alert can never make the same tokens repeat forever.
+    for k in to_alert + quiet:
         state["seen"][k] = current[k]
+    with open(STATE_FILE, "w") as f:
+        json.dump(state, f, indent=2, sort_keys=True)
+
+    for k in to_alert:
+        send_report_alerts(current[k])
+
     # Changes once a day so GitHub sees activity and keeps the schedule running.
     state["heartbeat"] = datetime.date.today().isoformat()
 
