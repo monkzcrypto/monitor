@@ -46,6 +46,21 @@
       "symbol": "IOF",
       "url": "https://www.geckoterminal.com/base/pools/0x0ad66dacf1702933d04cd2c7dd52bbac5de92fde787affc5b30c1487e6bbe385"
     },
+    "dex:base:0x0Af45aFFf3aDFFb4CF2C52AACe99dcb8E0159587": {
+      "address": "0x0Af45aFFf3aDFFb4CF2C52AACe99dcb8E0159587",
+      "bonded_ms": 1791366815000,
+      "chain": "base",
+      "created_ms": 1791366815000,
+      "exact_ticker": true,
+      "liquidity_usd": 67060.18,
+      "mcap": 852878404,
+      "name": "Institutional Oil Fund",
+      "name_match": true,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on uniswap",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/base/0x208f70bc4841ec8be47c4c65eecb6eaec03116018534237cb05fc7b7940c3797"
+    },
     "dex:base:0x14520ade3Ce3184c11F49072466ea12C6Ab3F38f": {
       "address": "0x14520ade3Ce3184c11F49072466ea12C6Ab3F38f",
       "bonded_ms": 1791326559000,
@@ -1036,6 +1051,21 @@
       "source": "Onchain - bonded, trading on pumpswap",
       "symbol": "IOF",
       "url": "https://dexscreener.com/solana/3vhq6z7acuh5nv6wbwf8udv2qlxwhxdfn85eqfim468b"
+    },
+    "dex:solana:FTNTsRxUMaVaKLHYaEZcZnhY3qEd4m7Q4ekp8TShBAGS": {
+      "address": "FTNTsRxUMaVaKLHYaEZcZnhY3qEd4m7Q4ekp8TShBAGS",
+      "bonded_ms": 1790823998000.0,
+      "chain": "solana",
+      "created_ms": 1790823998000.0,
+      "exact_ticker": true,
+      "liquidity_usd": 67960.8724,
+      "mcap": 67952.78961,
+      "name": "Institutional Oil Fund",
+      "name_match": true,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on bags-fm (GeckoTerminal)",
+      "symbol": "IOF",
+      "url": "https://www.geckoterminal.com/solana/pools/FdFcWZvwqAH4YuhrD1PrEcQK9nWerJ2fsNMd8BhW4VT1"
     },
     "dex:solana:FgQZ2k8pyg45xrfVzK1sAgr34tpb8xXJbsLgkfqTpump": {
       "address": "FgQZ2k8pyg45xrfVzK1sAgr34tpb8xXJbsLgkfqTpump",
