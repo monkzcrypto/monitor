@@ -164,16 +164,21 @@ def check_geckoterminal():
     found = {}
     for network in GECKO_NETWORKS:
         for term in GECKO_TERMS:
-            for page in (1, 2):
+            for page in (1,):
                 url = ("https://api.geckoterminal.com/api/v2/search/pools?query="
                        + urllib.parse.quote(term) + f"&network={network}&page={page}"
                        + "&include=base_token,quote_token,dex")
                 req = urllib.request.Request(url, headers={
                     "User-Agent": "iof-monitor/1.0",
                     "Accept": "application/json;version=20230302"})
-                with urllib.request.urlopen(req, timeout=30) as r:
-                    data = json.load(r)
-                time.sleep(2.5)  # stay under the free rate limit
+                try:
+                    with urllib.request.urlopen(req, timeout=30) as r:
+                        data = json.load(r)
+                except Exception as e:
+                    print(f"GeckoTerminal skipped {network} '{term}': {e}")
+                    time.sleep(3)
+                    continue  # rate-limited or down: keep what we have so far
+                time.sleep(3)  # stay under the free rate limit
                 tokens = {i["id"]: i.get("attributes", {})
                           for i in data.get("included", []) if i.get("type") == "token"}
                 pools = data.get("data") or []
@@ -262,6 +267,27 @@ def check_coinbase_official():
 
 
 def notify(title, message, click=None, priority=3, actions=None):
+    # ntfy rejects big messages (HTTP 413), so long ones are sent in parts.
+    limit = 3000
+    if len(message.encode("utf-8")) > limit:
+        parts, chunk = [], ""
+        for para in message.split("\n\n"):
+            piece = (chunk + "\n\n" + para) if chunk else para
+            if len(piece.encode("utf-8")) > limit and chunk:
+                parts.append(chunk)
+                chunk = para
+            else:
+                chunk = piece
+        parts.append(chunk)
+        ok = True
+        for i, part in enumerate(parts, 1):
+            ok = send_one(f"{title} ({i}/{len(parts)})", part[:limit * 2 // 3] if len(part.encode("utf-8")) > limit else part,
+                          click if i == 1 else None, priority, actions if i == 1 else None) and ok
+        return ok
+    return send_one(title, message, click, priority, actions)
+
+
+def send_one(title, message, click=None, priority=3, actions=None):
     if not TOPIC:
         print("NTFY_TOPIC secret is missing, so no notification was sent.")
         print(title, "-", message)
@@ -276,7 +302,13 @@ def notify(title, message, click=None, priority=3, actions=None):
         "https://ntfy.sh/", data=json.dumps(payload).encode("utf-8"),
         headers={"Content-Type": "application/json"}, method="POST",
     )
-    urllib.request.urlopen(req, timeout=30).read()
+    try:
+        urllib.request.urlopen(req, timeout=30).read()
+        time.sleep(1)  # space alerts out so ntfy doesn't rate-limit them
+        return True
+    except Exception as e:
+        print(f"Alert failed to send ({title}): {e}")
+        return False
 
 
 def describe(t):
@@ -435,9 +467,10 @@ def main():
 
     new_keys = [k for k in current if k not in state["seen"]]
 
-    # One-time catch-up when the extra sources are first added: tokens they find
-    # that launched more than 6 hours ago are filed quietly instead of pinging.
-    if state.get("initialized") and not state.get("sources_v2"):
+    # Flood guard: if lots of "new" tokens appear at once (a source came back
+    # after being down, or a fresh start), only ping for ones launched in the
+    # last 6 hours and file older ones quietly.
+    if state.get("initialized") and (not state.get("sources_v2") or len(new_keys) > 8):
         cutoff = (time.time() - 6 * 3600) * 1000
         quiet = [k for k in new_keys if (current[k].get("created_ms") or 0) < cutoff]
         for k in quiet:
@@ -454,6 +487,11 @@ def main():
                + (f"\nExamples: {names}" if names else ""))
         state["initialized"] = True
     else:
+        # Save first, so a failed alert can never make the same tokens repeat forever.
+        for k in new_keys:
+            state["seen"][k] = current[k]
+        with open(STATE_FILE, "w") as f:
+            json.dump(state, f, indent=2, sort_keys=True)
         for k in new_keys[:5]:
             t = current[k]
             if t.get("reportable"):
