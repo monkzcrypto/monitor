@@ -955,6 +955,21 @@
       "symbol": "IOF",
       "url": "https://dexscreener.com/solana/3okvxwy52q5nsqpvwvyowfyebgnxzbxazuq7afzaubez"
     },
+    "dex:solana:3Fo7AwpnrX8wFfST7pRUoxdMkjkjHUU3uRezGem4pump": {
+      "address": "3Fo7AwpnrX8wFfST7pRUoxdMkjkjHUU3uRezGem4pump",
+      "bonded_ms": 1790776329000.0,
+      "chain": "solana",
+      "created_ms": 1790776329000.0,
+      "exact_ticker": true,
+      "liquidity_usd": 2089.1165,
+      "mcap": 2115.1529384369,
+      "name": "Institutional Oil Fund",
+      "name_match": true,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on pumpswap (GeckoTerminal)",
+      "symbol": "IOF",
+      "url": "https://www.geckoterminal.com/solana/pools/Exe3rfYPGhapP2H5xNSdJ8VnYWxG6cDv4v2auKvZwTTH"
+    },
     "dex:solana:3TZHhABqHS4sMSVZnfgQ4uVQFUQsUACBdjoXKpeTpump": {
       "address": "3TZHhABqHS4sMSVZnfgQ4uVQFUQsUACBdjoXKpeTpump",
       "chain": "solana",
