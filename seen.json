@@ -431,6 +431,21 @@
       "symbol": "IOF",
       "url": "https://dexscreener.com/base/0x758e54b28ae18dffbb7f253cfa83637f4b19c8d62f881916d88812921076e973"
     },
+    "dex:base:0x63fce07102ef4ab1a4a2b7ae0c0469f66bcbd247": {
+      "address": "0x63fce07102ef4ab1a4a2b7ae0c0469f66bcbd247",
+      "bonded_ms": 1791198389000.0,
+      "chain": "base",
+      "created_ms": 1791198389000.0,
+      "exact_ticker": true,
+      "liquidity_usd": 182458.1496,
+      "mcap": 195528.851,
+      "name": "Institutional Oil Fund (WETH)",
+      "name_match": true,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on uniswap-v4-base (GeckoTerminal)",
+      "symbol": "IOF",
+      "url": "https://www.geckoterminal.com/base/pools/0x758e54b28ae18dffbb7f253cfa83637f4b19c8d62f881916d88812921076e973"
+    },
     "dex:base:0x7789e85Fc936CC23016D01Be6E0e2bE29C301F75": {
       "address": "0x7789e85Fc936CC23016D01Be6E0e2bE29C301F75",
       "chain": "base",
