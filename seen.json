@@ -1223,6 +1223,21 @@
       "symbol": "IOF",
       "url": "https://dexscreener.com/solana/eq23hxiv68ue5afqfdzncxdead9uswaqgx8qjqafos8g"
     },
+    "dex:solana:nfjQVkuF5FVLYbgegH3kyLWbV5SaKXHLuumF26xpump": {
+      "address": "nfjQVkuF5FVLYbgegH3kyLWbV5SaKXHLuumF26xpump",
+      "bonded_ms": 1791163477000.0,
+      "chain": "solana",
+      "created_ms": 1791163477000.0,
+      "exact_ticker": true,
+      "liquidity_usd": 370677306.182,
+      "mcap": 2310.3697792587,
+      "name": "IOF",
+      "name_match": false,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on pumpswap (GeckoTerminal)",
+      "symbol": "IOF",
+      "url": "https://www.geckoterminal.com/solana/pools/DFcSretELzMveTiy7bA3zUSksp6hjRmWMYPzHAKEiG4S"
+    },
     "dex:solana:pUuEmX3Uex66fhwboHo9gBoyMMYG3LdZpBNGhLvpump": {
       "address": "pUuEmX3Uex66fhwboHo9gBoyMMYG3LdZpBNGhLvpump",
       "chain": "solana",
