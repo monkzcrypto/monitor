@@ -309,6 +309,21 @@
       "symbol": "Institutional Oil Fund",
       "url": "https://www.geckoterminal.com/base/pools/0x99a981405cd09c0278619ca004707c63205c70a51990041615348927c135533e"
     },
+    "dex:base:0x2e07e051de76429ec4bc4c2b27ef496f853a8806": {
+      "address": "0x2e07e051de76429ec4bc4c2b27ef496f853a8806",
+      "bonded_ms": 1788520973000.0,
+      "chain": "base",
+      "created_ms": 1788520973000.0,
+      "exact_ticker": false,
+      "liquidity_usd": 77958.7553,
+      "mcap": 73664.46369,
+      "name": "Israel Oil Fund Asset",
+      "name_match": false,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on uniswap-v4-base (GeckoTerminal)",
+      "symbol": "IOFA",
+      "url": "https://www.geckoterminal.com/base/pools/0x73733678f59969a4155d4be0c678e2f03874e039cc7ff2bf4a9309995fb6b4bd"
+    },
     "dex:base:0x2e5Ec440934758B3f2286213531A45454e07bDe8": {
       "address": "0x2e5Ec440934758B3f2286213531A45454e07bDe8",
       "bonded_ms": 1790984847000,
@@ -641,6 +656,21 @@
       "source": "Onchain - bonded, trading on uniswap-v4-base (GeckoTerminal)",
       "symbol": "IOF",
       "url": "https://www.geckoterminal.com/base/pools/0x6abd2764292c60f63f26adf9b1c1cf9d0b0789aa2ab5a1d96f756861723a988c"
+    },
+    "dex:base:0x604d50011a991e7a25e62c9e1c8d0d4848a527d6": {
+      "address": "0x604d50011a991e7a25e62c9e1c8d0d4848a527d6",
+      "bonded_ms": 1790831953000.0,
+      "chain": "base",
+      "created_ms": 1790831953000.0,
+      "exact_ticker": false,
+      "liquidity_usd": 87002.858,
+      "mcap": 88735.08968,
+      "name": "Institution Oil Fund (IOF)",
+      "name_match": true,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on uniswap-v4-base (GeckoTerminal)",
+      "symbol": "IFO",
+      "url": "https://www.geckoterminal.com/base/pools/0x57105bfd8b12add1f05662566349163bad34dded6f050191aca1157f3ad6b225"
     },
     "dex:base:0x63Fce07102Ef4ab1a4a2B7AE0c0469f66BCBd247": {
       "address": "0x63Fce07102Ef4ab1a4a2B7AE0c0469f66BCBd247",
