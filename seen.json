@@ -946,6 +946,21 @@
       "symbol": "OFI",
       "url": "https://www.geckoterminal.com/base/pools/0x1983bcc3729420f297c13fc851bb77389c74b5995bca525d6177947ff1df884a"
     },
+    "dex:base:0xd846b8d8a16f373e718bfb00006d5ca9c9d321de": {
+      "address": "0xd846b8d8a16f373e718bfb00006d5ca9c9d321de",
+      "bonded_ms": 1790831617000.0,
+      "chain": "base",
+      "created_ms": 1790831617000.0,
+      "exact_ticker": true,
+      "liquidity_usd": 105642.6959,
+      "mcap": 106779.2545,
+      "name": "Institution Oil Fund",
+      "name_match": true,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on uniswap-v4-base (GeckoTerminal)",
+      "symbol": "IOF",
+      "url": "https://www.geckoterminal.com/base/pools/0x44a507c2ffb3c23d9d6799daddb2c88ee74fec01281cacf3276239368d302039"
+    },
     "dex:base:0xd9feab1593febae5a3fd1c1e214ecce21900c9df": {
       "address": "0xd9feab1593febae5a3fd1c1e214ecce21900c9df",
       "chain": "base",
