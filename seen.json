@@ -1498,6 +1498,21 @@
       "symbol": "IOF",
       "url": "https://dexscreener.com/robinhood/0x436aad48b4f1f82ade0196dd5af32f214b35edc0"
     },
+    "dex:robinhood:0xeeE94Bd194C2EBA329B8F06C51dCFb267AD72620": {
+      "address": "0xeeE94Bd194C2EBA329B8F06C51dCFb267AD72620",
+      "bonded_ms": 1791650450000,
+      "chain": "robinhood",
+      "created_ms": 1791650450000,
+      "exact_ticker": true,
+      "liquidity_usd": 25914.56,
+      "mcap": 30145,
+      "name": "IOF",
+      "name_match": false,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on uniswap",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/robinhood/0xf0e9d538086d8fb400da5d6fa0a0f202090f09f96da01a10e5cef584e2690758"
+    },
     "dex:robinhood:0xfAb0F4abF471e2da9cB7b3A2bda804256d787777": {
       "address": "0xfAb0F4abF471e2da9cB7b3A2bda804256d787777",
       "chain": "robinhood",
