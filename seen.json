@@ -1519,6 +1519,36 @@
       "symbol": "IOF",
       "url": "https://www.geckoterminal.com/base/pools/0x0159b0312e10dfbbbe5008aa119a52bedc661c620cdc9627ecb89c89c9a3e450"
     },
+    "dex:base:0xa7662B357f3f08b39bD12B223366C10182bbFfa6": {
+      "address": "0xa7662B357f3f08b39bD12B223366C10182bbFfa6",
+      "bonded_ms": 1791709231000,
+      "chain": "base",
+      "created_ms": 1791709231000,
+      "exact_ticker": true,
+      "liquidity_usd": 12732.87,
+      "mcap": 20198084,
+      "name": "IOF",
+      "name_match": false,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on uniswap",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/base/0xb7202e49ee9f2aa6f9965c07a9e74619bdbae807afc8c12e93522221b46e91ed"
+    },
+    "dex:base:0xa7662b357f3f08b39bd12b223366c10182bbffa6": {
+      "address": "0xa7662b357f3f08b39bd12b223366c10182bbffa6",
+      "bonded_ms": 1791709231000.0,
+      "chain": "base",
+      "created_ms": 1791709231000.0,
+      "exact_ticker": true,
+      "liquidity_usd": 12763.0573,
+      "mcap": 21035811.28,
+      "name": "IOF",
+      "name_match": false,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on uniswap-v4-base (GeckoTerminal)",
+      "symbol": "IOF",
+      "url": "https://www.geckoterminal.com/base/pools/0xb7202e49ee9f2aa6f9965c07a9e74619bdbae807afc8c12e93522221b46e91ed"
+    },
     "dex:base:0xafe390FDaC04c320741700d1cCF7C67B265e875e": {
       "address": "0xafe390FDaC04c320741700d1cCF7C67B265e875e",
       "chain": "base",
@@ -2421,6 +2451,21 @@
       "source": "Onchain - bonded, trading on pumpswap",
       "symbol": "IOF",
       "url": "https://dexscreener.com/solana/ayj7pucrnuuqzza5ncq1kh8jbxv6w8pvrmnkbe6vtnvi"
+    },
+    "dex:solana:9LdDqXoaE5gxmmfTTdRbndwUwRVQLqyVsSFP6drqpump": {
+      "address": "9LdDqXoaE5gxmmfTTdRbndwUwRVQLqyVsSFP6drqpump",
+      "bonded_ms": 1791709309000,
+      "chain": "solana",
+      "created_ms": 1791709309000,
+      "exact_ticker": true,
+      "liquidity_usd": 59561.72,
+      "mcap": 490088,
+      "name": "Institutional Oil Fund",
+      "name_match": true,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on pumpswap",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/solana/2m18ku1ygcwgtevangmp1c2ph2ia9hfvvmwcs35z5zyy"
     },
     "dex:solana:9qomFHpDTgd5jthbqv3j3db5rVpTsPhURqmMVeJpump": {
       "address": "9qomFHpDTgd5jthbqv3j3db5rVpTsPhURqmMVeJpump",
