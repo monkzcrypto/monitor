@@ -106,6 +106,21 @@
       "symbol": "IOF",
       "url": "https://www.geckoterminal.com/base/pools/0xa62c7381ff47af1010b86ba4d0326842e324629d3d9c73f134284546f939fe8a"
     },
+    "dex:base:0x041Ac1329347928Fb99513A07e0B5DcA05c51AcC": {
+      "address": "0x041Ac1329347928Fb99513A07e0B5DcA05c51AcC",
+      "bonded_ms": 1791755001000,
+      "chain": "base",
+      "created_ms": 1791755001000,
+      "exact_ticker": true,
+      "liquidity_usd": 14409.83,
+      "mcap": 55289203,
+      "name": "Institutional Oil Fund",
+      "name_match": true,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on uniswap",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/base/0x8b17c451ec2d0311e51ce857508986ab2d72e802d2f1036a38f303fb1860d501"
+    },
     "dex:base:0x05b5d9fec9f0ee9a447ac705f8f8a8db1c141e6a": {
       "address": "0x05b5d9fec9f0ee9a447ac705f8f8a8db1c141e6a",
       "bonded_ms": 1791008409000.0,
