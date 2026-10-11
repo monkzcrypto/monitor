@@ -1411,6 +1411,21 @@
       "symbol": "OFI",
       "url": "https://www.geckoterminal.com/base/pools/0x476c8f16a0d15623313aec0fb08a019e1c026310e753110b038faab9dbcf3d63"
     },
+    "dex:base:0xc9804f003e8a60344658142254696e91f6b94e44": {
+      "address": "0xc9804f003e8a60344658142254696e91f6b94e44",
+      "bonded_ms": 1791683713000.0,
+      "chain": "base",
+      "created_ms": 1791683713000.0,
+      "exact_ticker": true,
+      "liquidity_usd": 5745.3299,
+      "mcap": 2940.901364,
+      "name": "INDIVIDEN OIL FUND-IOF",
+      "name_match": false,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on uniswap-v4-base (GeckoTerminal)",
+      "symbol": "IOF",
+      "url": "https://www.geckoterminal.com/base/pools/0xf58e2e0e8f9cb3b167efae489d578572c1de39e0b2001b7ac123735be9910661"
+    },
     "dex:base:0xc9e206c85f6e021a1b9617499257c3f8e683c14b": {
       "address": "0xc9e206c85f6e021a1b9617499257c3f8e683c14b",
       "bonded_ms": 1790865971000.0,
@@ -1630,6 +1645,21 @@
       "source": "Onchain - bonded, trading on pumpswap",
       "symbol": "IOF",
       "url": "https://dexscreener.com/solana/4hgnkcrjjm1qjaaajuyamfrdjy8jvmurjdjlw7rnnmzr"
+    },
+    "dex:solana:2HLe6hAj1ooBCFRmccFie1ozijBQQoKWeTkFJYmjpump": {
+      "address": "2HLe6hAj1ooBCFRmccFie1ozijBQQoKWeTkFJYmjpump",
+      "bonded_ms": 1791684499000,
+      "chain": "solana",
+      "created_ms": 1791684499000,
+      "exact_ticker": true,
+      "liquidity_usd": 562970.48,
+      "mcap": 41213209,
+      "name": "IOF",
+      "name_match": false,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on pumpswap",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/solana/gdx6jfdqdwwvs2xuzr6lz2n9vsypsdtad5xj2k7jv1xb"
     },
     "dex:solana:2Lm2oUMP7i2CNWg4DTqAyBrDrWWe6BzXVYmo5i9jn9we": {
       "address": "2Lm2oUMP7i2CNWg4DTqAyBrDrWWe6BzXVYmo5i9jn9we",
