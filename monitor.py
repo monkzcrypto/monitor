@@ -14,6 +14,9 @@ A token still on its bonding curve is ignored until it bonds.
 For each new fake, it also sends a ready-to-paste scam report plus a button
 that opens the Blockaid report form. The real token below is never alerted
 on or reported.
+
+NEW: it also EMAILS the report straight to Blockaid support from your Gmail,
+so no form or captcha is needed. Safety limits are in the settings below.
 """
 
 import datetime
@@ -21,8 +24,10 @@ import re
 import time
 import json
 import os
+import smtplib
 import urllib.parse
 import urllib.request
+from email.message import EmailMessage
 
 # ---- What to look for (you can edit these) ---------------------------------
 SYMBOL_MATCH = "IOF"                    # any ticker or name CONTAINING this counts
@@ -52,11 +57,22 @@ REPORT_URL = "https://report.blockaid.io/scam"
 # Anything older that shows up for the first time is filed quietly, no ping.
 BOND_WINDOW_MINUTES = 60
 ALERT_CHAINS = {"solana", "base"}
+
+# ---- Automatic email reports to Blockaid (you can edit these) --------------
+EMAIL_REPORTS = True                    # set to False to turn emailing off
+BLOCKAID_EMAIL = "support@blockaid.co"
+DAILY_EMAIL_LIMIT = 100                 # never send more than this many per day
+# Only auto-email close copies (ticker is exactly IOF, or name is Institutional
+# Oil Fund). Looser matches (e.g. "IOF" hidden inside another word) still
+# ping your phone, so you can decide yourself.
+EMAIL_ONLY_CLOSE_COPIES = True
 # ----------------------------------------------------------------------------
 
 STATE_FILE = "seen.json"
 MODE = "bonded-v4"
 TOPIC = os.environ.get("NTFY_TOPIC", "").strip()
+GMAIL_ADDRESS = os.environ.get("GMAIL_ADDRESS", "").strip()
+GMAIL_APP_PASSWORD = os.environ.get("GMAIL_APP_PASSWORD", "").replace(" ", "").strip()
 
 
 def get_json(url):
@@ -443,7 +459,95 @@ def send_report_alerts(t):
     )
 
 
+# ---- Email to Blockaid -----------------------------------------------------
+
+def explorer_link(t):
+    chain = str(t.get("chain", "")).lower()
+    ca = t.get("address")
+    if chain == "base":
+        return f"https://basescan.org/token/{ca}"
+    if chain == "solana":
+        return f"https://solscan.io/token/{ca}"
+    return t.get("url") or ""
+
+
+def send_email(to, subject, body):
+    if not GMAIL_ADDRESS or not GMAIL_APP_PASSWORD:
+        print("GMAIL_ADDRESS or GMAIL_APP_PASSWORD secret is missing, so no email was sent.")
+        return False
+    msg = EmailMessage()
+    msg["From"] = GMAIL_ADDRESS
+    msg["To"] = to
+    msg["Subject"] = subject
+    msg.set_content(body)
+    try:
+        with smtplib.SMTP_SSL("smtp.gmail.com", 465, timeout=30) as s:
+            s.login(GMAIL_ADDRESS, GMAIL_APP_PASSWORD)
+            s.send_message(msg)
+        print(f"Email sent to {to}: {subject}")
+        return True
+    except Exception as e:
+        print(f"Email failed to send ({subject}): {e}")
+        return False
+
+
+def email_body(t):
+    return (report_text(t)
+            + f"\n\nBlock explorer link for the MALICIOUS token: {explorer_link(t)}"
+            + (f"\nChart: {t['url']}" if t.get("url") else ""))
+
+
+def email_subject(t):
+    chain = "Solana" if str(t.get("chain")).lower() == "solana" else "Base"
+    return f"MALICIOUS token report ({chain}): {t['address']}"
+
+
+def email_blockaid(t, state):
+    """Email the report to Blockaid, with safety checks."""
+    ca = t.get("address")
+    if not ca or ca == "-" or ca in LEGIT_CAS:
+        return  # never report the real token or a non-onchain listing
+    if str(t.get("chain")).lower() not in ALERT_CHAINS:
+        return
+    if EMAIL_ONLY_CLOSE_COPIES and not (t.get("exact_ticker") or t.get("name_match")):
+        print(f"Not auto-emailing {t.get('name')} (${t.get('symbol')}): loose match, phone alert only.")
+        return
+    emailed = state.setdefault("emailed", [])
+    if ca in emailed:
+        return  # already reported this address
+    today = datetime.date.today().isoformat()
+    counter = state.setdefault("email_count", {})
+    if counter.get("date") != today:
+        counter.clear()
+        counter.update({"date": today, "count": 0})
+    if counter["count"] >= DAILY_EMAIL_LIMIT:
+        print(f"Daily email limit ({DAILY_EMAIL_LIMIT}) reached; not emailing {ca}.")
+        notify("Daily Blockaid email limit reached",
+               f"Not auto-emailed (report it manually if needed):\n\n{ca}",
+               click=REPORT_URL, priority=3)
+        return
+    if send_email(BLOCKAID_EMAIL, email_subject(t), email_body(t)):
+        emailed.append(ca)
+        counter["count"] += 1
+
+
+def send_test_email():
+    """Sends a sample report to YOUR OWN Gmail (never to Blockaid)."""
+    sample = {
+        "name": "TEST Institutional Oil Fund", "symbol": "IOF", "chain": "base",
+        "address": "0x0000000000000000000000000000000000000000",
+        "url": None, "mcap": 1_000_000,
+        "created_ms": time.time() * 1000 - 5 * 60 * 1000,
+        "exact_ticker": True, "name_match": True,
+    }
+    send_email(GMAIL_ADDRESS, "[TEST - not sent to Blockaid] " + email_subject(sample),
+               email_body(sample))
+
+
 def main():
+    if os.environ.get("SEND_TEST_EMAIL", "").lower() == "true":
+        send_test_email()
+
     try:
         with open(STATE_FILE) as f:
             state = json.load(f)
@@ -504,6 +608,8 @@ def main():
 
     for k in to_alert:
         send_report_alerts(current[k])
+        if EMAIL_REPORTS:
+            email_blockaid(current[k], state)
 
     # Changes once a day so GitHub sees activity and keeps the schedule running.
     state["heartbeat"] = datetime.date.today().isoformat()
