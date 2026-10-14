@@ -4,6 +4,11 @@ on:
   schedule:
     - cron: "*/10 * * * *"   # every 10 minutes
   workflow_dispatch:          # adds a "Run workflow" button for testing
+    inputs:
+      test_email:
+        description: "Send a test email to yourself (NOT to Blockaid)"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -21,6 +26,9 @@ jobs:
       - name: Check for new IOF tokens
         env:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+          GMAIL_ADDRESS: ${{ secrets.GMAIL_ADDRESS }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          SEND_TEST_EMAIL: ${{ inputs.test_email }}
         run: python3 monitor.py
 
       - name: Remember what we've already seen
