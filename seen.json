@@ -1,6 +1,6 @@
 {
   "email_count": {
-    "count": 5,
+    "count": 6,
     "date": "2026-10-15"
   },
   "emailed": [
@@ -8,7 +8,8 @@
     "0xB2000000000000000000007Bb363C457b793a8b3",
     "E3AJ7r5s85dy4W3Vipgv1zGVS59Fw4YWsGZ9ECepump",
     "0xFa468a2b9401A2bf8749e55597a601281a68Ef4b",
-    "0xd924afA632293e140005Bdc4c7CbC6190ce5AF7d"
+    "0xd924afA632293e140005Bdc4c7CbC6190ce5AF7d",
+    "0x84d73b609D6a4dc2766E6ECfF672EA3bd36bD8BA"
   ],
   "heartbeat": "2026-10-15",
   "initialized": true,
@@ -4624,6 +4625,21 @@
       "source": "Onchain - bonded, trading on uniswap",
       "symbol": "IOF",
       "url": "https://dexscreener.com/base/0x51c4b3ef91a2dee41f902cb25f8e5352f401f78414100285accc1c8dabae10db"
+    },
+    "dex:base:0x84d73b609D6a4dc2766E6ECfF672EA3bd36bD8BA": {
+      "address": "0x84d73b609D6a4dc2766E6ECfF672EA3bd36bD8BA",
+      "bonded_ms": 1792070651000,
+      "chain": "base",
+      "created_ms": 1792070651000,
+      "exact_ticker": true,
+      "liquidity_usd": 82006.13,
+      "mcap": 82835,
+      "name": "Insitutional Oil Fund - IOF",
+      "name_match": false,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on uniswap",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/base/0xa102492c10560cc22e415ababa556056f86acfb30eb21933be303ae06b583848"
     },
     "dex:base:0x863A53e0104c432d8fBF6D5344aCab1E2BAEed71": {
       "address": "0x863A53e0104c432d8fBF6D5344aCab1E2BAEed71",
