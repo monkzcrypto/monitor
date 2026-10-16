@@ -6376,6 +6376,21 @@
       "symbol": "IOF",
       "url": "https://www.geckoterminal.com/base/pools/0x6ab4095f30f54e3866424dea5aa7d9fb673982fa4229428d9673b572da3ac00e"
     },
+    "dex:base:0xb011b062541d9e8b021b8b322ee9258f1a58d40b": {
+      "address": "0xb011b062541d9e8b021b8b322ee9258f1a58d40b",
+      "bonded_ms": 1792110393000.0,
+      "chain": "base",
+      "created_ms": 1792110393000.0,
+      "exact_ticker": false,
+      "liquidity_usd": 109088.7394,
+      "mcap": 112661.3474,
+      "name": "OIl Institution Fund(IOF)",
+      "name_match": false,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on uniswap-v4-base (GeckoTerminal)",
+      "symbol": "OIF",
+      "url": "https://www.geckoterminal.com/base/pools/0x605562bc532c410e77ae3fc0d3b5c37b3f5481e63241370b4d491027eb8e54f1"
+    },
     "dex:base:0xb0AD98754dc9Af08D26c44580c2286768f7E7777": {
       "address": "0xb0AD98754dc9Af08D26c44580c2286768f7E7777",
       "bonded_ms": 1791498319000,
