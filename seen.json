@@ -1,6 +1,6 @@
 {
   "email_count": {
-    "count": 9,
+    "count": 11,
     "date": "2026-10-18"
   },
   "emailed": [
@@ -21,7 +21,9 @@
     "0x91bf3621e94c56baf6e119692e19b016b4e0e261",
     "0x2aef6cfCe25f889A137A930847e9321866ceeb21",
     "0x6213B3D29451761d814A495C0b35Df7B78bC7777",
-    "0x2aef6cfce25f889a137a930847e9321866ceeb21"
+    "0x2aef6cfce25f889a137a930847e9321866ceeb21",
+    "intnygCtTd9DCgTTrWQFXkAxNbLWYrvfHRL2VPEpump",
+    "0x0Ca76B460B659ADAA24FCd7A65Fd4438dE0E7777"
   ],
   "heartbeat": "2026-10-18",
   "initialized": true,
@@ -429,6 +431,21 @@
       "source": "Onchain - bonded, trading on uniswap",
       "symbol": "IOF",
       "url": "https://dexscreener.com/base/0x208f70bc4841ec8be47c4c65eecb6eaec03116018534237cb05fc7b7940c3797"
+    },
+    "dex:base:0x0Ca76B460B659ADAA24FCd7A65Fd4438dE0E7777": {
+      "address": "0x0Ca76B460B659ADAA24FCd7A65Fd4438dE0E7777",
+      "bonded_ms": 1792347415000,
+      "chain": "base",
+      "created_ms": 1792347415000,
+      "exact_ticker": true,
+      "liquidity_usd": 9087.4,
+      "mcap": 4104,
+      "name": "Institutional Oil Fund",
+      "name_match": true,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on flapsh",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/base/0xfcb915b18d8c4db5cd273469d0719c6be67c4c2b"
     },
     "dex:base:0x0D74797B9d303199a23Ca14f432d4a2a367C2d37": {
       "address": "0x0D74797B9d303199a23Ca14f432d4a2a367C2d37",
@@ -8257,6 +8274,21 @@
       "symbol": "IOF",
       "url": "https://dexscreener.com/robinhood/0x81c6f8144677a07b4ce5773f5781d1088f183e4b"
     },
+    "dex:robinhood:0xF96E952cE574D7c2ED3b84264c79affd90827777": {
+      "address": "0xF96E952cE574D7c2ED3b84264c79affd90827777",
+      "bonded_ms": 1792347414000,
+      "chain": "robinhood",
+      "created_ms": 1792347414000,
+      "exact_ticker": true,
+      "liquidity_usd": 9062.11,
+      "mcap": 4093,
+      "name": "Institutional Oil Fund",
+      "name_match": true,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on flapsh",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/robinhood/0xc0008e9a655f86f2b1f0fb275c0dab7b3657d9f5"
+    },
     "dex:robinhood:0xbB6c79A2B3f6D0e294c5507d78ee4B16445E7777": {
       "address": "0xbB6c79A2B3f6D0e294c5507d78ee4B16445E7777",
       "bonded_ms": 1791557893000,
@@ -9737,6 +9769,21 @@
       "source": "Onchain - bonded, trading on pumpswap",
       "symbol": "IOF",
       "url": "https://dexscreener.com/solana/3ekiojcruaqvad1igymnybkq1zz6apgwukuppvm48yqr"
+    },
+    "dex:solana:intnygCtTd9DCgTTrWQFXkAxNbLWYrvfHRL2VPEpump": {
+      "address": "intnygCtTd9DCgTTrWQFXkAxNbLWYrvfHRL2VPEpump",
+      "bonded_ms": 1792347406000,
+      "chain": "solana",
+      "created_ms": 1792347406000,
+      "exact_ticker": true,
+      "liquidity_usd": 152809.51,
+      "mcap": 3322354,
+      "name": "Institutional Oil Fund",
+      "name_match": true,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on pumpswap",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/solana/glx4wfexehvvqsykptwy9vs8jixsoqujfoqveukcpw8z"
     },
     "dex:solana:kjmkD4Nf2pYQ8DKCScWc9MRkMhFGCZ9B4Kwhyijpump": {
       "address": "kjmkD4Nf2pYQ8DKCScWc9MRkMhFGCZ9B4Kwhyijpump",
