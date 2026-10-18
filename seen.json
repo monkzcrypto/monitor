@@ -1,7 +1,7 @@
 {
   "email_count": {
-    "count": 2,
-    "date": "2026-10-16"
+    "count": 4,
+    "date": "2026-10-18"
   },
   "emailed": [
     "0x6dA938d182Bd2aA5ff5312D9692f6DCac4297F33",
@@ -12,7 +12,11 @@
     "0x84d73b609D6a4dc2766E6ECfF672EA3bd36bD8BA",
     "9Bhx9LBT8Z5UeXhDfKqS8xP4HRQ8BCQ3wt6bKwvipump",
     "EYiJwo5QFRFdYavtdTxXwqSb2RbdUpG3ncmtqGokpump",
-    "y5yiSippc5waEJ1Vjs5g5fZ3VWg4dQSXTwZoEj2pump"
+    "y5yiSippc5waEJ1Vjs5g5fZ3VWg4dQSXTwZoEj2pump",
+    "0xAd9E973121ACd169D2f57f55adbA438c8f300387",
+    "0xe6Ab81599532C5adA4FB035B54E4BE077De0e23E",
+    "0xad9e973121acd169d2f57f55adba438c8f300387",
+    "0xe6ab81599532c5ada4fb035b54e4be077de0e23e"
   ],
   "heartbeat": "2026-10-18",
   "initialized": true,
@@ -5482,6 +5486,21 @@
       "symbol": "IOF",
       "url": "https://dexscreener.com/base/0xa4e16a42af0557757c09eb2a93c073c69023079c67b12af6b969154d120a2335"
     },
+    "dex:base:0xAd9E973121ACd169D2f57f55adbA438c8f300387": {
+      "address": "0xAd9E973121ACd169D2f57f55adbA438c8f300387",
+      "bonded_ms": 1792286119000,
+      "chain": "base",
+      "created_ms": 1792286119000,
+      "exact_ticker": true,
+      "liquidity_usd": 49347.38,
+      "mcap": 23241773,
+      "name": "IOF",
+      "name_match": false,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on uniswap",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/base/0x2a1ea6c8d50a2b919e7270b0acf3caec51fc6c3c4f0dfea1ce9650fa88f9164e"
+    },
     "dex:base:0xAfcc86f75b4c998E4D4043B5536528fe51634Ae8": {
       "address": "0xAfcc86f75b4c998E4D4043B5536528fe51634Ae8",
       "bonded_ms": 1791728795000,
@@ -6393,6 +6412,21 @@
       "source": "Onchain - bonded, trading on uniswap",
       "symbol": "IOF",
       "url": "https://dexscreener.com/base/0xa3b9331b0731186ae3ff6db8de8c81b7460dacdb752d3588f208188816511922"
+    },
+    "dex:base:0xad9e973121acd169d2f57f55adba438c8f300387": {
+      "address": "0xad9e973121acd169d2f57f55adba438c8f300387",
+      "bonded_ms": 1792286119000.0,
+      "chain": "base",
+      "created_ms": 1792286119000.0,
+      "exact_ticker": true,
+      "liquidity_usd": 6976.4258,
+      "mcap": 24191991.41,
+      "name": "IOF",
+      "name_match": false,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on uniswap-v4-base (GeckoTerminal)",
+      "symbol": "IOF",
+      "url": "https://www.geckoterminal.com/base/pools/0x2a1ea6c8d50a2b919e7270b0acf3caec51fc6c3c4f0dfea1ce9650fa88f9164e"
     },
     "dex:base:0xafcc86f75b4c998e4d4043b5536528fe51634ae8": {
       "address": "0xafcc86f75b4c998e4d4043b5536528fe51634ae8",
@@ -7349,6 +7383,36 @@
       "source": "Onchain - bonded, trading on uniswap-v4-base (GeckoTerminal)",
       "symbol": "IOF",
       "url": "https://www.geckoterminal.com/base/pools/0x3a57cce0097b34ad4f1c5d1e3c512eab7a7b173c63e2bd28f819870b611a62fc"
+    },
+    "dex:base:0xe6Ab81599532C5adA4FB035B54E4BE077De0e23E": {
+      "address": "0xe6Ab81599532C5adA4FB035B54E4BE077De0e23E",
+      "bonded_ms": 1792285963000,
+      "chain": "base",
+      "created_ms": 1792285963000,
+      "exact_ticker": true,
+      "liquidity_usd": 112.01,
+      "mcap": 6819,
+      "name": "IOF",
+      "name_match": false,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on uniswap",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/base/0xba5deca4f5e4cde55fe44ece52e5344c8f92d5814270ac12aca6e3932388641f"
+    },
+    "dex:base:0xe6ab81599532c5ada4fb035b54e4be077de0e23e": {
+      "address": "0xe6ab81599532c5ada4fb035b54e4be077de0e23e",
+      "bonded_ms": 1792285963000.0,
+      "chain": "base",
+      "created_ms": 1792285963000.0,
+      "exact_ticker": true,
+      "liquidity_usd": 419.7632,
+      "mcap": 113.298608,
+      "name": "IOF",
+      "name_match": false,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on uniswap-v4-base (GeckoTerminal)",
+      "symbol": "IOF",
+      "url": "https://www.geckoterminal.com/base/pools/0xba5deca4f5e4cde55fe44ece52e5344c8f92d5814270ac12aca6e3932388641f"
     },
     "dex:base:0xe6f85818657bee8ba29abf046083c798efeaa712": {
       "address": "0xe6f85818657bee8ba29abf046083c798efeaa712",
