@@ -1,6 +1,6 @@
 {
   "email_count": {
-    "count": 4,
+    "count": 5,
     "date": "2026-10-18"
   },
   "emailed": [
@@ -16,7 +16,8 @@
     "0xAd9E973121ACd169D2f57f55adbA438c8f300387",
     "0xe6Ab81599532C5adA4FB035B54E4BE077De0e23E",
     "0xad9e973121acd169d2f57f55adba438c8f300387",
-    "0xe6ab81599532c5ada4fb035b54e4be077de0e23e"
+    "0xe6ab81599532c5ada4fb035b54e4be077de0e23e",
+    "0x91bF3621e94C56baF6E119692E19B016b4e0e261"
   ],
   "heartbeat": "2026-10-18",
   "initialized": true,
@@ -5036,6 +5037,21 @@
       "source": "Onchain - bonded, trading on uniswap-v4-base (GeckoTerminal)",
       "symbol": "IOF",
       "url": "https://www.geckoterminal.com/base/pools/0x6ff58254f2348c91642ef13e640e767f03e6af4858c3e12fd3470c3611c153ce"
+    },
+    "dex:base:0x91bF3621e94C56baF6E119692E19B016b4e0e261": {
+      "address": "0x91bF3621e94C56baF6E119692E19B016b4e0e261",
+      "bonded_ms": 1792287351000,
+      "chain": "base",
+      "created_ms": 1792287351000,
+      "exact_ticker": true,
+      "liquidity_usd": 49115.65,
+      "mcap": 23120358,
+      "name": "IOF",
+      "name_match": false,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on uniswap",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/base/0xe0e227458b7980691bff3f738b62d9f02a217f4def8170f90878ede15f5f7093"
     },
     "dex:base:0x9321ff09E1deF85C9d2AE358FB80D4746B847c4C": {
       "address": "0x9321ff09E1deF85C9d2AE358FB80D4746B847c4C",
