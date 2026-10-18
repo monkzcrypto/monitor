@@ -1,6 +1,6 @@
 {
   "email_count": {
-    "count": 6,
+    "count": 9,
     "date": "2026-10-18"
   },
   "emailed": [
@@ -18,7 +18,10 @@
     "0xad9e973121acd169d2f57f55adba438c8f300387",
     "0xe6ab81599532c5ada4fb035b54e4be077de0e23e",
     "0x91bF3621e94C56baF6E119692E19B016b4e0e261",
-    "0x91bf3621e94c56baf6e119692e19b016b4e0e261"
+    "0x91bf3621e94c56baf6e119692e19b016b4e0e261",
+    "0x2aef6cfCe25f889A137A930847e9321866ceeb21",
+    "0x6213B3D29451761d814A495C0b35Df7B78bC7777",
+    "0x2aef6cfce25f889a137a930847e9321866ceeb21"
   ],
   "heartbeat": "2026-10-18",
   "initialized": true,
@@ -1799,6 +1802,36 @@
       "source": "Onchain - bonded, trading on uniswap",
       "symbol": "IOF",
       "url": "https://dexscreener.com/base/0x16a10cc4544cb0c007a8add5891ac28e29aec1b99bdb79a49570cfbd8d0c3e8b"
+    },
+    "dex:base:0x2aef6cfCe25f889A137A930847e9321866ceeb21": {
+      "address": "0x2aef6cfCe25f889A137A930847e9321866ceeb21",
+      "bonded_ms": 1792335477000,
+      "chain": "base",
+      "created_ms": 1792335477000,
+      "exact_ticker": false,
+      "liquidity_usd": 99494.94,
+      "mcap": 100500,
+      "name": "INSTITUTIONAL OIL FUND",
+      "name_match": true,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on uniswap",
+      "symbol": "IFO",
+      "url": "https://dexscreener.com/base/0x8b8d6dae4f94151e6c621b15bff4d2df6e1e528659a76d4dc92ebd8918b91ad5"
+    },
+    "dex:base:0x2aef6cfce25f889a137a930847e9321866ceeb21": {
+      "address": "0x2aef6cfce25f889a137a930847e9321866ceeb21",
+      "bonded_ms": 1792335477000.0,
+      "chain": "base",
+      "created_ms": 1792335477000.0,
+      "exact_ticker": false,
+      "liquidity_usd": 100504.6111,
+      "mcap": 101832.2297,
+      "name": "INSTITUTIONAL OIL FUND",
+      "name_match": true,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on uniswap-v4-base (GeckoTerminal)",
+      "symbol": "IFO",
+      "url": "https://www.geckoterminal.com/base/pools/0x8b8d6dae4f94151e6c621b15bff4d2df6e1e528659a76d4dc92ebd8918b91ad5"
     },
     "dex:base:0x2c0c7BC182d5339069B1153D118544f60B291bD0": {
       "address": "0x2c0c7BC182d5339069B1153D118544f60B291bD0",
@@ -3872,6 +3905,21 @@
       "source": "Onchain - bonded, trading on uniswap-v4-base (GeckoTerminal)",
       "symbol": "IOF",
       "url": "https://www.geckoterminal.com/base/pools/0x17a21789ade095a631e3b0cba7e26b75938c666d3bb107e0793e5e4b4fd50b2b"
+    },
+    "dex:base:0x6213B3D29451761d814A495C0b35Df7B78bC7777": {
+      "address": "0x6213B3D29451761d814A495C0b35Df7B78bC7777",
+      "bonded_ms": 1792335681000,
+      "chain": "base",
+      "created_ms": 1792335681000,
+      "exact_ticker": false,
+      "liquidity_usd": 9104.33,
+      "mcap": 4112,
+      "name": "INSTITUTIONAL OIL FUND",
+      "name_match": true,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on flapsh",
+      "symbol": "IFO",
+      "url": "https://dexscreener.com/base/0x6d04f9314e238ccb58f44a3efacc1b8e78890eeb"
     },
     "dex:base:0x63Fce07102Ef4ab1a4a2B7AE0c0469f66BCBd247": {
       "address": "0x63Fce07102Ef4ab1a4a2B7AE0c0469f66BCBd247",
@@ -8164,6 +8212,21 @@
       "source": "Onchain - bonded, trading on flapsh",
       "symbol": "I O F",
       "url": "https://dexscreener.com/robinhood/0x0ee476e28456911c30e042648cef19278aa952ed"
+    },
+    "dex:robinhood:0x5837865f122C9B627cC068D82a44f6E364407777": {
+      "address": "0x5837865f122C9B627cC068D82a44f6E364407777",
+      "bonded_ms": 1792335684000,
+      "chain": "robinhood",
+      "created_ms": 1792335684000,
+      "exact_ticker": false,
+      "liquidity_usd": 9104.33,
+      "mcap": 4112,
+      "name": "INSTITUTIONAL OIL FUND",
+      "name_match": true,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on flapsh",
+      "symbol": "IFO",
+      "url": "https://dexscreener.com/robinhood/0xfcec92d9b62455d612ec8619b660275bd4a38c40"
     },
     "dex:robinhood:0xAE2Df3c1749daEE721c1BFcbbFDde5D61ae7cb99": {
       "address": "0xAE2Df3c1749daEE721c1BFcbbFDde5D61ae7cb99",
