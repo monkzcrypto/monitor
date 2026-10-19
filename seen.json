@@ -1,7 +1,7 @@
 {
   "email_count": {
-    "count": 11,
-    "date": "2026-10-18"
+    "count": 2,
+    "date": "2026-10-19"
   },
   "emailed": [
     "0x6dA938d182Bd2aA5ff5312D9692f6DCac4297F33",
@@ -23,7 +23,9 @@
     "0x6213B3D29451761d814A495C0b35Df7B78bC7777",
     "0x2aef6cfce25f889a137a930847e9321866ceeb21",
     "intnygCtTd9DCgTTrWQFXkAxNbLWYrvfHRL2VPEpump",
-    "0x0Ca76B460B659ADAA24FCd7A65Fd4438dE0E7777"
+    "0x0Ca76B460B659ADAA24FCd7A65Fd4438dE0E7777",
+    "NQBgEicb4tTLe7JiA23rfw684cGiuZrjmWwS1Ckpump",
+    "0xa0976547A670ca74eA96A842Cb558e06B9ed7777"
   ],
   "heartbeat": "2026-10-19",
   "initialized": true,
@@ -4970,6 +4972,21 @@
       "symbol": "IOF",
       "url": "https://dexscreener.com/base/0xbec1cadb96d0eb34e1767e8e56573d070063d85ec2a0ae5b1b6779733c75f4ca"
     },
+    "dex:base:0x86aab1f0d671a8d1cde4dd33610bc91d9ed87e5b": {
+      "address": "0x86aab1f0d671a8d1cde4dd33610bc91d9ed87e5b",
+      "bonded_ms": 1791829195000.0,
+      "chain": "base",
+      "created_ms": 1791829195000.0,
+      "exact_ticker": true,
+      "liquidity_usd": 3160.202,
+      "mcap": 25166.51914,
+      "name": "IOF",
+      "name_match": false,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on uniswap-v4-base (GeckoTerminal)",
+      "symbol": "IOF",
+      "url": "https://www.geckoterminal.com/base/pools/0xbec1cadb96d0eb34e1767e8e56573d070063d85ec2a0ae5b1b6779733c75f4ca"
+    },
     "dex:base:0x87d9a02328F815FA15393Bb2a5fC4D2B40Bc2594": {
       "address": "0x87d9a02328F815FA15393Bb2a5fC4D2B40Bc2594",
       "bonded_ms": 1791930563000,
@@ -6166,6 +6183,21 @@
       "source": "Onchain - bonded, trading on uniswap-v4-base (GeckoTerminal)",
       "symbol": "IOF",
       "url": "https://www.geckoterminal.com/base/pools/0x29cb0f0ff3c8ae44c354e38380e84ece4fb989782d4f7166b94ae42c140fcb18"
+    },
+    "dex:base:0xa0976547A670ca74eA96A842Cb558e06B9ed7777": {
+      "address": "0xa0976547A670ca74eA96A842Cb558e06B9ed7777",
+      "bonded_ms": 1792421255000,
+      "chain": "base",
+      "created_ms": 1792421255000,
+      "exact_ticker": true,
+      "liquidity_usd": 9190.3,
+      "mcap": 4151,
+      "name": "IOF",
+      "name_match": false,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on flapsh",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/base/0x0398a7f0b85fbef1280203b110629b1f97af93f6"
     },
     "dex:base:0xa0DF2fe0B90b5314605E0FD456015BCA6f1BD1e0": {
       "address": "0xa0DF2fe0B90b5314605E0FD456015BCA6f1BD1e0",
@@ -8334,6 +8366,21 @@
       "symbol": "IOF",
       "url": "https://dexscreener.com/robinhood/0xc0008e9a655f86f2b1f0fb275c0dab7b3657d9f5"
     },
+    "dex:robinhood:0xb4C93B93745359dfB3A3B84A810FDbF6df647777": {
+      "address": "0xb4C93B93745359dfB3A3B84A810FDbF6df647777",
+      "bonded_ms": 1792421259000,
+      "chain": "robinhood",
+      "created_ms": 1792421259000,
+      "exact_ticker": true,
+      "liquidity_usd": 9190.3,
+      "mcap": 4151,
+      "name": "IOF",
+      "name_match": false,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on flapsh",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/robinhood/0x719c6814591668328d186dfadb01ec7277f12eb9"
+    },
     "dex:robinhood:0xbB6c79A2B3f6D0e294c5507d78ee4B16445E7777": {
       "address": "0xbB6c79A2B3f6D0e294c5507d78ee4B16445E7777",
       "bonded_ms": 1791557893000,
@@ -9548,6 +9595,21 @@
       "source": "Onchain - bonded, trading on pumpswap",
       "symbol": "IOF",
       "url": "https://dexscreener.com/solana/2o6xwk3poyuev9jptqdah6w2tjxs4zjx5gpmpa4kh1xy"
+    },
+    "dex:solana:NQBgEicb4tTLe7JiA23rfw684cGiuZrjmWwS1Ckpump": {
+      "address": "NQBgEicb4tTLe7JiA23rfw684cGiuZrjmWwS1Ckpump",
+      "bonded_ms": 1792421243000,
+      "chain": "solana",
+      "created_ms": 1792421243000,
+      "exact_ticker": true,
+      "liquidity_usd": 170304.6,
+      "mcap": 4029130,
+      "name": "IOF",
+      "name_match": false,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on pumpswap",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/solana/8da2suhwek74cm71a53dksikhttwrars4kxst6a2dzav"
     },
     "dex:solana:NmyEeTUVqGhSgPK27s2TBannMc4Zyud4JeJU2Kypump": {
       "address": "NmyEeTUVqGhSgPK27s2TBannMc4Zyud4JeJU2Kypump",
