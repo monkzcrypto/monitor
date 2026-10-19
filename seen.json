@@ -7244,6 +7244,21 @@
       "symbol": "IOF",
       "url": "https://www.geckoterminal.com/base/pools/0xdea62aa2692e36aa5f2ac0920b2e3fd170947fced4a1a13df57b14df4d64c1c1"
     },
+    "dex:base:0xd0ad474c6bda8ecda0105ba8f077528008223eea": {
+      "address": "0xd0ad474c6bda8ecda0105ba8f077528008223eea",
+      "bonded_ms": 1791850205000.0,
+      "chain": "base",
+      "created_ms": 1791850205000.0,
+      "exact_ticker": true,
+      "liquidity_usd": 2465.8305,
+      "mcap": 808.5023938,
+      "name": "IOF",
+      "name_match": false,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on uniswap-v4-base (GeckoTerminal)",
+      "symbol": "IOF",
+      "url": "https://www.geckoterminal.com/base/pools/0x6a7e232e6d443fb04f0b3ecdcc40021da31ef75eb60620034042b424c992576d"
+    },
     "dex:base:0xd0d3a92c30ce5b9a4056e6c6addb2a5cacf85191": {
       "address": "0xd0d3a92c30ce5b9a4056e6c6addb2a5cacf85191",
       "bonded_ms": 1791704251000.0,
