@@ -1,6 +1,6 @@
 {
   "email_count": {
-    "count": 12,
+    "count": 14,
     "date": "2026-10-20"
   },
   "emailed": [
@@ -37,7 +37,9 @@
     "0x49655f800B49CAa81d6eE65b0244a5BdEB6c4587",
     "0x49655f800b49caa81d6ee65b0244a5bdeb6c4587",
     "0xbc1ec8997d9e33eb0f36f391982f39076fa9999b",
-    "0x94de808744c2a16e8113f856c27fb731e8dd44d3"
+    "0x94de808744c2a16e8113f856c27fb731e8dd44d3",
+    "0x77A94Dc79194ea94999a09BA560a39a43139dEF7",
+    "0x77a94dc79194ea94999a09ba560a39a43139def7"
   ],
   "heartbeat": "2026-10-20",
   "initialized": true,
@@ -4668,6 +4670,36 @@
       "source": "Onchain - bonded, trading on uniswap-v4-base (GeckoTerminal)",
       "symbol": "IOF",
       "url": "https://www.geckoterminal.com/base/pools/0x4153c3ef085bd29dd90367c914c6a869ccf918f1fbc5b04b98ff00eb37a07bb0"
+    },
+    "dex:base:0x77A94Dc79194ea94999a09BA560a39a43139dEF7": {
+      "address": "0x77A94Dc79194ea94999a09BA560a39a43139dEF7",
+      "bonded_ms": 1792538691000,
+      "chain": "base",
+      "created_ms": 1792538691000,
+      "exact_ticker": true,
+      "liquidity_usd": 44281.71,
+      "mcap": 37991237,
+      "name": "IOF",
+      "name_match": false,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on uniswap",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/base/0xb34bd57923d59c95a7cf53568bba0aada97fb58cb7844be7e9d7e83f479ad64f"
+    },
+    "dex:base:0x77a94dc79194ea94999a09ba560a39a43139def7": {
+      "address": "0x77a94dc79194ea94999a09ba560a39a43139def7",
+      "bonded_ms": 1792538691000.0,
+      "chain": "base",
+      "created_ms": 1792538691000.0,
+      "exact_ticker": true,
+      "liquidity_usd": 44375.6801,
+      "mcap": 39572987.38,
+      "name": "IOF",
+      "name_match": false,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on uniswap-v4-base (GeckoTerminal)",
+      "symbol": "IOF",
+      "url": "https://www.geckoterminal.com/base/pools/0xb34bd57923d59c95a7cf53568bba0aada97fb58cb7844be7e9d7e83f479ad64f"
     },
     "dex:base:0x77dab35619B0f6fC36F480369f67724DDE8A176B": {
       "address": "0x77dab35619B0f6fC36F480369f67724DDE8A176B",
