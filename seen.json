@@ -1,6 +1,6 @@
 {
   "email_count": {
-    "count": 7,
+    "count": 9,
     "date": "2026-10-20"
   },
   "emailed": [
@@ -32,7 +32,9 @@
     "FdYcdzrJjMq5EmfTHFxmtb8WS48QzQQbb65zJJZtpump",
     "0x3A1870174F0fcA74688dE2A00E90e96c2243cDff",
     "0x94de808744C2a16E8113F856C27FB731e8dd44D3",
-    "0x3a1870174f0fca74688de2a00e90e96c2243cdff"
+    "0x3a1870174f0fca74688de2a00e90e96c2243cdff",
+    "0xbc1eC8997D9E33Eb0f36f391982f39076FA9999b",
+    "0x49655f800B49CAa81d6eE65b0244a5BdEB6c4587"
   ],
   "heartbeat": "2026-10-20",
   "initialized": true,
@@ -3423,6 +3425,21 @@
       "source": "Onchain - bonded, trading on uniswap",
       "symbol": "IOF",
       "url": "https://dexscreener.com/base/0x4be6f918ea1c8548ecaf4c695d94fc513877d5e97e0fbee3709a9d80badf3e62"
+    },
+    "dex:base:0x49655f800B49CAa81d6eE65b0244a5BdEB6c4587": {
+      "address": "0x49655f800B49CAa81d6eE65b0244a5BdEB6c4587",
+      "bonded_ms": 1792536913000,
+      "chain": "base",
+      "created_ms": 1792536913000,
+      "exact_ticker": true,
+      "liquidity_usd": 3156.37,
+      "mcap": 24280,
+      "name": "IOF Protocol",
+      "name_match": false,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on uniswap",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/base/0xb8b04d84ecb8bc807bf6d250cd68fc24850ab231dc2665559943052cfdc847ca"
     },
     "dex:base:0x4c04EdE1747fD6450c90108178e704d818eD377e": {
       "address": "0x4c04EdE1747fD6450c90108178e704d818eD377e",
@@ -7056,6 +7073,21 @@
       "source": "Onchain - bonded, trading on uniswap-v4-base (GeckoTerminal)",
       "symbol": "IOF",
       "url": "https://www.geckoterminal.com/base/pools/0xaa0f78b08bad1e0df3ab87b435aef95e687903c5daa0cd154fd87f5b4b9c7374"
+    },
+    "dex:base:0xbc1eC8997D9E33Eb0f36f391982f39076FA9999b": {
+      "address": "0xbc1eC8997D9E33Eb0f36f391982f39076FA9999b",
+      "bonded_ms": 1792536907000,
+      "chain": "base",
+      "created_ms": 1792536907000,
+      "exact_ticker": true,
+      "liquidity_usd": 3156.37,
+      "mcap": 24280,
+      "name": "IOF",
+      "name_match": false,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on uniswap",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/base/0xff8a854680b94e726a972d1d35aa700dd6ce98ae6cdc1305596900441096800e"
     },
     "dex:base:0xbcf6bf36716b276ed1f953c75058a742a407fbc5": {
       "address": "0xbcf6bf36716b276ed1f953c75058a742a407fbc5",
