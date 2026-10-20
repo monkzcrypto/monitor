@@ -1,6 +1,6 @@
 {
   "email_count": {
-    "count": 3,
+    "count": 4,
     "date": "2026-10-20"
   },
   "emailed": [
@@ -28,7 +28,8 @@
     "0xa0976547A670ca74eA96A842Cb558e06B9ed7777",
     "Q8NBrf3DFEMQvUgNpD7kMeRmsJCPJGZmKPTMNTzpump",
     "0x254058f17F3D808378f33831F090f08118547777",
-    "HcVYWnxL1Tzrfq6HBpfBgfyWumw82MermX7DNNwapump"
+    "HcVYWnxL1Tzrfq6HBpfBgfyWumw82MermX7DNNwapump",
+    "FdYcdzrJjMq5EmfTHFxmtb8WS48QzQQbb65zJJZtpump"
   ],
   "heartbeat": "2026-10-20",
   "initialized": true,
@@ -9482,6 +9483,21 @@
       "source": "Onchain - bonded, trading on bags-fm (GeckoTerminal)",
       "symbol": "IOF",
       "url": "https://www.geckoterminal.com/solana/pools/FdFcWZvwqAH4YuhrD1PrEcQK9nWerJ2fsNMd8BhW4VT1"
+    },
+    "dex:solana:FdYcdzrJjMq5EmfTHFxmtb8WS48QzQQbb65zJJZtpump": {
+      "address": "FdYcdzrJjMq5EmfTHFxmtb8WS48QzQQbb65zJJZtpump",
+      "bonded_ms": 1792525712000,
+      "chain": "solana",
+      "created_ms": 1792525712000,
+      "exact_ticker": true,
+      "liquidity_usd": 196191,
+      "mcap": 5258837,
+      "name": "IOF",
+      "name_match": false,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on pumpswap",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/solana/cswf7skbccbnpb7x8fakkgnjafbzvjf1sa9q5ixwyeom"
     },
     "dex:solana:FgQZ2k8pyg45xrfVzK1sAgr34tpb8xXJbsLgkfqTpump": {
       "address": "FgQZ2k8pyg45xrfVzK1sAgr34tpb8xXJbsLgkfqTpump",
