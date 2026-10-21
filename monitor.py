@@ -17,6 +17,9 @@ on or reported.
 
 NEW: it also EMAILS the report straight to Blockaid support from your Gmail,
 so no form or captcha is needed. Safety limits are in the settings below.
+
+FIX: Base addresses (0x...) are now compared without caring about capital
+letters, so the same Base token can no longer be alerted or emailed twice.
 """
 
 import datetime
@@ -75,6 +78,19 @@ GMAIL_ADDRESS = os.environ.get("GMAIL_ADDRESS", "").strip()
 GMAIL_APP_PASSWORD = os.environ.get("GMAIL_APP_PASSWORD", "").replace(" ", "").strip()
 
 
+def same_ca(addr):
+    """Base/EVM addresses (0x...) ignore capital letters, so compare them in
+    lowercase. Solana addresses DO care about capitals, so they stay as-is."""
+    a = str(addr or "").strip()
+    return a.lower() if a.lower().startswith("0x") else a
+
+
+def norm_key(key):
+    """'dex:base:0xAbC...' -> 'dex:base:0xabc...' so one token can't count twice."""
+    prefix, sep, addr = str(key).rpartition(":")
+    return f"{prefix}:{same_ca(addr)}" if sep else key
+
+
 def get_json(url):
     req = urllib.request.Request(
         url, headers={"User-Agent": "iof-monitor/1.0", "Accept": "application/json"}
@@ -130,7 +146,7 @@ def check_dexscreener():
                 continue
             if bt.get("address") in LEGIT_CAS:
                 continue  # never touch the real token
-            key = f"dex:{p.get('chainId', '?')}:{bt.get('address', '?')}"
+            key = norm_key(f"dex:{p.get('chainId', '?')}:{bt.get('address', '?')}")
             tokens.setdefault(key, {"info": bt, "pairs": {}})
             tokens[key]["pairs"][p.get("pairAddress") or p.get("url")] = p
 
@@ -223,7 +239,7 @@ def check_geckoterminal():
                             continue
                         if addr in LEGIT_CAS or not matches(name, sym):
                             continue
-                        key = f"dex:{network}:{addr}"
+                        key = norm_key(f"dex:{network}:{addr}")
                         created = iso_to_ms(attr.get("pool_created_at") or "")
                         mcap = as_number(attr.get("market_cap_usd")) or as_number(attr.get("fdv_usd"))
                         old = found.get(key)
@@ -513,7 +529,8 @@ def email_blockaid(t, state):
         print(f"Not auto-emailing {t.get('name')} (${t.get('symbol')}): loose match, phone alert only.")
         return
     emailed = state.setdefault("emailed", [])
-    if ca in emailed:
+    if same_ca(ca) in {same_ca(e) for e in emailed}:
+        print(f"Already emailed {ca} before (any capitalization); skipping.")
         return  # already reported this address
     today = datetime.date.today().isoformat()
     counter = state.setdefault("email_count", {})
@@ -562,6 +579,7 @@ def main():
             results = checker()
             print(f"{checker.__name__}: {len(results)} matches")
             for k, v in results.items():
+                k = norm_key(k)  # same Base token in different capitals = one token
                 if k not in current:
                     current[k] = v
                 else:
@@ -577,7 +595,8 @@ def main():
         if len(nm) > 60:
             v["name"] = nm[:57] + "..."
 
-    new_keys = [k for k in current if k not in state["seen"]]
+    seen_keys = {norm_key(s) for s in state["seen"]}  # older saved entries may have capitals
+    new_keys = [k for k in current if k not in seen_keys]
     now_ms = time.time() * 1000
     window_ms = BOND_WINDOW_MINUTES * 60 * 1000
 
