@@ -54,6 +54,9 @@ QUOTE_SYMBOLS = {"SOL", "WSOL", "WETH", "ETH", "USDC", "USDT", "VIRTUAL", "ZORA"
 # The REAL token. It is never alerted on and never gets a report drafted.
 LEGIT_CAS = {"2sY7rkMCQyFNcSpHm3fciJf2ptYRg3cYpn4srN6Bpump"}
 
+# How long ago the REAL token launched, as written in the reports. Edit this one line to update it.
+REAL_TOKEN_AGE = "over 3 weeks ago"
+
 REPORT_URL = "https://report.blockaid.io/scam"
 
 # Only ping for tokens that bonded within this many minutes (i.e. "right when it bonds").
@@ -432,12 +435,12 @@ def report_text(t):
             f"They bundled to {mcap} market cap, and are wash trading and spoofing their holder "
             "count in order to rank higher on Coinbase search results than the real token so that "
             "they can deceive buyers into buying an impersonator token and rugpull them. "
-            f"They are using the {same} as the original token that was deployed over 2 weeks ago "
+            f"They are using the {same} as the original token that was deployed {REAL_TOKEN_AGE} "
             "and it is extremely obvious what they are doing. I urge you to look into this and flag "
             "them as a MALICIOUS token so that it is reflected in the search of platforms like "
             "Coinbase and FOMO and people stop getting scammed.\n\n"
             f"Malicious CA (launched {age}) : {ca}\n\n"
-            f"Original CA (launched over 2 weeks ago) : {real}\n\n"
+            f"Original CA (launched {REAL_TOKEN_AGE}) : {real}\n\n"
             f"And please double check and make sure that the MALICIOUS CA ( {ca} ) is classified "
             "as MALICIOUS as that is the only way that it actually shows a warning on Coinbase, "
             "which is where most people are currently getting scammed. Thank you for your help."
@@ -448,12 +451,12 @@ def report_text(t):
         f"I am writing to report the following CA on {chain_name} chain as a MALICIOUS token -\n\n"
         f"{ca}\n\n"
         f"They deployed {age}, and are already at {mcap} market cap, directly copying the "
-        f"{copied_what(t)} of the original token that was deployed over 2 weeks ago. They do this in "
+        f"{copied_what(t)} of the original token that was deployed {REAL_TOKEN_AGE}. They do this in "
         "order to rank higher on platforms' search, for example Coinbase. They wait for people to "
         "buy their token thinking it is the original and then they rugpull. Please flag this CA as "
         "MALICIOUS as that is the only flag that will remove it from Coinbase search and keep "
         "users safe.\n\n"
-        "For reference, here is the ORIGINAL CA deployed over 2 weeks ago -\n\n"
+        f"For reference, here is the ORIGINAL CA deployed {REAL_TOKEN_AGE} -\n\n"
         f"{real}\n\n"
         "Once again, the MALICIOUS CA is -\n\n"
         f"{ca}\n\n"
