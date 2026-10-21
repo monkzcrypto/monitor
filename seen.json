@@ -1,6 +1,6 @@
 {
   "email_count": {
-    "count": 13,
+    "count": 15,
     "date": "2026-10-21"
   },
   "emailed": [
@@ -52,7 +52,9 @@
     "0xB200000000000000000000a32E62B129344719Ab",
     "0x2fd61edf007501d2399539414cd47e3f2a8255eb",
     "0xb200000000000000000000a32e62b129344719ab",
-    "0x463c6aB26E633100b16da884A2de5504ad5Da149"
+    "0x463c6aB26E633100b16da884A2de5504ad5Da149",
+    "0xB200000000000000000000916B5E9Ada1126078f",
+    "0xb200000000000000000000916b5e9ada1126078f"
   ],
   "heartbeat": "2026-10-21",
   "initialized": true,
@@ -6017,6 +6019,21 @@
       "symbol": "IOF",
       "url": "https://dexscreener.com/base/0x68579144b20af2c0d7138ef5fc3856a29c509079cc941456dc3d57fb6ac27eb9"
     },
+    "dex:base:0xB200000000000000000000916B5E9Ada1126078f": {
+      "address": "0xB200000000000000000000916B5E9Ada1126078f",
+      "bonded_ms": 1792555505000,
+      "chain": "base",
+      "created_ms": 1792555505000,
+      "exact_ticker": true,
+      "liquidity_usd": 2995.75,
+      "mcap": 3027,
+      "name": "Institutional Oil Fund - IOF",
+      "name_match": true,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on uniswap",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/base/0x6cf7b48ba9b4bf13a3f5e71f37e2d1614105387ea972fd9173b1dcd091cceb64"
+    },
     "dex:base:0xB200000000000000000000a32E62B129344719Ab": {
       "address": "0xB200000000000000000000a32E62B129344719Ab",
       "bonded_ms": 1792554289000,
@@ -7062,6 +7079,21 @@
       "source": "Onchain - bonded, trading on flapsh",
       "symbol": "OIF",
       "url": "https://dexscreener.com/base/0x9df1a991b7b0a685633f07caf212ada408d185ff"
+    },
+    "dex:base:0xb200000000000000000000916b5e9ada1126078f": {
+      "address": "0xb200000000000000000000916b5e9ada1126078f",
+      "bonded_ms": 1792555505000.0,
+      "chain": "base",
+      "created_ms": 1792555505000.0,
+      "exact_ticker": true,
+      "liquidity_usd": 2489.6606,
+      "mcap": 2991.787446,
+      "name": "Institutional Oil Fund - IOF",
+      "name_match": true,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on uniswap-v4-base (GeckoTerminal)",
+      "symbol": "IOF",
+      "url": "https://www.geckoterminal.com/base/pools/0x6cf7b48ba9b4bf13a3f5e71f37e2d1614105387ea972fd9173b1dcd091cceb64"
     },
     "dex:base:0xb200000000000000000000E4AF3fbe657C452883": {
       "address": "0xb200000000000000000000E4AF3fbe657C452883",
