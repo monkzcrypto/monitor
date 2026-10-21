@@ -1,6 +1,6 @@
 {
   "email_count": {
-    "count": 2,
+    "count": 4,
     "date": "2026-10-21"
   },
   "emailed": [
@@ -41,7 +41,9 @@
     "0x77A94Dc79194ea94999a09BA560a39a43139dEF7",
     "0x77a94dc79194ea94999a09ba560a39a43139def7",
     "0xc589d725Fa219f05Ded0177B0CE4eDE4a64D6DFc",
-    "0xc589d725fa219f05ded0177b0ce4ede4a64d6dfc"
+    "0xc589d725fa219f05ded0177b0ce4ede4a64d6dfc",
+    "0xaaE0BA0CFdA9a5bc315761F4Fa0B9aeAa9bFCd6b",
+    "0xaae0ba0cfda9a5bc315761f4fa0b9aeaa9bfcd6b"
   ],
   "heartbeat": "2026-10-21",
   "initialized": true,
@@ -6797,6 +6799,36 @@
       "source": "Onchain - bonded, trading on uniswap-v4-base (GeckoTerminal)",
       "symbol": "IOF",
       "url": "https://www.geckoterminal.com/base/pools/0xa4e16a42af0557757c09eb2a93c073c69023079c67b12af6b969154d120a2335"
+    },
+    "dex:base:0xaaE0BA0CFdA9a5bc315761F4Fa0B9aeAa9bFCd6b": {
+      "address": "0xaaE0BA0CFdA9a5bc315761F4Fa0B9aeAa9bFCd6b",
+      "bonded_ms": 1792546503000,
+      "chain": "base",
+      "created_ms": 1792546503000,
+      "exact_ticker": true,
+      "liquidity_usd": 70144.89,
+      "mcap": 303696205,
+      "name": "IOF",
+      "name_match": false,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on uniswap",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/base/0xefe709b2c1c370d79da74f745e14b325e99dbec2f0c2090c7dd81a8e20defe95"
+    },
+    "dex:base:0xaae0ba0cfda9a5bc315761f4fa0b9aeaa9bfcd6b": {
+      "address": "0xaae0ba0cfda9a5bc315761f4fa0b9aeaa9bfcd6b",
+      "bonded_ms": 1792546503000.0,
+      "chain": "base",
+      "created_ms": 1792546503000.0,
+      "exact_ticker": true,
+      "liquidity_usd": 68728.1974,
+      "mcap": 316832417.6,
+      "name": "IOF",
+      "name_match": false,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on uniswap-v4-base (GeckoTerminal)",
+      "symbol": "IOF",
+      "url": "https://www.geckoterminal.com/base/pools/0xefe709b2c1c370d79da74f745e14b325e99dbec2f0c2090c7dd81a8e20defe95"
     },
     "dex:base:0xacdC1E00ad4a92247Eec9C6D4483E5600454A25d": {
       "address": "0xacdC1E00ad4a92247Eec9C6D4483E5600454A25d",
