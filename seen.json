@@ -1,6 +1,6 @@
 {
   "email_count": {
-    "count": 7,
+    "count": 9,
     "date": "2026-10-22"
   },
   "emailed": [
@@ -69,7 +69,9 @@
     "5kg6QeUeYGJHy6t5tDn4WEc2eEPvcHnTRRNG8SXDvFQH",
     "6NNeEDhPQCwazvsfexzjxgp1phGXB8oE3pCBHQ51LU6v",
     "9BWcYUJiyBGypt8iCKCcvPnYodGiC92F9fHyjS8ZrgaU",
-    "86kTTNzYbqGgm92TpsMoBKcqjrwG8UiAiNKWyuuztcJL"
+    "86kTTNzYbqGgm92TpsMoBKcqjrwG8UiAiNKWyuuztcJL",
+    "77NzTA9UztGY76YztcvnQX4pr4osfPzSHamjNComg6NZ",
+    "7kPADzunxjJa5CtMJSQWgsPLnUH2FSvct8dXJ2Uw4UHA"
   ],
   "heartbeat": "2026-10-22",
   "initialized": true,
@@ -9653,6 +9655,21 @@
       "symbol": "IOF",
       "url": "https://dexscreener.com/solana/4ns7s7ctgnnqppvemfope8vlmk1fqkbvqiqruubbzjkf"
     },
+    "dex:solana:77NzTA9UztGY76YztcvnQX4pr4osfPzSHamjNComg6NZ": {
+      "address": "77NzTA9UztGY76YztcvnQX4pr4osfPzSHamjNComg6NZ",
+      "bonded_ms": 1792676931000,
+      "chain": "solana",
+      "created_ms": 1792676931000,
+      "exact_ticker": true,
+      "liquidity_usd": 39708.45,
+      "mcap": 21018,
+      "name": "IOF\u2728",
+      "name_match": false,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on pumpswap",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/solana/24uvdfgrzxajl4pu55eoea4racafef6s6w561vyvvbx4"
+    },
     "dex:solana:7c8SkmWC9Zmy9qh7ctLBQgkFhKhrKfPpfURrGHRfpump": {
       "address": "7c8SkmWC9Zmy9qh7ctLBQgkFhKhrKfPpfURrGHRfpump",
       "chain": "solana",
@@ -9666,6 +9683,21 @@
       "source": "Onchain - bonded, trading on pumpswap",
       "symbol": "IOF",
       "url": "https://dexscreener.com/solana/edjp3bfahvhc9dcjc9cuhvu6tgpotw7aedndpbr8cz1c"
+    },
+    "dex:solana:7kPADzunxjJa5CtMJSQWgsPLnUH2FSvct8dXJ2Uw4UHA": {
+      "address": "7kPADzunxjJa5CtMJSQWgsPLnUH2FSvct8dXJ2Uw4UHA",
+      "bonded_ms": 1792676866000,
+      "chain": "solana",
+      "created_ms": 1792676866000,
+      "exact_ticker": true,
+      "liquidity_usd": 0.01,
+      "mcap": 128028,
+      "name": "IOF\u2728",
+      "name_match": false,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on pumpswap",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/solana/46j7mng5zzeboyodfuqszbkct7dyse7s1r8ixosnrqes"
     },
     "dex:solana:86kTTNzYbqGgm92TpsMoBKcqjrwG8UiAiNKWyuuztcJL": {
       "address": "86kTTNzYbqGgm92TpsMoBKcqjrwG8UiAiNKWyuuztcJL",
