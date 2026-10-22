@@ -1,7 +1,7 @@
 {
   "email_count": {
-    "count": 23,
-    "date": "2026-10-21"
+    "count": 2,
+    "date": "2026-10-22"
   },
   "emailed": [
     "0x6dA938d182Bd2aA5ff5312D9692f6DCac4297F33",
@@ -62,7 +62,9 @@
     "0x2D193dEc190407a063BfA94Cdbc8C644F2F9f9E5",
     "0x5B43dfd89e8FAdd5dF7047f19255e5dd052EC24f",
     "0x0245d76d0E5a69D75784cb58405fa2c50c83d6a4",
-    "0x4E110dc1FA9aAaacC7387d4aa92Ad22887Bd0149"
+    "0x4E110dc1FA9aAaacC7387d4aa92Ad22887Bd0149",
+    "F2x6dvTZ1SCcgbfCfCcRVL9rDgkw9rJAfmXYiTu7pump",
+    "AEGjYRwmjkxdJPdjmix9G3ZavUAp7awcibCBTV9xfiZY"
   ],
   "heartbeat": "2026-10-22",
   "initialized": true,
@@ -8975,6 +8977,21 @@
       "symbol": "IOF",
       "url": "https://dexscreener.com/robinhood/0x341febb3e127f76b1d8931b178a10c82a63aac4b"
     },
+    "dex:robinhood:0x36468cb6483299c9fe51b8ee65ce0a5e52567777": {
+      "address": "0x36468CB6483299C9fE51B8ee65cE0a5e52567777",
+      "bonded_ms": 1792671704000,
+      "chain": "robinhood",
+      "created_ms": 1792671704000,
+      "exact_ticker": true,
+      "liquidity_usd": 9218.43,
+      "mcap": 4164,
+      "name": "IOF\u2728",
+      "name_match": false,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on flapsh",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/robinhood/0x7cede79a07217788898f3cc9ba131a7065c46b9d"
+    },
     "dex:robinhood:0x567DdC1fa9375484444ABB2855fE84564A487777": {
       "address": "0x567DdC1fa9375484444ABB2855fE84564A487777",
       "chain": "robinhood",
@@ -9777,6 +9794,21 @@
       "symbol": "IOF",
       "url": "https://dexscreener.com/solana/6xoahhonb3m7ohzqt7enbb4sdgacrginx2kyyw7lwzzd"
     },
+    "dex:solana:AEGjYRwmjkxdJPdjmix9G3ZavUAp7awcibCBTV9xfiZY": {
+      "address": "AEGjYRwmjkxdJPdjmix9G3ZavUAp7awcibCBTV9xfiZY",
+      "bonded_ms": 1792671807000,
+      "chain": "solana",
+      "created_ms": 1792671807000,
+      "exact_ticker": true,
+      "liquidity_usd": 46223.49,
+      "mcap": 28532,
+      "name": "IOF\u2728",
+      "name_match": false,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on pumpswap",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/solana/efqgrxccs71xynmrsv54yrpbjpe7ymyzve3sfifdpqmf"
+    },
     "dex:solana:AHesXXHQxyFM7ariQMEGgAQVKztmqafFAP3X8My3pump": {
       "address": "AHesXXHQxyFM7ariQMEGgAQVKztmqafFAP3X8My3pump",
       "chain": "solana",
@@ -9984,6 +10016,21 @@
       "source": "Onchain - bonded, trading on pumpswap",
       "symbol": "IOF",
       "url": "https://dexscreener.com/solana/gw1y44b7m9zmcmtpyzkkbnvrbrsafsfd97zo1bzwlewf"
+    },
+    "dex:solana:F2x6dvTZ1SCcgbfCfCcRVL9rDgkw9rJAfmXYiTu7pump": {
+      "address": "F2x6dvTZ1SCcgbfCfCcRVL9rDgkw9rJAfmXYiTu7pump",
+      "bonded_ms": 1792671689000,
+      "chain": "solana",
+      "created_ms": 1792671689000,
+      "exact_ticker": true,
+      "liquidity_usd": 641282.6,
+      "mcap": 56244729,
+      "name": "IOF\u2728",
+      "name_match": false,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on pumpswap",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/solana/7jjars9syr13fgtb8gw8sdqnotcztcoh4huuedxuwpkj"
     },
     "dex:solana:FJnCoddosAU13rE217m2vXMstwFVYHf1PN5915DYpump": {
       "address": "FJnCoddosAU13rE217m2vXMstwFVYHf1PN5915DYpump",
