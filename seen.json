@@ -1,6 +1,6 @@
 {
   "email_count": {
-    "count": 7,
+    "count": 8,
     "date": "2026-10-23"
   },
   "emailed": [
@@ -86,7 +86,8 @@
     "0x100b7E14368C8ab3d87e57cd99F96573bf802Cc5",
     "0x243D37e27CD761C35466C08104a01bD78a08aF46",
     "KFpSU62fCXjWa5He5wbrY3stiwqF1EeLqRNfMdRpump",
-    "4DgiTDxC1hdpuyY6yZQDRoUz3Pd2zrWRAp6Dxw4dpump"
+    "4DgiTDxC1hdpuyY6yZQDRoUz3Pd2zrWRAp6Dxw4dpump",
+    "0x62c38ba3704443840ab0596f7f973bf3998dd319"
   ],
   "heartbeat": "2026-10-23",
   "initialized": true,
@@ -4420,6 +4421,21 @@
       "source": "Onchain - bonded, trading on flapsh",
       "symbol": "IFO",
       "url": "https://dexscreener.com/base/0x6d04f9314e238ccb58f44a3efacc1b8e78890eeb"
+    },
+    "dex:base:0x62c38ba3704443840ab0596f7f973bf3998dd319": {
+      "address": "0x62c38ba3704443840ab0596f7f973bf3998dd319",
+      "bonded_ms": 1792789963000.0,
+      "chain": "base",
+      "created_ms": 1792789963000.0,
+      "exact_ticker": false,
+      "liquidity_usd": 217854.8246,
+      "mcap": 224056.2992,
+      "name": "Institutional Oil Funds",
+      "name_match": true,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on uniswap-v4-base (GeckoTerminal)",
+      "symbol": "IOFF",
+      "url": "https://www.geckoterminal.com/base/pools/0x855c47ec6cc72c1dccf60832ec1c42bfbf10cc90b26a00270e26f0c232582124"
     },
     "dex:base:0x63Fce07102Ef4ab1a4a2B7AE0c0469f66BCBd247": {
       "address": "0x63Fce07102Ef4ab1a4a2B7AE0c0469f66BCBd247",
