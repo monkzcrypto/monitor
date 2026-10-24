@@ -1,6 +1,6 @@
 {
   "email_count": {
-    "count": 3,
+    "count": 4,
     "date": "2026-10-24"
   },
   "emailed": [
@@ -90,7 +90,8 @@
     "0x62c38ba3704443840ab0596f7f973bf3998dd319",
     "5MDdoXuyft8A9tgsWQS4yttis4rEaPWA7T4vhyjqpump",
     "5eXqiSMnZuqujfvpozFE1yJNEMxnUkjTy4urSYJYpump",
-    "RxUZpPEguWiaQU6342paYMbALup1LviSHPvgn7Npump"
+    "RxUZpPEguWiaQU6342paYMbALup1LviSHPvgn7Npump",
+    "0xb62d5e645294f4F34e921dcfCC155dD50B7b104a"
   ],
   "heartbeat": "2026-10-24",
   "initialized": true,
@@ -7520,6 +7521,21 @@
       "symbol": "IOF",
       "url": "https://www.geckoterminal.com/base/pools/0x3241081e313e6f6535f32385ce7b108cff79e393142201649f076082c6288762"
     },
+    "dex:base:0xb62d5e645294f4f34e921dcfcc155dd50b7b104a": {
+      "address": "0xb62d5e645294f4F34e921dcfCC155dD50B7b104a",
+      "bonded_ms": 1792861259000,
+      "chain": "base",
+      "created_ms": 1792861259000,
+      "exact_ticker": false,
+      "liquidity_usd": 97831.94,
+      "mcap": 98821,
+      "name": "OIL FUND INSTITUTIONAL(IOF)",
+      "name_match": true,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on uniswap",
+      "symbol": "OFI",
+      "url": "https://dexscreener.com/base/0xafd3f9dfa2d45567fbe7d32ef481b73d9c7d7cc9e2eb1a33b3da9df21611d165"
+    },
     "dex:base:0xb80706D374ea32038d72af4Eeba4e53fEEF4386b": {
       "address": "0xb80706D374ea32038d72af4Eeba4e53fEEF4386b",
       "bonded_ms": 1791938563000,
@@ -9182,6 +9198,21 @@
       "source": "Onchain - bonded, trading on flapsh",
       "symbol": "IOF",
       "url": "https://dexscreener.com/robinhood/0x7cede79a07217788898f3cc9ba131a7065c46b9d"
+    },
+    "dex:robinhood:0x4221d2d96f388dfaf3ac1c55df0fab0f10f07777": {
+      "address": "0x4221d2d96F388DFAf3AC1c55df0fab0f10f07777",
+      "bonded_ms": 1792861305000,
+      "chain": "robinhood",
+      "created_ms": 1792861305000,
+      "exact_ticker": false,
+      "liquidity_usd": 8882.76,
+      "mcap": 4012,
+      "name": "OIL FUND INSTITUTIONAL IOF",
+      "name_match": true,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on flapsh",
+      "symbol": "OFI",
+      "url": "https://dexscreener.com/robinhood/0x0c92acc8aef0803ac9c88d3d337214c450cbfe48"
     },
     "dex:robinhood:0x567DdC1fa9375484444ABB2855fE84564A487777": {
       "address": "0x567DdC1fa9375484444ABB2855fE84564A487777",
