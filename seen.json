@@ -5580,6 +5580,21 @@
       "symbol": "IOF",
       "url": "https://www.geckoterminal.com/base/pools/0xbec1cadb96d0eb34e1767e8e56573d070063d85ec2a0ae5b1b6779733c75f4ca"
     },
+    "dex:base:0x86ece15f3af99eae4c5e2e4594b0727386157777": {
+      "address": "0x86ECE15f3AF99eaE4c5e2E4594B0727386157777",
+      "bonded_ms": 1792861305000,
+      "chain": "base",
+      "created_ms": 1792861305000,
+      "exact_ticker": false,
+      "liquidity_usd": 8882.76,
+      "mcap": 4012,
+      "name": "OIL FUND INSTITUTIONAL IOF",
+      "name_match": true,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on flapsh",
+      "symbol": "OFI",
+      "url": "https://dexscreener.com/base/0x080f207c7cc63486de0d89f8564ef01759c64f05"
+    },
     "dex:base:0x87d9a02328F815FA15393Bb2a5fC4D2B40Bc2594": {
       "address": "0x87d9a02328F815FA15393Bb2a5fC4D2B40Bc2594",
       "bonded_ms": 1791930563000,
