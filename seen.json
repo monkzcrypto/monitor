@@ -4931,6 +4931,21 @@
       "symbol": "IOF",
       "url": "https://www.geckoterminal.com/base/pools/0x16d7e6c4a996f1ae357a8d63c3f48b4b04f497362651deeb67ff660c7397740a"
     },
+    "dex:base:0x73b8ada8c7a7746cd233a5c50c29c232a60a7777": {
+      "address": "0x73B8Ada8C7A7746cd233A5c50C29C232A60a7777",
+      "bonded_ms": 1792751643000,
+      "chain": "base",
+      "created_ms": 1792751643000,
+      "exact_ticker": true,
+      "liquidity_usd": 9202.46,
+      "mcap": 4156,
+      "name": "LOF",
+      "name_match": false,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on flapsh",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/base/0x4f88726b62ebaf0e90c5b454987af9cd3cafa516"
+    },
     "dex:base:0x753c6a29B22987f17cb8A773B3858614239A7f3e": {
       "address": "0x753c6a29B22987f17cb8A773B3858614239A7f3e",
       "bonded_ms": 1792002955000,
