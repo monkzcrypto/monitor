@@ -1,6 +1,6 @@
 {
   "email_count": {
-    "count": 5,
+    "count": 6,
     "date": "2026-10-24"
   },
   "emailed": [
@@ -92,7 +92,8 @@
     "5eXqiSMnZuqujfvpozFE1yJNEMxnUkjTy4urSYJYpump",
     "RxUZpPEguWiaQU6342paYMbALup1LviSHPvgn7Npump",
     "0xb62d5e645294f4F34e921dcfCC155dD50B7b104a",
-    "0x7e02e0079a887885c88464935ec51a0f592b90cb"
+    "0x7e02e0079a887885c88464935ec51a0f592b90cb",
+    "0x3e5556bd6653ee147a7252d45b10544128e0da99"
   ],
   "heartbeat": "2026-10-24",
   "initialized": true,
@@ -3334,6 +3335,21 @@
       "source": "Onchain - bonded, trading on uniswap-v4-base (GeckoTerminal)",
       "symbol": "IOF",
       "url": "https://www.geckoterminal.com/base/pools/0xbb1ae1e7e3ca1d97e447bf37b5bea61b2b2865a42cbd268231999cb3dd478746"
+    },
+    "dex:base:0x3e5556bd6653ee147a7252d45b10544128e0da99": {
+      "address": "0x3e5556bd6653ee147a7252d45b10544128e0da99",
+      "bonded_ms": 1792862715000.0,
+      "chain": "base",
+      "created_ms": 1792862715000.0,
+      "exact_ticker": false,
+      "liquidity_usd": 3020.8675,
+      "mcap": 23231.41636,
+      "name": "OIL FUND INSTITUTIONAL(IOF) USD NETWORK",
+      "name_match": true,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on uniswap-v4-base (GeckoTerminal)",
+      "symbol": "OFI",
+      "url": "https://www.geckoterminal.com/base/pools/0x5f443ccc888baa3490ad81317254870d55398b74d7e212ab81d5014821cd08e2"
     },
     "dex:base:0x3eb94504292c1b9be6bfcab60c611029d367dbf8": {
       "address": "0x3eb94504292c1b9be6bfcab60c611029d367dbf8",
