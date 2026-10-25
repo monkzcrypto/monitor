@@ -1,6 +1,6 @@
 {
   "email_count": {
-    "count": 5,
+    "count": 6,
     "date": "2026-10-25"
   },
   "emailed": [
@@ -99,7 +99,8 @@
     "0x93aeB92D63A3Fd3436ea0495473f0e08C7A47777",
     "48eA76rJMsbeLuQVz5oYp631yY4xwC2RRmSC83RoBAGS",
     "0xc073CBE230fFD95813463634177bC47Ee94cEFb0",
-    "0x7826D97B0014dCd32789D0f449F8E6C6A7aC9851"
+    "0x7826D97B0014dCd32789D0f449F8E6C6A7aC9851",
+    "0x1510806bdbd699cdc666024233d974c4fd7578fe"
   ],
   "heartbeat": "2026-10-25",
   "initialized": true,
@@ -1060,6 +1061,21 @@
       "source": "Onchain - bonded, trading on uniswap-v4-base (GeckoTerminal)",
       "symbol": "IOF",
       "url": "https://www.geckoterminal.com/base/pools/0xf80e7fe0768591ef063b80f22f529af45a4b02cfe467a96570f20a7dbf34b27e"
+    },
+    "dex:base:0x1510806bdbd699cdc666024233d974c4fd7578fe": {
+      "address": "0x1510806bdbd699cdc666024233d974c4fd7578fe",
+      "bonded_ms": 1792969739000.0,
+      "chain": "base",
+      "created_ms": 1792969739000.0,
+      "exact_ticker": false,
+      "liquidity_usd": 118510.1457,
+      "mcap": 119616.1076,
+      "name": "(OFI)Oil Fund Institutional",
+      "name_match": true,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on uniswap-v4-base (GeckoTerminal)",
+      "symbol": "OFI",
+      "url": "https://www.geckoterminal.com/base/pools/0x8592f7f124c0255176825e732f5e5ef8c4feaf78ee9cd1366d10d7611081542d"
     },
     "dex:base:0x1764c2B3511d8e09366c681159Be0BC1b4CD5827": {
       "address": "0x1764c2B3511d8e09366c681159Be0BC1b4CD5827",
@@ -9326,6 +9342,21 @@
       "source": "Onchain - bonded, trading on flapsh",
       "symbol": "IOF",
       "url": "https://dexscreener.com/robinhood/0x341febb3e127f76b1d8931b178a10c82a63aac4b"
+    },
+    "dex:robinhood:0x076a7a6e6df2706dce10be2121e74745260e7777": {
+      "address": "0x076A7a6e6df2706DcE10Be2121E74745260E7777",
+      "bonded_ms": 1792969806000,
+      "chain": "robinhood",
+      "created_ms": 1792969806000,
+      "exact_ticker": false,
+      "liquidity_usd": 8967.62,
+      "mcap": 4050,
+      "name": "OFI Oil Fund Institutional",
+      "name_match": true,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on flapsh",
+      "symbol": "OFI",
+      "url": "https://dexscreener.com/robinhood/0x8095077a9bdb5b90d7a8be680018c9e0783e8475"
     },
     "dex:robinhood:0x36468cb6483299c9fe51b8ee65ce0a5e52567777": {
       "address": "0x36468CB6483299C9fE51B8ee65cE0a5e52567777",
