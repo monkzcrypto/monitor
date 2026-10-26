@@ -5529,6 +5529,21 @@
       "symbol": "IOF",
       "url": "https://dexscreener.com/base/0x51c4b3ef91a2dee41f902cb25f8e5352f401f78414100285accc1c8dabae10db"
     },
+    "dex:base:0x822cf65ee9baf5c18ca033379b296180611a60aa": {
+      "address": "0x822CF65eE9baF5c18CA033379B296180611a60AA",
+      "bonded_ms": 1792765263000,
+      "chain": "base",
+      "created_ms": 1792765263000,
+      "exact_ticker": false,
+      "liquidity_usd": 186369.24,
+      "mcap": 188382,
+      "name": "Global Institution Oil Fund (GIOF)",
+      "name_match": true,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on uniswap",
+      "symbol": "GIOF",
+      "url": "https://dexscreener.com/base/0x297d592f91bec278496bab4c8c27c672b06e1e425b422d4881409a3b63e770df"
+    },
     "dex:base:0x84d73b609D6a4dc2766E6ECfF672EA3bd36bD8BA": {
       "address": "0x84d73b609D6a4dc2766E6ECfF672EA3bd36bD8BA",
       "bonded_ms": 1792070651000,
