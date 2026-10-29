@@ -8722,6 +8722,21 @@
       "symbol": "IOF",
       "url": "https://www.geckoterminal.com/base/pools/0x00ebf7ef0f6733664feefd8fcfa47380659901ea378233b999b7d4a2a40e57fa"
     },
+    "dex:base:0xdd561518799f91cb0b25b68d3e2e7032ad202892": {
+      "address": "0xdd561518799f91cb0b25b68d3e2e7032ad202892",
+      "bonded_ms": 1791898401000.0,
+      "chain": "base",
+      "created_ms": 1791898401000.0,
+      "exact_ticker": false,
+      "liquidity_usd": 72086.2236,
+      "mcap": 73426.35805,
+      "name": "INSTUTIONAL OIL FUND (IOF)",
+      "name_match": false,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on uniswap-v4-base (GeckoTerminal)",
+      "symbol": "IFO",
+      "url": "https://www.geckoterminal.com/base/pools/0xe80c92ee46b9482e456d7d739cf1009c6756be0a8ce6b47b0e7181343764b8e3"
+    },
     "dex:base:0xde7fe380683108f598ba66375f35a927b4c3dd8e": {
       "address": "0xde7fe380683108f598ba66375f35a927b4c3dd8e",
       "bonded_ms": 1791769433000.0,
