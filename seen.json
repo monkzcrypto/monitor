@@ -1792,6 +1792,21 @@
       "symbol": "IOF",
       "url": "https://dexscreener.com/base/0xe9dcf96a48f859dac5d94d33f8e7eded2af1c82bfa19e38e4b2abe1868745e61"
     },
+    "dex:base:0x252ca772fcbb5a07a18d978df952f684e219eba3": {
+      "address": "0x252ca772fcbb5a07a18d978df952f684e219eba3",
+      "bonded_ms": 1775340463000.0,
+      "chain": "base",
+      "created_ms": 1775340463000.0,
+      "exact_ticker": false,
+      "liquidity_usd": 22878.2169,
+      "mcap": 23044.42358,
+      "name": "IonForge",
+      "name_match": false,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on bankr (GeckoTerminal)",
+      "symbol": "IOFO",
+      "url": "https://www.geckoterminal.com/base/pools/0x45b4e689e8d37a401d400602e445d8f71f08592a2805063ae5dd2cb20c80d2ba"
+    },
     "dex:base:0x254058f17F3D808378f33831F090f08118547777": {
       "address": "0x254058f17F3D808378f33831F090f08118547777",
       "bonded_ms": 1792507341000,
