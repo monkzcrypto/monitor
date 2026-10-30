@@ -1,6 +1,6 @@
 {
   "email_count": {
-    "count": 10,
+    "count": 11,
     "date": "2026-10-30"
   },
   "emailed": [
@@ -123,12 +123,27 @@
     "0xcC6b0D0be3e2dF62b0D57F8546ae61bCd73d840c",
     "G4igFNg5AJZezYrZL14BiwAkke8QTVAwGT7yv2rvpump",
     "0x0415B8373074363Eeda2C8bC7b68e45a9b72D2aD",
-    "0xBe2FEEC85942D69Bd6092dD468Ff03b0AD9c00Ee"
+    "0xBe2FEEC85942D69Bd6092dD468Ff03b0AD9c00Ee",
+    "Bg6AXWysZRtKwiVPXPbu7bQupxC83BzA96x6PFtKpump"
   ],
   "heartbeat": "2026-10-30",
   "initialized": true,
   "mode": "bonded-v4",
-  "reports": {},
+  "reports": {
+    "Bg6AXWysZRtKwiVPXPbu7bQupxC83BzA96x6PFtKpump": {
+      "address": "Bg6AXWysZRtKwiVPXPbu7bQupxC83BzA96x6PFtKpump",
+      "chain": "solana",
+      "exact_ticker": true,
+      "followed_up": false,
+      "message_id": "<179338805313.2449.16937025866870007759@gmail.com>",
+      "name": "Institutional Oil Fund",
+      "name_match": true,
+      "sent_ms": 1793388054883.2085,
+      "subject": "MALICIOUS token report (Solana): Bg6AXWysZRtKwiVPXPbu7bQupxC83BzA96x6PFtKpump",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/solana/e5p9cje5yqlx4frdcajvmlapwaecfiazkqpnv38yyupj"
+    }
+  },
   "seen": {
     "dex:base:0x004E61dfe83b80D60c8A62BbeBCc872192247CB6": {
       "address": "0x004E61dfe83b80D60c8A62BbeBCc872192247CB6",
@@ -11202,6 +11217,21 @@
       "source": "Onchain - bonded, trading on pumpswap",
       "symbol": "IOF",
       "url": "https://dexscreener.com/solana/hzueqqhfqtwt65uvfkaqi7zkmxjbcbzkuk9f3wgbtrkd"
+    },
+    "dex:solana:Bg6AXWysZRtKwiVPXPbu7bQupxC83BzA96x6PFtKpump": {
+      "address": "Bg6AXWysZRtKwiVPXPbu7bQupxC83BzA96x6PFtKpump",
+      "bonded_ms": 1793387705000,
+      "chain": "solana",
+      "created_ms": 1793387705000,
+      "exact_ticker": true,
+      "liquidity_usd": 241262.1,
+      "mcap": 8894674,
+      "name": "Institutional Oil Fund",
+      "name_match": true,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on pumpswap",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/solana/e5p9cje5yqlx4frdcajvmlapwaecfiazkqpnv38yyupj"
     },
     "dex:solana:BydDtQ2T8YAvAxq4zGHgB3U3vAcFNRFwUnmbJybWpump": {
       "address": "BydDtQ2T8YAvAxq4zGHgB3U3vAcFNRFwUnmbJybWpump",
