@@ -128,6 +128,7 @@
   "heartbeat": "2026-10-30",
   "initialized": true,
   "mode": "bonded-v4",
+  "reports": {},
   "seen": {
     "dex:base:0x004E61dfe83b80D60c8A62BbeBCc872192247CB6": {
       "address": "0x004E61dfe83b80D60c8A62BbeBCc872192247CB6",
@@ -8436,6 +8437,21 @@
       "source": "Onchain - bonded, trading on uniswap",
       "symbol": "I O F",
       "url": "https://dexscreener.com/base/0xeaa1caf504e034fa6f41c3b3d83363daf0e2e37927039e63455f700479589542"
+    },
+    "dex:base:0xccb5432d17e8e78196bac1806b44af830940e498": {
+      "address": "0xccB5432d17e8E78196BAC1806b44Af830940E498",
+      "bonded_ms": 1790645191000,
+      "chain": "base",
+      "created_ms": 1790645191000,
+      "exact_ticker": false,
+      "liquidity_usd": 149126.24,
+      "mcap": 150630,
+      "name": "Global Oil Fund Institution",
+      "name_match": true,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on uniswap",
+      "symbol": "GOFI",
+      "url": "https://dexscreener.com/base/0x1f261332501cfd8df27ec9837aa275f3646af26ea85de5d03ef329e5f40722f9"
     },
     "dex:base:0xcdE3A944556c69549d00A3F376821bD6F2FA2169": {
       "address": "0xcdE3A944556c69549d00A3F376821bD6F2FA2169",
