@@ -1,6 +1,6 @@
 {
   "email_count": {
-    "count": 1,
+    "count": 2,
     "date": "2026-10-30"
   },
   "emailed": [
@@ -114,7 +114,8 @@
     "AcBX8a8eHbzQghgqMfqXeAz4kQSRbtHWKUSGXvwMpump",
     "0xD0bc1B1e361fD5f7D1C4ecee1E1C9Acc9C827777",
     "0x079ba9bda5cd6de0f2f15ce2a9e7c9fd8c695159",
-    "GZRS3VwVRUwEzgposkzWygsUUiXtkJRXkCBCJ7Fvpump"
+    "GZRS3VwVRUwEzgposkzWygsUUiXtkJRXkCBCJ7Fvpump",
+    "AoV6s7YdPHNfpaWmNsoSKMtutdkgt2NuW8isASYpump"
   ],
   "heartbeat": "2026-10-30",
   "initialized": true,
@@ -10847,6 +10848,21 @@
       "source": "Onchain - bonded, trading on pumpswap",
       "symbol": "IOF",
       "url": "https://dexscreener.com/solana/ffx248swf7spygcuapyksn7bmx8x5hvid5b7znfe3mbs"
+    },
+    "dex:solana:AoV6s7YdPHNfpaWmNsoSKMtutdkgt2NuW8isASYpump": {
+      "address": "AoV6s7YdPHNfpaWmNsoSKMtutdkgt2NuW8isASYpump",
+      "bonded_ms": 1793323384000,
+      "chain": "solana",
+      "created_ms": 1793323384000,
+      "exact_ticker": true,
+      "liquidity_usd": 380651.02,
+      "mcap": 22142409,
+      "name": "Institutional Oil Fund",
+      "name_match": true,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on pumpswap",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/solana/89hotvfe6sqehecdyp4t7cb9d1cisngin7c8fu29ngu9"
     },
     "dex:solana:Au5RjLKbuKxS7tFopCmFUp3gYKAu2ewgAZ8mpabeW58Q": {
       "address": "Au5RjLKbuKxS7tFopCmFUp3gYKAu2ewgAZ8mpabeW58Q",
