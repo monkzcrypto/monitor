@@ -1,6 +1,6 @@
 {
   "email_count": {
-    "count": 4,
+    "count": 5,
     "date": "2026-10-30"
   },
   "emailed": [
@@ -117,7 +117,8 @@
     "GZRS3VwVRUwEzgposkzWygsUUiXtkJRXkCBCJ7Fvpump",
     "AoV6s7YdPHNfpaWmNsoSKMtutdkgt2NuW8isASYpump",
     "5BcoB5jW3c2GMMMPNF6AHhpyawmR1cxCdyY1NQUPpump",
-    "0xb2000000000000000000005581B7c3E3418bbfca"
+    "0xb2000000000000000000005581B7c3E3418bbfca",
+    "0x40fceca1819463ac5fcd1c8d22e5da9d1562cb05"
   ],
   "heartbeat": "2026-10-30",
   "initialized": true,
@@ -3718,6 +3719,21 @@
       "source": "Onchain - bonded, trading on uniswap",
       "symbol": "INSTITUTIONAL OIL FUND",
       "url": "https://dexscreener.com/base/0x7cca4efe7a0e731eddce06ebbdee21d5a521b2a0255be3945dca514a285a6081"
+    },
+    "dex:base:0x40fceca1819463ac5fcd1c8d22e5da9d1562cb05": {
+      "address": "0x40fceca1819463ac5fcd1c8d22e5da9d1562cb05",
+      "bonded_ms": 1793363003000.0,
+      "chain": "base",
+      "created_ms": 1793363003000.0,
+      "exact_ticker": true,
+      "liquidity_usd": 29093528.9102,
+      "mcap": 193927660.1,
+      "name": "IOF",
+      "name_match": false,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on uniswap-v4-base (GeckoTerminal)",
+      "symbol": "I O F",
+      "url": "https://www.geckoterminal.com/base/pools/0xc66e516b26f9833df7c51a10972fbdae19a59a7a54f752ba8f298ea748a5da0f"
     },
     "dex:base:0x419fc336cD431Eda0a9bF762FD5C8748a9B89f7E": {
       "address": "0x419fc336cD431Eda0a9bF762FD5C8748a9B89f7E",
