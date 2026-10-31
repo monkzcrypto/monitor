@@ -1,6 +1,6 @@
 {
   "email_count": {
-    "count": 15,
+    "count": 16,
     "date": "2026-10-31"
   },
   "emailed": [
@@ -133,7 +133,8 @@
     "0x110634B709d8FF8662ABe5E519d67C900B453766",
     "0xb200000000000000000000AaC1c0f3b076d3B610",
     "0xa8D870ed3A81cF11541BF8958b4720BC7566A98B",
-    "0x18790AB67b5de41Cbec5F8b137D54B8D10804a65"
+    "0x18790AB67b5de41Cbec5F8b137D54B8D10804a65",
+    "GimbpHMAsdTAVc4o9aXkBVu4D8aWzkNd7osJxY6ppump"
   ],
   "heartbeat": "2026-10-31",
   "initialized": true,
@@ -268,6 +269,19 @@
       "subject": "MALICIOUS token report (Solana): Bg6AXWysZRtKwiVPXPbu7bQupxC83BzA96x6PFtKpump",
       "symbol": "IOF",
       "url": "https://dexscreener.com/solana/e5p9cje5yqlx4frdcajvmlapwaecfiazkqpnv38yyupj"
+    },
+    "GimbpHMAsdTAVc4o9aXkBVu4D8aWzkNd7osJxY6ppump": {
+      "address": "GimbpHMAsdTAVc4o9aXkBVu4D8aWzkNd7osJxY6ppump",
+      "chain": "solana",
+      "exact_ticker": true,
+      "followed_up": false,
+      "message_id": "<179348762173.2625.4174498168383735210@gmail.com>",
+      "name": "IOF",
+      "name_match": false,
+      "sent_ms": 1793487623944.351,
+      "subject": "MALICIOUS token report (Solana): GimbpHMAsdTAVc4o9aXkBVu4D8aWzkNd7osJxY6ppump",
+      "symbol": "I\u200aO\u200aF",
+      "url": "https://dexscreener.com/solana/aiwizvz8kabykngdfdn6qux5fvrnol9a9trn6v9jjzta"
     }
   },
   "seen": {
@@ -11875,6 +11889,21 @@
       "source": "Onchain - bonded, trading on pumpswap",
       "symbol": "IOF",
       "url": "https://dexscreener.com/solana/3uex9cymsx4fdaokct6lgpndbemdum7usxfzxngjbasp"
+    },
+    "dex:solana:GimbpHMAsdTAVc4o9aXkBVu4D8aWzkNd7osJxY6ppump": {
+      "address": "GimbpHMAsdTAVc4o9aXkBVu4D8aWzkNd7osJxY6ppump",
+      "bonded_ms": 1793487110000,
+      "chain": "solana",
+      "created_ms": 1793487110000,
+      "exact_ticker": true,
+      "liquidity_usd": 299430.99,
+      "mcap": 13523679,
+      "name": "IOF",
+      "name_match": false,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on pumpswap",
+      "symbol": "I\u200aO\u200aF",
+      "url": "https://dexscreener.com/solana/aiwizvz8kabykngdfdn6qux5fvrnol9a9trn6v9jjzta"
     },
     "dex:solana:GxX6Eauqk25c4MeqnPArczu33C4rHfJxbKT79ScBpump": {
       "address": "GxX6Eauqk25c4MeqnPArczu33C4rHfJxbKT79ScBpump",
