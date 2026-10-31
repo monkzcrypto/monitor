@@ -1,6 +1,6 @@
 {
   "email_count": {
-    "count": 11,
+    "count": 13,
     "date": "2026-10-31"
   },
   "emailed": [
@@ -131,7 +131,8 @@
     "0x0b5844F293cfeCf4c311fEF8E9ae919d03E01b46",
     "0x34678EaCB05a7545F0C15d92178BbdA7A2772Dc4",
     "0x110634B709d8FF8662ABe5E519d67C900B453766",
-    "0xb200000000000000000000AaC1c0f3b076d3B610"
+    "0xb200000000000000000000AaC1c0f3b076d3B610",
+    "0xa8D870ed3A81cF11541BF8958b4720BC7566A98B"
   ],
   "heartbeat": "2026-10-31",
   "initialized": true,
@@ -202,11 +203,24 @@
       "symbol": "I O F",
       "url": "https://dexscreener.com/base/0x6e2a426bd8f98aca312123b8af3efc0cb4e58e8c3a4de36651a9929cc4dbf44d"
     },
+    "0xa8d870ed3a81cf11541bf8958b4720bc7566a98b": {
+      "address": "0xa8D870ed3A81cF11541BF8958b4720BC7566A98B",
+      "chain": "base",
+      "exact_ticker": true,
+      "followed_up": false,
+      "message_id": "<179346185550.2162.15293631879692481691@gmail.com>",
+      "name": "IOF",
+      "name_match": false,
+      "sent_ms": 1793461857330.974,
+      "subject": "MALICIOUS token report (Base): 0xa8D870ed3A81cF11541BF8958b4720BC7566A98B",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/base/0x89518fd23077f38eb99bc41518d373c2ddd030e2c1683bd69a607579387e9808"
+    },
     "0xb200000000000000000000aac1c0f3b076d3b610": {
       "address": "0xb200000000000000000000AaC1c0f3b076d3B610",
       "chain": "base",
       "exact_ticker": true,
-      "followed_up": false,
+      "followed_up": true,
       "message_id": "<179345825079.2166.14299304155803838354@gmail.com>",
       "name": "IOF",
       "name_match": false,
@@ -7758,6 +7772,21 @@
       "source": "Onchain - bonded, trading on uniswap-v4-base (GeckoTerminal)",
       "symbol": "IOF",
       "url": "https://www.geckoterminal.com/base/pools/0x8fcbcda424b9dcac458193a4a49100abc678552f8d649dede9ffc1947489704a"
+    },
+    "dex:base:0xa8d870ed3a81cf11541bf8958b4720bc7566a98b": {
+      "address": "0xa8D870ed3A81cF11541BF8958b4720BC7566A98B",
+      "bonded_ms": 1793461283000,
+      "chain": "base",
+      "created_ms": 1793461283000,
+      "exact_ticker": true,
+      "liquidity_usd": 3296.08,
+      "mcap": 4120,
+      "name": "IOF",
+      "name_match": false,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on uniswap",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/base/0x89518fd23077f38eb99bc41518d373c2ddd030e2c1683bd69a607579387e9808"
     },
     "dex:base:0xa9610A559f9B8979ea1bddF543630F74E28382B2": {
       "address": "0xa9610A559f9B8979ea1bddF543630F74E28382B2",
