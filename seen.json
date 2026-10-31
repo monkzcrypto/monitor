@@ -1,6 +1,6 @@
 {
   "email_count": {
-    "count": 3,
+    "count": 4,
     "date": "2026-10-31"
   },
   "emailed": [
@@ -127,12 +127,26 @@
     "Bg6AXWysZRtKwiVPXPbu7bQupxC83BzA96x6PFtKpump",
     "0xb200000000000000000000d49CD7E7251dD92887",
     "0x1717506BA50B45c936437A97C6bDd3F014dDfb1A",
-    "0x2A73e0eEa0d69Aab5410B8eEEdef3130A582cBc1"
+    "0x2A73e0eEa0d69Aab5410B8eEEdef3130A582cBc1",
+    "0x0b5844F293cfeCf4c311fEF8E9ae919d03E01b46"
   ],
   "heartbeat": "2026-10-31",
   "initialized": true,
   "mode": "bonded-v4",
   "reports": {
+    "0x0b5844f293cfecf4c311fef8e9ae919d03e01b46": {
+      "address": "0x0b5844F293cfeCf4c311fEF8E9ae919d03E01b46",
+      "chain": "base",
+      "exact_ticker": true,
+      "followed_up": false,
+      "message_id": "<179344745150.2146.10203480808971022912@gmail.com>",
+      "name": "IOF",
+      "name_match": false,
+      "sent_ms": 1793447452374.977,
+      "subject": "MALICIOUS token report (Base): 0x0b5844F293cfeCf4c311fEF8E9ae919d03E01b46",
+      "symbol": "I O F",
+      "url": "https://dexscreener.com/base/0x98427461caa2e5569ad8ad9e6d80cd6c22922573095e225654adf63de01913e2"
+    },
     "0x1717506ba50b45c936437a97c6bdd3f014ddfb1a": {
       "address": "0x1717506BA50B45c936437A97C6bDd3F014dDfb1A",
       "chain": "base",
@@ -799,6 +813,21 @@
       "source": "Onchain - bonded, trading on uniswap-v4-base (GeckoTerminal)",
       "symbol": "IOF",
       "url": "https://www.geckoterminal.com/base/pools/0x208f70bc4841ec8be47c4c65eecb6eaec03116018534237cb05fc7b7940c3797"
+    },
+    "dex:base:0x0b5844f293cfecf4c311fef8e9ae919d03e01b46": {
+      "address": "0x0b5844F293cfeCf4c311fEF8E9ae919d03E01b46",
+      "bonded_ms": 1793446903000,
+      "chain": "base",
+      "created_ms": 1793446903000,
+      "exact_ticker": true,
+      "liquidity_usd": 29301945.48,
+      "mcap": 195339978,
+      "name": "IOF",
+      "name_match": false,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on uniswap",
+      "symbol": "I O F",
+      "url": "https://dexscreener.com/base/0x98427461caa2e5569ad8ad9e6d80cd6c22922573095e225654adf63de01913e2"
     },
     "dex:base:0x0bf7fC03188feB4AE52793ebf4dFAd5963B7AcB2": {
       "address": "0x0bf7fC03188feB4AE52793ebf4dFAd5963B7AcB2",
