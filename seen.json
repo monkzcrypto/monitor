@@ -1,7 +1,7 @@
 {
   "email_count": {
-    "count": 14,
-    "date": "2026-10-30"
+    "count": 1,
+    "date": "2026-10-31"
   },
   "emailed": [
     "0x6dA938d182Bd2aA5ff5312D9692f6DCac4297F33",
@@ -125,12 +125,26 @@
     "0x0415B8373074363Eeda2C8bC7b68e45a9b72D2aD",
     "0xBe2FEEC85942D69Bd6092dD468Ff03b0AD9c00Ee",
     "Bg6AXWysZRtKwiVPXPbu7bQupxC83BzA96x6PFtKpump",
-    "0xb200000000000000000000d49CD7E7251dD92887"
+    "0xb200000000000000000000d49CD7E7251dD92887",
+    "0x1717506BA50B45c936437A97C6bDd3F014dDfb1A"
   ],
   "heartbeat": "2026-10-31",
   "initialized": true,
   "mode": "bonded-v4",
   "reports": {
+    "0x1717506ba50b45c936437a97c6bdd3f014ddfb1a": {
+      "address": "0x1717506BA50B45c936437A97C6bDd3F014dDfb1A",
+      "chain": "base",
+      "exact_ticker": true,
+      "followed_up": false,
+      "message_id": "<179344145160.2373.3768879135046042121@gmail.com>",
+      "name": "IOF",
+      "name_match": false,
+      "sent_ms": 1793441452998.1448,
+      "subject": "MALICIOUS token report (Base): 0x1717506BA50B45c936437A97C6bDd3F014dDfb1A",
+      "symbol": "I O F",
+      "url": "https://dexscreener.com/base/0x2f2e5d57208cc915e7b973d74d901a47f4a04838eba4f7b3d12129990bd0c0fe"
+    },
     "0xb200000000000000000000d49cd7e7251dd92887": {
       "address": "0xb200000000000000000000d49CD7E7251dD92887",
       "chain": "base",
@@ -1234,6 +1248,21 @@
       "source": "Onchain - bonded, trading on uniswap-v4-base (GeckoTerminal)",
       "symbol": "OFI",
       "url": "https://www.geckoterminal.com/base/pools/0x8592f7f124c0255176825e732f5e5ef8c4feaf78ee9cd1366d10d7611081542d"
+    },
+    "dex:base:0x1717506ba50b45c936437a97c6bdd3f014ddfb1a": {
+      "address": "0x1717506BA50B45c936437A97C6bDd3F014dDfb1A",
+      "bonded_ms": 1793441381000,
+      "chain": "base",
+      "created_ms": 1793441381000,
+      "exact_ticker": true,
+      "liquidity_usd": 29161397.9,
+      "mcap": 194401832,
+      "name": "IOF",
+      "name_match": false,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on uniswap",
+      "symbol": "I O F",
+      "url": "https://dexscreener.com/base/0x2f2e5d57208cc915e7b973d74d901a47f4a04838eba4f7b3d12129990bd0c0fe"
     },
     "dex:base:0x1764c2B3511d8e09366c681159Be0BC1b4CD5827": {
       "address": "0x1764c2B3511d8e09366c681159Be0BC1b4CD5827",
