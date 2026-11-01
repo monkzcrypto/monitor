@@ -1,6 +1,6 @@
 {
   "email_count": {
-    "count": 13,
+    "count": 14,
     "date": "2026-11-01"
   },
   "emailed": [
@@ -346,7 +346,7 @@
       "address": "Dyk2fxwqMW5vMPaL5coBr1rsrnnHoN925JzMoEH7pump",
       "chain": "solana",
       "exact_ticker": true,
-      "followed_up": false,
+      "followed_up": true,
       "message_id": "<179353204872.2335.6524160718183767933@gmail.com>",
       "name": "IOF\u2728",
       "name_match": false,
