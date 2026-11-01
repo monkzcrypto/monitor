@@ -1,6 +1,6 @@
 {
   "email_count": {
-    "count": 15,
+    "count": 16,
     "date": "2026-11-01"
   },
   "emailed": [
@@ -152,7 +152,7 @@
       "address": "0x087c2e8F047Fa44C2e333025DD869B57Deb5A9bA",
       "chain": "base",
       "exact_ticker": true,
-      "followed_up": false,
+      "followed_up": true,
       "message_id": "<179353745010.2357.2225543438073120499@gmail.com>",
       "name": "IOF",
       "name_match": false,
