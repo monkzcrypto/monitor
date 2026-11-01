@@ -1,6 +1,6 @@
 {
   "email_count": {
-    "count": 17,
+    "count": 18,
     "date": "2026-11-01"
   },
   "emailed": [
@@ -143,7 +143,8 @@
     "6iZKe45CVT6qYabpAbPBANoH2S73H9QJzxbJZ5urkRYw",
     "Dyk2fxwqMW5vMPaL5coBr1rsrnnHoN925JzMoEH7pump",
     "0x087c2e8F047Fa44C2e333025DD869B57Deb5A9bA",
-    "0x1dAd4DF0f16bBe6A96D6d328ceDce637A2A795eb"
+    "0x1dAd4DF0f16bBe6A96D6d328ceDce637A2A795eb",
+    "0x6030a288168389d190fa7f6376a220043549bd0e"
   ],
   "heartbeat": "2026-11-01",
   "initialized": true,
@@ -278,6 +279,19 @@
       "subject": "MALICIOUS token report (Base): 0x3932c8FE80d4215899B6D16190E51a521525083a",
       "symbol": "IOF",
       "url": "https://dexscreener.com/base/0xf3a850c8a86aa34ac160d5e35ca9607ec72ad786d610e9b412e0ddc35a617d2f"
+    },
+    "0x6030a288168389d190fa7f6376a220043549bd0e": {
+      "address": "0x6030a288168389d190fa7f6376a220043549bd0e",
+      "chain": "base",
+      "exact_ticker": true,
+      "followed_up": false,
+      "message_id": "<179355338564.2387.8224032125196866729@gmail.com>",
+      "name": "IOF",
+      "name_match": false,
+      "sent_ms": 1793553387510.8828,
+      "subject": "MALICIOUS token report (Base): 0x6030a288168389d190fa7f6376a220043549bd0e",
+      "symbol": "IOF",
+      "url": "https://www.geckoterminal.com/base/pools/0x7e72aae6288cce26538a5510385d77a922bc414568e07199641be183d57429af"
     },
     "0x99bfc80593230262ed2fb97e4bcfdf9346787777": {
       "address": "0x99Bfc80593230262eD2fB97E4bcfDf9346787777",
@@ -5114,6 +5128,21 @@
       "source": "Onchain - bonded, trading on uniswap-v4-base (GeckoTerminal)",
       "symbol": "OFI",
       "url": "https://www.geckoterminal.com/base/pools/0x1055ed9cfc1b269b968bafbd9a831b1299a95fcd95ce186a8d20a5cae69f67d9"
+    },
+    "dex:base:0x6030a288168389d190fa7f6376a220043549bd0e": {
+      "address": "0x6030a288168389d190fa7f6376a220043549bd0e",
+      "bonded_ms": 1793553027000.0,
+      "chain": "base",
+      "created_ms": 1793553027000.0,
+      "exact_ticker": true,
+      "liquidity_usd": 3352.0798,
+      "mcap": 4190.09514,
+      "name": "IOF",
+      "name_match": false,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on uniswap-v4-base (GeckoTerminal)",
+      "symbol": "IOF",
+      "url": "https://www.geckoterminal.com/base/pools/0x7e72aae6288cce26538a5510385d77a922bc414568e07199641be183d57429af"
     },
     "dex:base:0x604d50011a991e7a25e62c9e1c8d0d4848a527d6": {
       "address": "0x604d50011a991e7a25e62c9e1c8d0d4848a527d6",
