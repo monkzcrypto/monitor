@@ -1,6 +1,6 @@
 {
   "email_count": {
-    "count": 9,
+    "count": 10,
     "date": "2026-11-01"
   },
   "emailed": [
@@ -139,7 +139,8 @@
     "0x35Fb6203cE61F86fb265B00EFfb6bEb2dC83CB24",
     "0x99Bfc80593230262eD2fB97E4bcfDf9346787777",
     "0x3932c8FE80d4215899B6D16190E51a521525083a",
-    "DZf13q7HmPM2tfGTvFxWBgepAtfnfsES6xziX175pump"
+    "DZf13q7HmPM2tfGTvFxWBgepAtfnfsES6xziX175pump",
+    "6iZKe45CVT6qYabpAbPBANoH2S73H9QJzxbJZ5urkRYw"
   ],
   "heartbeat": "2026-11-01",
   "initialized": true,
@@ -300,6 +301,19 @@
       "subject": "MALICIOUS token report (Base): 0xb200000000000000000000d49CD7E7251dD92887",
       "symbol": "IOF",
       "url": "https://dexscreener.com/base/0x7690540f38773bd80ae4f0a8c17e48f36cde0ccf54e05719923e5d3052eb41d2"
+    },
+    "6iZKe45CVT6qYabpAbPBANoH2S73H9QJzxbJZ5urkRYw": {
+      "address": "6iZKe45CVT6qYabpAbPBANoH2S73H9QJzxbJZ5urkRYw",
+      "chain": "solana",
+      "exact_ticker": true,
+      "followed_up": false,
+      "message_id": "<179352664877.2150.2286265509501927939@gmail.com>",
+      "name": "IOF",
+      "name_match": false,
+      "sent_ms": 1793526650920.437,
+      "subject": "MALICIOUS token report (Solana): 6iZKe45CVT6qYabpAbPBANoH2S73H9QJzxbJZ5urkRYw",
+      "symbol": "IOF",
+      "url": "https://www.geckoterminal.com/solana/pools/6yaLpY6UmsnQ3VoRGug5jr8z7j4xF9JGKVVKQ5d8dgfG"
     },
     "Bg6AXWysZRtKwiVPXPbu7bQupxC83BzA96x6PFtKpump": {
       "address": "Bg6AXWysZRtKwiVPXPbu7bQupxC83BzA96x6PFtKpump",
@@ -11147,6 +11161,21 @@
       "source": "Onchain - bonded, trading on pumpswap",
       "symbol": "IOF",
       "url": "https://dexscreener.com/solana/fxncdqldzwq34rx2yspfmp7lwt7pmggr2qdcw3mrdzek"
+    },
+    "dex:solana:6iZKe45CVT6qYabpAbPBANoH2S73H9QJzxbJZ5urkRYw": {
+      "address": "6iZKe45CVT6qYabpAbPBANoH2S73H9QJzxbJZ5urkRYw",
+      "bonded_ms": 1793526516000.0,
+      "chain": "solana",
+      "created_ms": 1793526516000.0,
+      "exact_ticker": true,
+      "liquidity_usd": 5308.0237,
+      "mcap": 5387.62734,
+      "name": "IOF",
+      "name_match": false,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on memefun (GeckoTerminal)",
+      "symbol": "IOF",
+      "url": "https://www.geckoterminal.com/solana/pools/6yaLpY6UmsnQ3VoRGug5jr8z7j4xF9JGKVVKQ5d8dgfG"
     },
     "dex:solana:6pcPYiKWKfPbi4CRJbeP3DN52BFt5FaHenfzzibfpump": {
       "address": "6pcPYiKWKfPbi4CRJbeP3DN52BFt5FaHenfzzibfpump",
