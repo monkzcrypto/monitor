@@ -306,7 +306,7 @@
       "address": "6iZKe45CVT6qYabpAbPBANoH2S73H9QJzxbJZ5urkRYw",
       "chain": "solana",
       "exact_ticker": true,
-      "followed_up": false,
+      "followed_up": "gone",
       "message_id": "<179352664877.2150.2286265509501927939@gmail.com>",
       "name": "IOF",
       "name_match": false,
