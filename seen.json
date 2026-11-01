@@ -284,7 +284,7 @@
       "address": "0x6030a288168389d190fa7f6376a220043549bd0e",
       "chain": "base",
       "exact_ticker": true,
-      "followed_up": false,
+      "followed_up": "gone",
       "message_id": "<179355338564.2387.8224032125196866729@gmail.com>",
       "name": "IOF",
       "name_match": false,
