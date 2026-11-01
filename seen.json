@@ -1,6 +1,6 @@
 {
   "email_count": {
-    "count": 2,
+    "count": 3,
     "date": "2026-11-01"
   },
   "emailed": [
@@ -288,7 +288,7 @@
       "address": "jgikSLSgEwznRu1pFya9CmAFzc7Pq3rZLbEH3mppump",
       "chain": "solana",
       "exact_ticker": false,
-      "followed_up": false,
+      "followed_up": true,
       "message_id": "<179350566370.2359.4987617853809241368@gmail.com>",
       "name": "World Oil Fund Institution",
       "name_match": true,
