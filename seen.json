@@ -1,7 +1,7 @@
 {
   "email_count": {
-    "count": 17,
-    "date": "2026-10-31"
+    "count": 1,
+    "date": "2026-11-01"
   },
   "emailed": [
     "0x6dA938d182Bd2aA5ff5312D9692f6DCac4297F33",
@@ -136,7 +136,7 @@
     "0x18790AB67b5de41Cbec5F8b137D54B8D10804a65",
     "GimbpHMAsdTAVc4o9aXkBVu4D8aWzkNd7osJxY6ppump"
   ],
-  "heartbeat": "2026-10-31",
+  "heartbeat": "2026-11-01",
   "initialized": true,
   "mode": "bonded-v4",
   "reports": {
@@ -274,7 +274,7 @@
       "address": "GimbpHMAsdTAVc4o9aXkBVu4D8aWzkNd7osJxY6ppump",
       "chain": "solana",
       "exact_ticker": true,
-      "followed_up": false,
+      "followed_up": true,
       "message_id": "<179348762173.2625.4174498168383735210@gmail.com>",
       "name": "IOF",
       "name_match": false,
