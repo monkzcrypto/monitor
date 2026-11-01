@@ -1,6 +1,6 @@
 {
   "email_count": {
-    "count": 14,
+    "count": 15,
     "date": "2026-11-01"
   },
   "emailed": [
@@ -141,12 +141,26 @@
     "0x3932c8FE80d4215899B6D16190E51a521525083a",
     "DZf13q7HmPM2tfGTvFxWBgepAtfnfsES6xziX175pump",
     "6iZKe45CVT6qYabpAbPBANoH2S73H9QJzxbJZ5urkRYw",
-    "Dyk2fxwqMW5vMPaL5coBr1rsrnnHoN925JzMoEH7pump"
+    "Dyk2fxwqMW5vMPaL5coBr1rsrnnHoN925JzMoEH7pump",
+    "0x087c2e8F047Fa44C2e333025DD869B57Deb5A9bA"
   ],
   "heartbeat": "2026-11-01",
   "initialized": true,
   "mode": "bonded-v4",
   "reports": {
+    "0x087c2e8f047fa44c2e333025dd869b57deb5a9ba": {
+      "address": "0x087c2e8F047Fa44C2e333025DD869B57Deb5A9bA",
+      "chain": "base",
+      "exact_ticker": true,
+      "followed_up": false,
+      "message_id": "<179353745010.2357.2225543438073120499@gmail.com>",
+      "name": "IOF",
+      "name_match": false,
+      "sent_ms": 1793537451236.935,
+      "subject": "MALICIOUS token report (Base): 0x087c2e8F047Fa44C2e333025DD869B57Deb5A9bA",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/base/0x14a233427fabf5ff1894cc4c4bf56795d21ea5ba2d40d1d185a61e488959fc55"
+    },
     "0x0b5844f293cfecf4c311fef8e9ae919d03e01b46": {
       "address": "0x0b5844F293cfeCf4c311fEF8E9ae919d03E01b46",
       "chain": "base",
@@ -815,6 +829,21 @@
       "source": "Onchain - bonded, trading on uniswap-v4-base (GeckoTerminal)",
       "symbol": "I O F",
       "url": "https://www.geckoterminal.com/base/pools/0xdccbeb5ac07d488646d7f9a3e5052ca6f7188944797b9bd5e4b461959b48d923"
+    },
+    "dex:base:0x087c2e8f047fa44c2e333025dd869b57deb5a9ba": {
+      "address": "0x087c2e8F047Fa44C2e333025DD869B57Deb5A9bA",
+      "bonded_ms": 1793537219000,
+      "chain": "base",
+      "created_ms": 1793537219000,
+      "exact_ticker": true,
+      "liquidity_usd": 29373141.36,
+      "mcap": 195813401,
+      "name": "IOF",
+      "name_match": false,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on uniswap",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/base/0x14a233427fabf5ff1894cc4c4bf56795d21ea5ba2d40d1d185a61e488959fc55"
     },
     "dex:base:0x092F0597Be1878072CF560AEFFbd995cD20874bf": {
       "address": "0x092F0597Be1878072CF560AEFFbd995cD20874bf",
