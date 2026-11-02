@@ -1,6 +1,6 @@
 {
   "email_count": {
-    "count": 2,
+    "count": 4,
     "date": "2026-11-02"
   },
   "emailed": [
@@ -326,7 +326,7 @@
       "address": "0x9B1d9f86fc54253a821FcD1Ac20FE174ED5A35b8",
       "chain": "base",
       "exact_ticker": false,
-      "followed_up": false,
+      "followed_up": true,
       "message_id": "<179358905617.2469.17782289084602487043@gmail.com>",
       "name": "Oil Fund Institutional",
       "name_match": true,
@@ -339,7 +339,7 @@
       "address": "0xa298Aa6EC5B0b48DfF3D43B63605b1D0fF362242",
       "chain": "base",
       "exact_ticker": true,
-      "followed_up": false,
+      "followed_up": true,
       "message_id": "<179358905381.2469.14399346715372682304@gmail.com>",
       "name": "Institusional Oil Fund",
       "name_match": true,
