@@ -10439,6 +10439,21 @@
       "symbol": "IOF",
       "url": "https://dexscreener.com/bsc/0xb0278fb6005cb52c504f7efefa8838b88e2a5387"
     },
+    "dex:bsc:0xd63833b2924fcbac59f62f88e7ec4682abbb7777": {
+      "address": "0xD63833B2924fCbac59F62F88e7ec4682aBBB7777",
+      "bonded_ms": 1793588948000,
+      "chain": "bsc",
+      "created_ms": 1793588948000,
+      "exact_ticker": true,
+      "liquidity_usd": 8666.95,
+      "mcap": 3947,
+      "name": "Institusional Oil Fund",
+      "name_match": true,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on flapsh",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/bsc/0xefbc641ef5c382d31271cb2649893e838aa2affb"
+    },
     "dex:bsc:0xe115D23B101A928671bb744140080caCf2Ed7777": {
       "address": "0xe115D23B101A928671bb744140080caCf2Ed7777",
       "bonded_ms": 1791084324000,
