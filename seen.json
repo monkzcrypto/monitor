@@ -5528,6 +5528,21 @@
       "symbol": "FOI",
       "url": "https://www.geckoterminal.com/base/pools/0x98ec6a542513767eb312aedc3988776503787013b32b090df03e697aa455e895"
     },
+    "dex:base:0x677767694afc74dd8144dd29213e0e7c9f5b56a0": {
+      "address": "0x677767694Afc74DD8144Dd29213E0e7C9F5b56a0",
+      "bonded_ms": 1793538409000,
+      "chain": "base",
+      "created_ms": 1793538409000,
+      "exact_ticker": false,
+      "liquidity_usd": 77144.7,
+      "mcap": 77924,
+      "name": "Global Institution Oil Fund (GIOF)",
+      "name_match": true,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on uniswap",
+      "symbol": "GOIF",
+      "url": "https://dexscreener.com/base/0x5173fab72e401fe3e4d461ab44bac10f12cfca664251b6152533290202ddb2e8"
+    },
     "dex:base:0x697d573269cBf4439943625dd993C88B86dcC855": {
       "address": "0x697d573269cBf4439943625dd993C88B86dcC855",
       "bonded_ms": 1791977665000,
@@ -8070,6 +8085,21 @@
       "source": "Onchain - bonded, trading on uniswap-v4-base (GeckoTerminal)",
       "symbol": "IOF",
       "url": "https://www.geckoterminal.com/base/pools/0x0159b0312e10dfbbbe5008aa119a52bedc661c620cdc9627ecb89c89c9a3e450"
+    },
+    "dex:base:0xa4871d46e91f980da13c514dd4e1b6626b314e9b": {
+      "address": "0xa4871d46E91F980dA13C514dd4E1B6626B314E9B",
+      "bonded_ms": 1793538277000,
+      "chain": "base",
+      "created_ms": 1793538277000,
+      "exact_ticker": false,
+      "liquidity_usd": 63057.89,
+      "mcap": 63695,
+      "name": "Global Oil Institution Fund (GIOF)",
+      "name_match": false,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on uniswap",
+      "symbol": "GOIF",
+      "url": "https://dexscreener.com/base/0x98dd4b4f82a8737c45f765052a78348313e32ef4e34a077670347366fb475dfb"
     },
     "dex:base:0xa61687cEd67b8c98D38981A4091e48A4388B145e": {
       "address": "0xa61687cEd67b8c98D38981A4091e48A4388B145e",
