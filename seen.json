@@ -10497,6 +10497,21 @@
       "symbol": "BioFi",
       "url": "https://dexscreener.com/bsc/0x58a50fc3bc271ccd5a078fab8222b2e021b9f4df"
     },
+    "dex:bsc:0x80d7170f13291dc29863633173a4093314fc7777": {
+      "address": "0x80d7170F13291dc29863633173a4093314Fc7777",
+      "bonded_ms": 1793698432000,
+      "chain": "bsc",
+      "created_ms": 1793698432000,
+      "exact_ticker": true,
+      "liquidity_usd": 8568.26,
+      "mcap": 3871,
+      "name": "Institutional Oil Fund",
+      "name_match": true,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on flapsh",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/bsc/0x8f36c8fbdc30e53a238f1f40ebb8e64a785c9b91"
+    },
     "dex:bsc:0xB71a0ccfB31C798D1C2DBD7FBB12521E20bb7777": {
       "address": "0xB71a0ccfB31C798D1C2DBD7FBB12521E20bb7777",
       "bonded_ms": 1791337392000,
