@@ -1,6 +1,6 @@
 {
   "email_count": {
-    "count": 2,
+    "count": 4,
     "date": "2026-11-03"
   },
   "emailed": [
@@ -393,7 +393,7 @@
       "address": "0xC9059a9d48212CB64ec80996A0bD87f88E8e7777",
       "chain": "base",
       "exact_ticker": true,
-      "followed_up": false,
+      "followed_up": true,
       "message_id": "<179369885489.2236.12732556761706857132@gmail.com>",
       "name": "Institutional Oil Fund",
       "name_match": true,
@@ -471,7 +471,7 @@
       "address": "VVZD4wcfVfiGedhhd5rC78EwUMAgg2yB6iYgRDrpump",
       "chain": "solana",
       "exact_ticker": true,
-      "followed_up": false,
+      "followed_up": true,
       "message_id": "<179369885169.2236.8217440557754895785@gmail.com>",
       "name": "Institutional Oil Fund",
       "name_match": true,
