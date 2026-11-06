@@ -12549,6 +12549,21 @@
       "symbol": "I\u200aO\u200aF",
       "url": "https://dexscreener.com/solana/aiwizvz8kabykngdfdn6qux5fvrnol9a9trn6v9jjzta"
     },
+    "dex:solana:GnYZyBNCc6XJVdT76PeQc32Ww6rK9RtC9DvNWoHnx71u": {
+      "address": "GnYZyBNCc6XJVdT76PeQc32Ww6rK9RtC9DvNWoHnx71u",
+      "bonded_ms": 1791873610000.0,
+      "chain": "solana",
+      "created_ms": 1791873610000.0,
+      "exact_ticker": true,
+      "liquidity_usd": 0.652,
+      "mcap": 0.3498374644,
+      "name": "International Oil Fund",
+      "name_match": false,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on meteora-damm-v2 (GeckoTerminal)",
+      "symbol": "IOF\ud83d\udd25",
+      "url": "https://www.geckoterminal.com/solana/pools/25zCMgrJowcL75ucT57a7ZNuiaTJMLQU1c9NnQi7fgKX"
+    },
     "dex:solana:GxX6Eauqk25c4MeqnPArczu33C4rHfJxbKT79ScBpump": {
       "address": "GxX6Eauqk25c4MeqnPArczu33C4rHfJxbKT79ScBpump",
       "bonded_ms": 1791417712000,
