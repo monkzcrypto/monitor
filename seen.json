@@ -12092,6 +12092,21 @@
       "symbol": "IOF",
       "url": "https://dexscreener.com/solana/96gaaqxjqahrfeg1kpugibebnd99cl7njhabxf5asdua"
     },
+    "dex:solana:B2rQTgxBRgXXUnV9Bos9Cxq1ZY1JV8nhPNzYqp193vXw": {
+      "address": "B2rQTgxBRgXXUnV9Bos9Cxq1ZY1JV8nhPNzYqp193vXw",
+      "bonded_ms": 1789229405000,
+      "chain": "solana",
+      "created_ms": 1789229405000,
+      "exact_ticker": false,
+      "liquidity_usd": 99932043.76,
+      "mcap": 100100067,
+      "name": "World Oil Fund Institution",
+      "name_match": true,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on raydium",
+      "symbol": "WOFI",
+      "url": "https://dexscreener.com/solana/da3qmle3f1yyndjjvqgawffbkqyhiutrdns3tw2cj7da"
+    },
     "dex:solana:BBHyC27kkkjydU8amm2KEPQgWbwiPqSnkS56XcEdpump": {
       "address": "BBHyC27kkkjydU8amm2KEPQgWbwiPqSnkS56XcEdpump",
       "bonded_ms": 1791871536000,
