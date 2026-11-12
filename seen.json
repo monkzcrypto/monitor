@@ -1,6 +1,6 @@
 {
   "email_count": {
-    "count": 3,
+    "count": 4,
     "date": "2026-11-12"
   },
   "emailed": [
@@ -423,7 +423,7 @@
       "address": "0xd38A19e667926D59F7538E6bAf074f0a1A9eDE20",
       "chain": "base",
       "exact_ticker": true,
-      "followed_up": false,
+      "followed_up": true,
       "message_id": "<179451965309.2365.6464235065660261386@gmail.com>",
       "name": "Index Oil Fund (IOF)",
       "name_match": false,
