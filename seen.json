@@ -1,7 +1,7 @@
 {
   "email_count": {
-    "count": 2,
-    "date": "2026-11-09"
+    "count": 1,
+    "date": "2026-11-12"
   },
   "emailed": [
     "0x6dA938d182Bd2aA5ff5312D9692f6DCac4297F33",
@@ -151,7 +151,8 @@
     "VVZD4wcfVfiGedhhd5rC78EwUMAgg2yB6iYgRDrpump",
     "0xC9059a9d48212CB64ec80996A0bD87f88E8e7777",
     "u5r3uxzxvbTjWS2gNdWfNmjM36daJj1Aa8TQZkTpump",
-    "0x515A83fa7aaa7A79A2aC2500Ef90DC492fbF66db"
+    "0x515A83fa7aaa7A79A2aC2500Ef90DC492fbF66db",
+    "0xe4348948bffe94c46024d3f2f9fc65d80cd546b6"
   ],
   "heartbeat": "2026-11-12",
   "initialized": true,
@@ -416,6 +417,19 @@
       "subject": "MALICIOUS token report (Base): 0xC9059a9d48212CB64ec80996A0bD87f88E8e7777",
       "symbol": "IOF",
       "url": "https://dexscreener.com/base/0xcf02459cdf8d7d8f3b320527c6098cb1a9e8f40f"
+    },
+    "0xe4348948bffe94c46024d3f2f9fc65d80cd546b6": {
+      "address": "0xe4348948bffe94c46024d3f2f9fc65d80cd546b6",
+      "chain": "base",
+      "exact_ticker": true,
+      "followed_up": false,
+      "message_id": "<179447405372.2385.7946272488154319828@gmail.com>",
+      "name": "index Oil Fund [IOF]",
+      "name_match": false,
+      "sent_ms": 1794474054764.4177,
+      "subject": "MALICIOUS token report (Base): 0xe4348948bffe94c46024d3f2f9fc65d80cd546b6",
+      "symbol": "IOF",
+      "url": "https://www.geckoterminal.com/base/pools/0x0cfaf25def9faa05352360675bd97b60a2531ba6ffacc4856958449ae6fe81a8"
     },
     "6iZKe45CVT6qYabpAbPBANoH2S73H9QJzxbJZ5urkRYw": {
       "address": "6iZKe45CVT6qYabpAbPBANoH2S73H9QJzxbJZ5urkRYw",
@@ -9804,6 +9818,21 @@
       "source": "Onchain - bonded, trading on uniswap-v4-base (GeckoTerminal)",
       "symbol": "IOF",
       "url": "https://www.geckoterminal.com/base/pools/0x92cea4e0428aeeeca79cfee695c769b4eb5f59c6ea81f76395c1f753219a8072"
+    },
+    "dex:base:0xe4348948bffe94c46024d3f2f9fc65d80cd546b6": {
+      "address": "0xe4348948bffe94c46024d3f2f9fc65d80cd546b6",
+      "bonded_ms": 1794473795000.0,
+      "chain": "base",
+      "created_ms": 1794473795000.0,
+      "exact_ticker": true,
+      "liquidity_usd": 118268.3192,
+      "mcap": 122419.2465,
+      "name": "index Oil Fund [IOF]",
+      "name_match": false,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on uniswap-v4-base (GeckoTerminal)",
+      "symbol": "IOF",
+      "url": "https://www.geckoterminal.com/base/pools/0x0cfaf25def9faa05352360675bd97b60a2531ba6ffacc4856958449ae6fe81a8"
     },
     "dex:base:0xe440bd0e200f1f32f9258d8b4143729c93a56c9e": {
       "address": "0xe440bd0e200f1f32f9258d8b4143729c93a56c9e",
