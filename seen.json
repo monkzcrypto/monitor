@@ -1,6 +1,6 @@
 {
   "email_count": {
-    "count": 2,
+    "count": 3,
     "date": "2026-11-12"
   },
   "emailed": [
@@ -152,7 +152,8 @@
     "0xC9059a9d48212CB64ec80996A0bD87f88E8e7777",
     "u5r3uxzxvbTjWS2gNdWfNmjM36daJj1Aa8TQZkTpump",
     "0x515A83fa7aaa7A79A2aC2500Ef90DC492fbF66db",
-    "0xe4348948bffe94c46024d3f2f9fc65d80cd546b6"
+    "0xe4348948bffe94c46024d3f2f9fc65d80cd546b6",
+    "0xd38A19e667926D59F7538E6bAf074f0a1A9eDE20"
   ],
   "heartbeat": "2026-11-12",
   "initialized": true,
@@ -417,6 +418,19 @@
       "subject": "MALICIOUS token report (Base): 0xC9059a9d48212CB64ec80996A0bD87f88E8e7777",
       "symbol": "IOF",
       "url": "https://dexscreener.com/base/0xcf02459cdf8d7d8f3b320527c6098cb1a9e8f40f"
+    },
+    "0xd38a19e667926d59f7538e6baf074f0a1a9ede20": {
+      "address": "0xd38A19e667926D59F7538E6bAf074f0a1A9eDE20",
+      "chain": "base",
+      "exact_ticker": true,
+      "followed_up": false,
+      "message_id": "<179451965309.2365.6464235065660261386@gmail.com>",
+      "name": "Index Oil Fund (IOF)",
+      "name_match": false,
+      "sent_ms": 1794519654575.648,
+      "subject": "MALICIOUS token report (Base): 0xd38A19e667926D59F7538E6bAf074f0a1A9eDE20",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/base/0x55e4af7c69864c1e2f5374146f901f6becbc84237a973a780bb090c79ce9437a"
     },
     "0xe4348948bffe94c46024d3f2f9fc65d80cd546b6": {
       "address": "0xe4348948bffe94c46024d3f2f9fc65d80cd546b6",
@@ -9504,6 +9518,21 @@
       "source": "Onchain - bonded, trading on uniswap-v4-base (GeckoTerminal)",
       "symbol": "IOF",
       "url": "https://www.geckoterminal.com/base/pools/0xf7bd325ece080c67c72e8e4c8a69a53d18a0c88d4b175274ac89388f2b9ab15f"
+    },
+    "dex:base:0xd38a19e667926d59f7538e6baf074f0a1a9ede20": {
+      "address": "0xd38A19e667926D59F7538E6bAf074f0a1A9eDE20",
+      "bonded_ms": 1794519445000,
+      "chain": "base",
+      "created_ms": 1794519445000,
+      "exact_ticker": true,
+      "liquidity_usd": 109669.72,
+      "mcap": 110777,
+      "name": "Index Oil Fund (IOF)",
+      "name_match": false,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on uniswap",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/base/0x55e4af7c69864c1e2f5374146f901f6becbc84237a973a780bb090c79ce9437a"
     },
     "dex:base:0xd40b2d013dbcda98ddafd1f73612978756693ba9": {
       "address": "0xd40b2d013dbcda98ddafd1f73612978756693ba9",
