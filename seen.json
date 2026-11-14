@@ -10493,6 +10493,21 @@
       "symbol": "IOF",
       "url": "https://www.geckoterminal.com/base/pools/0x4481c31b955435ba20bff999ea6025189f443e0b0f2c3940951c94b1a927331f"
     },
+    "dex:base:0xfbf854060768c13715718855d46d635b0c2174da": {
+      "address": "0xfbF854060768c13715718855D46D635b0C2174da",
+      "bonded_ms": 1789931241000,
+      "chain": "base",
+      "created_ms": 1789931241000,
+      "exact_ticker": false,
+      "liquidity_usd": 56991.19,
+      "mcap": 57567,
+      "name": "Vanguard Institution Oil Fund (VOFI)",
+      "name_match": true,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on uniswap",
+      "symbol": "VIOF",
+      "url": "https://dexscreener.com/base/0x4303036deb04252236c3a155f5ac81262b6282b3638946a5b4d350e1a3ecd4f3"
+    },
     "dex:base:0xfc43d53b5258e794b3C802e1850c7ec8726EE517": {
       "address": "0xfc43d53b5258e794b3C802e1850c7ec8726EE517",
       "bonded_ms": 1791731069000,
