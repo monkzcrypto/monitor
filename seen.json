@@ -1,6 +1,6 @@
 {
   "email_count": {
-    "count": 3,
+    "count": 4,
     "date": "2026-11-17"
   },
   "emailed": [
@@ -308,7 +308,7 @@
       "address": "0x4355590f502d3bc89960c049285088358e466b35",
       "chain": "base",
       "exact_ticker": true,
-      "followed_up": false,
+      "followed_up": true,
       "message_id": "<179494444461.2384.7605209030199805217@gmail.com>",
       "name": "Instutional Oil Fund",
       "name_match": false,
