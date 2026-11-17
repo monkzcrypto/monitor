@@ -1,6 +1,6 @@
 {
   "email_count": {
-    "count": 1,
+    "count": 2,
     "date": "2026-11-17"
   },
   "emailed": [
@@ -154,7 +154,8 @@
     "0x515A83fa7aaa7A79A2aC2500Ef90DC492fbF66db",
     "0xe4348948bffe94c46024d3f2f9fc65d80cd546b6",
     "0xd38A19e667926D59F7538E6bAf074f0a1A9eDE20",
-    "0xd9faaa1cd6ec0c4aa276ee6fedb9d4e0a1ff247c"
+    "0xd9faaa1cd6ec0c4aa276ee6fedb9d4e0a1ff247c",
+    "0x4355590f502d3bc89960c049285088358e466b35"
   ],
   "heartbeat": "2026-11-17",
   "initialized": true,
@@ -302,6 +303,19 @@
       "subject": "MALICIOUS token report (Base): 0x3932c8FE80d4215899B6D16190E51a521525083a",
       "symbol": "IOF",
       "url": "https://dexscreener.com/base/0xf3a850c8a86aa34ac160d5e35ca9607ec72ad786d610e9b412e0ddc35a617d2f"
+    },
+    "0x4355590f502d3bc89960c049285088358e466b35": {
+      "address": "0x4355590f502d3bc89960c049285088358e466b35",
+      "chain": "base",
+      "exact_ticker": true,
+      "followed_up": false,
+      "message_id": "<179494444461.2384.7605209030199805217@gmail.com>",
+      "name": "Instutional Oil Fund",
+      "name_match": false,
+      "sent_ms": 1794944445491.969,
+      "subject": "MALICIOUS token report (Base): 0x4355590f502d3bc89960c049285088358e466b35",
+      "symbol": "IOF\ud83d\udd25",
+      "url": "https://www.geckoterminal.com/base/pools/0x26624f36ef23f2596cd41044a78e746393ef9fa6"
     },
     "0x515a83fa7aaa7a79a2ac2500ef90dc492fbf66db": {
       "address": "0x515A83fa7aaa7A79A2aC2500Ef90DC492fbF66db",
@@ -4535,6 +4549,21 @@
       "source": "Onchain - bonded, trading on uniswap-v4-base (GeckoTerminal)",
       "symbol": "IOF",
       "url": "https://www.geckoterminal.com/base/pools/0xfb9ce37143520f95f95c2d088b8294eaafdf2837c3ce3e6b2aafb5fbde767e16"
+    },
+    "dex:base:0x4355590f502d3bc89960c049285088358e466b35": {
+      "address": "0x4355590f502d3bc89960c049285088358e466b35",
+      "bonded_ms": 1794944179000.0,
+      "chain": "base",
+      "created_ms": 1794944179000.0,
+      "exact_ticker": true,
+      "liquidity_usd": 54306.0893,
+      "mcap": 27438.1631472,
+      "name": "Instutional Oil Fund",
+      "name_match": false,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on uniswap-v2-base (GeckoTerminal)",
+      "symbol": "IOF\ud83d\udd25",
+      "url": "https://www.geckoterminal.com/base/pools/0x26624f36ef23f2596cd41044a78e746393ef9fa6"
     },
     "dex:base:0x43ae077af850CdaBf0571C8f7d04e1E09AeB0aDa": {
       "address": "0x43ae077af850CdaBf0571C8f7d04e1E09AeB0aDa",
