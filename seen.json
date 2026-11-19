@@ -3042,6 +3042,21 @@
       "symbol": "IOFA",
       "url": "https://www.geckoterminal.com/base/pools/0x73733678f59969a4155d4be0c678e2f03874e039cc7ff2bf4a9309995fb6b4bd"
     },
+    "dex:base:0x2e256754502a34efa26a79cd0d31925c1ace4e52": {
+      "address": "0x2e256754502a34eFa26A79Cd0d31925C1ACe4e52",
+      "bonded_ms": 1791064105000,
+      "chain": "base",
+      "created_ms": 1791064105000,
+      "exact_ticker": false,
+      "liquidity_usd": 232754.59,
+      "mcap": 235105,
+      "name": "Institution Global Oil Fund",
+      "name_match": true,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on uniswap",
+      "symbol": "IGOF",
+      "url": "https://dexscreener.com/base/0x49a46660132cc0c3c6c2063d6db13a0a0f004fb1b612466b62349e8508a42916"
+    },
     "dex:base:0x2e54623b160cd63fd68e306acc82c70ba4be8020": {
       "address": "0x2e54623b160cd63fd68e306acc82c70ba4be8020",
       "bonded_ms": 1791747461000.0,
