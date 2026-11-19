@@ -1,7 +1,7 @@
 {
   "email_count": {
-    "count": 4,
-    "date": "2026-11-18"
+    "count": 1,
+    "date": "2026-11-19"
   },
   "emailed": [
     "0x6dA938d182Bd2aA5ff5312D9692f6DCac4297F33",
@@ -157,7 +157,8 @@
     "0xd9faaa1cd6ec0c4aa276ee6fedb9d4e0a1ff247c",
     "0x4355590f502d3bc89960c049285088358e466b35",
     "681LxERzG453daDfQJMtfK7zWVn87iV2aHaK9ADpump",
-    "0xb958B6bEbDf22c0077af7E03A2a422d5b4520197"
+    "0xb958B6bEbDf22c0077af7E03A2a422d5b4520197",
+    "0xD0AE18a0E03e478162b97dDE086090966f3c4e5a"
   ],
   "heartbeat": "2026-11-19",
   "initialized": true,
@@ -448,6 +449,19 @@
       "subject": "MALICIOUS token report (Base): 0xC9059a9d48212CB64ec80996A0bD87f88E8e7777",
       "symbol": "IOF",
       "url": "https://dexscreener.com/base/0xcf02459cdf8d7d8f3b320527c6098cb1a9e8f40f"
+    },
+    "0xd0ae18a0e03e478162b97dde086090966f3c4e5a": {
+      "address": "0xD0AE18a0E03e478162b97dDE086090966f3c4e5a",
+      "chain": "base",
+      "exact_ticker": true,
+      "followed_up": false,
+      "message_id": "<179509084639.2879.897434322060139072@gmail.com>",
+      "name": "IOF\ud83d\udd25",
+      "name_match": false,
+      "sent_ms": 1795090847504.5488,
+      "subject": "MALICIOUS token report (Base): 0xD0AE18a0E03e478162b97dDE086090966f3c4e5a",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/base/0xfea31d86d6c2bd9e95b776376ac3494c48e2d58c3ac2b07616271064a192283a"
     },
     "0xd38a19e667926d59f7538e6baf074f0a1a9ede20": {
       "address": "0xd38A19e667926D59F7538E6bAf074f0a1A9eDE20",
@@ -9545,6 +9559,21 @@
       "symbol": "IOF",
       "url": "https://www.geckoterminal.com/base/pools/0x6a7e232e6d443fb04f0b3ecdcc40021da31ef75eb60620034042b424c992576d"
     },
+    "dex:base:0xd0ae18a0e03e478162b97dde086090966f3c4e5a": {
+      "address": "0xD0AE18a0E03e478162b97dDE086090966f3c4e5a",
+      "bonded_ms": 1795090323000,
+      "chain": "base",
+      "created_ms": 1795090323000,
+      "exact_ticker": true,
+      "liquidity_usd": 2217442.62,
+      "mcap": 2239841,
+      "name": "IOF\ud83d\udd25",
+      "name_match": false,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on uniswap",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/base/0xfea31d86d6c2bd9e95b776376ac3494c48e2d58c3ac2b07616271064a192283a"
+    },
     "dex:base:0xd0bc1b1e361fd5f7d1c4ecee1e1c9acc9c827777": {
       "address": "0xD0bc1B1e361fD5f7D1C4ecee1E1C9Acc9C827777",
       "bonded_ms": 1793284033000,
@@ -10953,6 +10982,21 @@
       "source": "Onchain - bonded, trading on flapsh",
       "symbol": "IOF",
       "url": "https://dexscreener.com/robinhood/0xc3864a86e28a7a1bd6ed74ad646df60ed6042bf9"
+    },
+    "dex:robinhood:0x1853f3b363869593b5b3eb4f47483ba1bca97777": {
+      "address": "0x1853f3b363869593B5B3EB4f47483bA1BCa97777",
+      "bonded_ms": 1795090361000,
+      "chain": "robinhood",
+      "created_ms": 1795090361000,
+      "exact_ticker": true,
+      "liquidity_usd": 6917.15,
+      "mcap": 3124,
+      "name": "IOF\ud83d\udd25",
+      "name_match": false,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on flapsh",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/robinhood/0x8a5ee7a23ee8d487b30889f179c2f13c8400bdec"
     },
     "dex:robinhood:0x26890415dcfd5d889ac997bc938e1d3298617777": {
       "address": "0x26890415dCfD5D889AC997bc938e1d3298617777",
