@@ -1,6 +1,6 @@
 {
   "email_count": {
-    "count": 2,
+    "count": 3,
     "date": "2026-11-20"
   },
   "emailed": [
@@ -160,7 +160,8 @@
     "0xb958B6bEbDf22c0077af7E03A2a422d5b4520197",
     "0xD0AE18a0E03e478162b97dDE086090966f3c4e5a",
     "0xD4570Fb1f2Aa183087b83E2C1A95d998416f8bf9",
-    "0xDadFb82511D3754cD9980f9438a874a2990A1BDA"
+    "0xDadFb82511D3754cD9980f9438a874a2990A1BDA",
+    "0x6094F41e192E0Cb93118fAd557bc61cE8703B10D"
   ],
   "heartbeat": "2026-11-20",
   "initialized": true,
@@ -347,6 +348,19 @@
       "subject": "MALICIOUS token report (Base): 0x6030a288168389d190fa7f6376a220043549bd0e",
       "symbol": "IOF",
       "url": "https://www.geckoterminal.com/base/pools/0x7e72aae6288cce26538a5510385d77a922bc414568e07199641be183d57429af"
+    },
+    "0x6094f41e192e0cb93118fad557bc61ce8703b10d": {
+      "address": "0x6094F41e192E0Cb93118fAd557bc61cE8703B10D",
+      "chain": "base",
+      "exact_ticker": true,
+      "followed_up": false,
+      "message_id": "<179514184687.2503.7052811263222148841@gmail.com>",
+      "name": "INSTITUTE OIL FUND ",
+      "name_match": true,
+      "sent_ms": 1795141847693.3083,
+      "subject": "MALICIOUS token report (Base): 0x6094F41e192E0Cb93118fAd557bc61cE8703B10D",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/base/0xf4760c7f65e703c6f0ed838d2bcc94174c23c096d33a4bd71a3c91f49cd27846"
     },
     "0x99bfc80593230262ed2fb97e4bcfdf9346787777": {
       "address": "0x99Bfc80593230262eD2fB97E4bcfDf9346787777",
@@ -5502,6 +5516,21 @@
       "source": "Onchain - bonded, trading on uniswap-v4-base (GeckoTerminal)",
       "symbol": "IFO",
       "url": "https://www.geckoterminal.com/base/pools/0x57105bfd8b12add1f05662566349163bad34dded6f050191aca1157f3ad6b225"
+    },
+    "dex:base:0x6094f41e192e0cb93118fad557bc61ce8703b10d": {
+      "address": "0x6094F41e192E0Cb93118fAd557bc61cE8703B10D",
+      "bonded_ms": 1795141149000,
+      "chain": "base",
+      "created_ms": 1795141149000,
+      "exact_ticker": true,
+      "liquidity_usd": 96972.65,
+      "mcap": 97953,
+      "name": "INSTITUTE OIL FUND ",
+      "name_match": true,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on uniswap",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/base/0xf4760c7f65e703c6f0ed838d2bcc94174c23c096d33a4bd71a3c91f49cd27846"
     },
     "dex:base:0x614fdB74Fd06aba20e45a9ff5ec25F3AAF01e414": {
       "address": "0x614fdB74Fd06aba20e45a9ff5ec25F3AAF01e414",
