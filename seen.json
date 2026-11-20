@@ -1,6 +1,6 @@
 {
   "email_count": {
-    "count": 6,
+    "count": 7,
     "date": "2026-11-20"
   },
   "emailed": [
@@ -381,7 +381,7 @@
       "address": "0x6094F41e192E0Cb93118fAd557bc61cE8703B10D",
       "chain": "base",
       "exact_ticker": true,
-      "followed_up": false,
+      "followed_up": true,
       "message_id": "<179514184687.2503.7052811263222148841@gmail.com>",
       "name": "INSTITUTE OIL FUND ",
       "name_match": true,
@@ -12827,6 +12827,21 @@
       "source": "Onchain - bonded, trading on pumpswap",
       "symbol": "IOF",
       "url": "https://dexscreener.com/solana/gw1y44b7m9zmcmtpyzkkbnvrbrsafsfd97zo1bzwlewf"
+    },
+    "dex:solana:EvH3RsJ8NhSazw8yJdAi44kG3H1a5FvhrVZVnJKNpump": {
+      "address": "EvH3RsJ8NhSazw8yJdAi44kG3H1a5FvhrVZVnJKNpump",
+      "bonded_ms": 1794972728000,
+      "chain": "solana",
+      "created_ms": 1794972728000,
+      "exact_ticker": false,
+      "liquidity_usd": 79308.88,
+      "mcap": 1263495,
+      "name": "World Oil Fund Institution",
+      "name_match": true,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on pumpswap",
+      "symbol": "WOFI",
+      "url": "https://dexscreener.com/solana/fgibprpzc9xfdmensyc5wgsxagupyc8xkwvipvktoe2f"
     },
     "dex:solana:F2x6dvTZ1SCcgbfCfCcRVL9rDgkw9rJAfmXYiTu7pump": {
       "address": "F2x6dvTZ1SCcgbfCfCcRVL9rDgkw9rJAfmXYiTu7pump",
