@@ -1,6 +1,6 @@
 {
   "email_count": {
-    "count": 8,
+    "count": 9,
     "date": "2026-11-20"
   },
   "emailed": [
@@ -342,7 +342,7 @@
       "address": "0x444C6c5D22a025617cd79d38c4a1cB707204Bce9",
       "chain": "base",
       "exact_ticker": true,
-      "followed_up": false,
+      "followed_up": true,
       "message_id": "<179514424429.2425.15748484699970578314@gmail.com>",
       "name": "INSTITUTE OIL FUND ",
       "name_match": true,
