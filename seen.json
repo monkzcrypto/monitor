@@ -3558,6 +3558,21 @@
       "symbol": "IOF",
       "url": "https://www.geckoterminal.com/base/pools/0x6dc4730159aa9abc5385bd87ca052436173d8203f2af034732688174d4628b80"
     },
+    "dex:base:0x340d9fe3931caaa6488a3adfef56d1fd82a189fb": {
+      "address": "0x340d9Fe3931cAaA6488A3aDFEf56d1fd82a189fb",
+      "bonded_ms": 1761345045000,
+      "chain": "base",
+      "created_ms": 1761345045000,
+      "exact_ticker": false,
+      "liquidity_usd": 391.5,
+      "mcap": 780,
+      "name": "basenjiofficial",
+      "name_match": false,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on uniswap",
+      "symbol": "basenjiofficial",
+      "url": "https://dexscreener.com/base/0x558af09507f31d52e79a533c434f516355627109ca8c3db1c831b6320d6c3584"
+    },
     "dex:base:0x34678eacb05a7545f0c15d92178bbda7a2772dc4": {
       "address": "0x34678EaCB05a7545F0C15d92178BbdA7A2772Dc4",
       "bonded_ms": 1793449805000,
