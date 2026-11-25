@@ -7547,6 +7547,21 @@
       "symbol": "OFI",
       "url": "https://dexscreener.com/base/0xffb3d8d287d32ee370944acea44115a3accc65ce7d800ef701eb06590a357c0e"
     },
+    "dex:base:0x9ba6a7e2667946b0b4713ea55876bbfd30fe0737": {
+      "address": "0x9Ba6a7e2667946B0B4713ea55876BBfd30FE0737",
+      "bonded_ms": 1795440602000,
+      "chain": "base",
+      "created_ms": 1795440602000,
+      "exact_ticker": false,
+      "liquidity_usd": 77382.44,
+      "mcap": 78164,
+      "name": "K.I.O.F - KHARG ISLAND OIL FUND",
+      "name_match": false,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on uniswap",
+      "symbol": "KIOF",
+      "url": "https://dexscreener.com/base/0x82e172c8094f3459ac37a6a57a48eb7d2c6a12f51b323d24c488dbb2fe43da6a"
+    },
     "dex:base:0x9cc1d1074133238d2a33852ad14270efea05d2a2": {
       "address": "0x9cc1d1074133238d2a33852ad14270efea05d2a2",
       "bonded_ms": 1791261935000.0,
