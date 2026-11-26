@@ -8665,6 +8665,21 @@
       "symbol": "IOF",
       "url": "https://www.geckoterminal.com/base/pools/0xe6c1084259aaee72bb0c95fc5126e0086658d672794f011c8d79f4b45226ea08"
     },
+    "dex:base:0xa63644c127bc31b10046659b43efd7434499725d": {
+      "address": "0xA63644C127bc31b10046659b43efd7434499725d",
+      "bonded_ms": 1788282147000,
+      "chain": "base",
+      "created_ms": 1788282147000,
+      "exact_ticker": false,
+      "liquidity_usd": 154401.77,
+      "mcap": 155961,
+      "name": "World Oil Fund Institutions",
+      "name_match": true,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on uniswap",
+      "symbol": "WOFF",
+      "url": "https://dexscreener.com/base/0x30b9e88ae4cd29af6442cd76f62adbcdb35a40dc6a790fff2a52f9a9b8d07d54"
+    },
     "dex:base:0xa742e96253fa178a038ac71587bcde3bacb87777": {
       "address": "0xa742E96253fa178A038AC71587BCDe3BaCb87777",
       "bonded_ms": 1793192135000,
