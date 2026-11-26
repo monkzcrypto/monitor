@@ -11570,6 +11570,21 @@
       "symbol": "IFO",
       "url": "https://dexscreener.com/robinhood/0xe0c95e4f0357e35afc1e378162442a54eb0ac1f7"
     },
+    "dex:robinhood:0x7263004c171c15bfc3236e3b6c69182522727777": {
+      "address": "0x7263004c171c15BfC3236e3b6c69182522727777",
+      "bonded_ms": 1795700893000,
+      "chain": "robinhood",
+      "created_ms": 1795700893000,
+      "exact_ticker": false,
+      "liquidity_usd": 8425.85,
+      "mcap": 3806,
+      "name": "Global Oil Fund Institutional",
+      "name_match": true,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on flapsh",
+      "symbol": "GOFI",
+      "url": "https://dexscreener.com/robinhood/0x1e32ba671210070d8e6ca709f2cc007d2ae6797a"
+    },
     "dex:robinhood:0x926d802e99566388af8813742856858a231b7777": {
       "address": "0x926D802e99566388aF8813742856858a231B7777",
       "bonded_ms": 1792790027000,
