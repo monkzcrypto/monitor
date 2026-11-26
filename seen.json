@@ -1,6 +1,6 @@
 {
   "email_count": {
-    "count": 4,
+    "count": 6,
     "date": "2026-11-26"
   },
   "emailed": [
@@ -557,7 +557,7 @@
       "address": "0xCF17f45a7869299F27ee29a7267c8EB07dF87777",
       "chain": "base",
       "exact_ticker": false,
-      "followed_up": false,
+      "followed_up": true,
       "message_id": "<179570044419.2500.3371070163624558172@gmail.com>",
       "name": "Global Oil Fund Institutional",
       "name_match": true,
@@ -635,7 +635,7 @@
       "address": "0xDd66690dEf0D22ca6f5e2b40c3047781821Bb300",
       "chain": "base",
       "exact_ticker": false,
-      "followed_up": false,
+      "followed_up": true,
       "message_id": "<179570044216.2500.12383960561267682403@gmail.com>",
       "name": "Global Oil Fund Institutional",
       "name_match": true,
