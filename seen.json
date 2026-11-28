@@ -1,7 +1,7 @@
 {
   "email_count": {
-    "count": 6,
-    "date": "2026-11-26"
+    "count": 1,
+    "date": "2026-11-28"
   },
   "emailed": [
     "0x6dA938d182Bd2aA5ff5312D9692f6DCac4297F33",
@@ -170,7 +170,8 @@
     "0x7aB735A92F30a9c6aA30121B1d452dfDFb3537Ef",
     "0x2751156dEf05598954Da94719B29F845193C0D41",
     "0xDd66690dEf0D22ca6f5e2b40c3047781821Bb300",
-    "0xCF17f45a7869299F27ee29a7267c8EB07dF87777"
+    "0xCF17f45a7869299F27ee29a7267c8EB07dF87777",
+    "0xc3b8f3ebE0Fe5846C72923d649561FE5633f2C6F"
   ],
   "heartbeat": "2026-11-28",
   "initialized": true,
@@ -539,6 +540,19 @@
       "subject": "MALICIOUS token report (Base): 0xb958B6bEbDf22c0077af7E03A2a422d5b4520197",
       "symbol": "IOF",
       "url": "https://dexscreener.com/base/0x8fb275919968a11c11aa9346c9df2e813d7a4dcd35b5e891aae39abf5e4073de"
+    },
+    "0xc3b8f3ebe0fe5846c72923d649561fe5633f2c6f": {
+      "address": "0xc3b8f3ebE0Fe5846C72923d649561FE5633f2C6F",
+      "chain": "base",
+      "exact_ticker": true,
+      "followed_up": false,
+      "message_id": "<179584024741.2180.4598824877789618759@gmail.com>",
+      "name": "INSTITUTION OIL FUND-IOF",
+      "name_match": true,
+      "sent_ms": 1795840248853.3103,
+      "subject": "MALICIOUS token report (Base): 0xc3b8f3ebE0Fe5846C72923d649561FE5633f2C6F",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/base/0xd81a6a15321ae18889fc7746ae4129d57eddd791bd033442e2f9659ea47ae7c9"
     },
     "0xc9059a9d48212cb64ec80996a0bd87f88e8e7777": {
       "address": "0xC9059a9d48212CB64ec80996A0bD87f88E8e7777",
@@ -9593,6 +9607,21 @@
       "symbol": "IFO",
       "url": "https://www.geckoterminal.com/base/pools/0xb27823c2dbe64f0051058fe6d4933332873cadfbe674d0de817eff2ff9c22c3f"
     },
+    "dex:base:0xc3b8f3ebe0fe5846c72923d649561fe5633f2c6f": {
+      "address": "0xc3b8f3ebE0Fe5846C72923d649561FE5633f2C6F",
+      "bonded_ms": 1795840089000,
+      "chain": "base",
+      "created_ms": 1795840089000,
+      "exact_ticker": true,
+      "liquidity_usd": 74817.6,
+      "mcap": 75573,
+      "name": "INSTITUTION OIL FUND-IOF",
+      "name_match": true,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on uniswap",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/base/0xd81a6a15321ae18889fc7746ae4129d57eddd791bd033442e2f9659ea47ae7c9"
+    },
     "dex:base:0xc40eafC2afB763Ad99242E8C71A3BC2928D31F86": {
       "address": "0xc40eafC2afB763Ad99242E8C71A3BC2928D31F86",
       "bonded_ms": 1791218529000,
@@ -11733,6 +11762,21 @@
       "source": "Onchain - bonded, trading on flapsh",
       "symbol": "IOF",
       "url": "https://dexscreener.com/robinhood/0x436aad48b4f1f82ade0196dd5af32f214b35edc0"
+    },
+    "dex:robinhood:0xd36e52223731fc95588a5e2b9ef979c03c1f7777": {
+      "address": "0xd36e52223731FC95588a5e2B9EF979C03c1f7777",
+      "bonded_ms": 1795840129000,
+      "chain": "robinhood",
+      "created_ms": 1795840129000,
+      "exact_ticker": true,
+      "liquidity_usd": 8238.41,
+      "mcap": 3721,
+      "name": "INSTITUTION OIL FUND IOF",
+      "name_match": true,
+      "reportable": true,
+      "source": "Onchain - bonded, trading on flapsh",
+      "symbol": "IOF",
+      "url": "https://dexscreener.com/robinhood/0xf657321114eefc1a9c30c5a896c1808713f4f7d5"
     },
     "dex:robinhood:0xd42f03e73e00e1bfb4e2ebb5b22bf3a5b8a77777": {
       "address": "0xd42f03e73E00e1bfb4E2eBB5B22BF3A5b8A77777",
